@@ -77,19 +77,16 @@
                     .attr('class', 'node')
                     .attr("transform", d => `translate(${source.y0},${source.x0})`)
                     .on('click', (event, d) => {
-                        // 1. Check if this is the root node (Volatility 3)
-                        // We check if d.depth === 0 (the top level)
-                        if (d.depth === 0) {
-                            console.log("Root node clicked - ignoring to prevent collapse.");
-                            return; // Exit here, do nothing
-                        }
+                        if (d.depth === 0) return; // can't click on root "volatility 3"
 
-                        // 2. Original logic for everything else
+                        // activate the click on folder
                         if (d.children || d._children) {
                             d.children = d.children ? null : d._children;
                             update(d);
-                        } else if (d.data.desc) {
-                            showInfo(d.data);
+                        } else {
+                            if (d.data.help || d.data.example) {
+                                showInfo(d.data);
+                            }
                         }
                     });
 
