@@ -1055,12 +1055,6 @@
           ]
         }
       ]
-    },
-        {
-          "name": "Malware",
-          "children": [
-            { "name": "windows.malfind", "desc": "Finds injected code and shellcode.", "usage": "vol -f mem.raw windows.malfind" }
-          ]
-        }
-      ]
     }
+  ]
+}
