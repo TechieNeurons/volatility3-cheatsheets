@@ -1,0 +1,26 @@
+{
+  "name": "Volatility 3",
+  "children": [
+    {
+      "name": "Windows",
+      "children": [
+        {
+          "name": "Process",
+          "children": [
+            { "name": "windows.pslist", "desc": "Lists processes in a double-linked list.", "usage": "vol -f mem.raw windows.pslist" },
+            { "name": "windows.psscan", "desc": "Pool scanner for process objects.", "usage": "vol -f mem.raw windows.psscan" },
+            { "name": "windows.pstree", "desc": "Shows process parent-child relationships.", "usage": "vol -f mem.raw windows.pstree" }
+          ]
+        },
+        {
+          "name": "Malware",
+          "children": [
+            { "name": "windows.malfind", "desc": "Finds injected code and shellcode.", "usage": "vol -f mem.raw windows.malfind" }
+          ]
+        }
+      ]
+    },
+    { "name": "Linux", "children": [] },
+    { "name": "macOS", "children": [] }
+  ]
+}
