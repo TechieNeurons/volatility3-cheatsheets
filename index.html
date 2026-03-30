@@ -31,7 +31,7 @@
 
     <div id="info-box">
         <span class="close-btn" onclick="document.getElementById('info-box').style.display='none'">✖</span>
-        <h2 id="plugin-name" style="color:#00ffcc; margin-top:0;"></h2>
+        <h2 id="plugin-name"></h2>
         <p id="plugin-desc"></p>
         <strong>Usage:</strong>
         <pre id="plugin-usage"></pre>
@@ -113,7 +113,9 @@
 
                 nodeUpdate.select('circle')
                     .attr('r', 8)
-                    .style("fill", d => d._children ? "#ff0000" : "#800000") // Bright red if has children, dark red if leaf
+                    .style("fill", d => {
+                        if (d.depth ===0) return "#ffffff";
+                        return d._children ? "#ff0000" : "#cc0000";})
                     .style("stroke", "#ffffff")
                     .style("stroke-width", "2px");
 
