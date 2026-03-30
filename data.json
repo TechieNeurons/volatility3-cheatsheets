@@ -5,13 +5,1057 @@
       "name": "Windows",
       "children": [
         {
-          "name": "Process",
+          "name": "amcache",
           "children": [
-            { "name": "windows.pslist", "desc": "Lists processes in a double-linked list.", "usage": "vol -f mem.raw windows.pslist" },
-            { "name": "windows.psscan", "desc": "Pool scanner for process objects.", "usage": "vol -f mem.raw windows.psscan" },
-            { "name": "windows.pstree", "desc": "Shows process parent-child relationships.", "usage": "vol -f mem.raw windows.pstree" }
+            {
+              "name": "Amcache",
+              "help": "Description for Amcache goes here.",
+              "example": "vol -f mem.raw windows.amcache.Amcache"
+            }
           ]
         },
+        {
+          "name": "bigpools",
+          "children": [
+            {
+              "name": "BigPools",
+              "help": "Description for BigPools goes here.",
+              "example": "vol -f mem.raw windows.bigpools.BigPools"
+            }
+          ]
+        },
+        {
+          "name": "cachedump",
+          "children": [
+            {
+              "name": "Cachedump",
+              "help": "Description for Cachedump goes here.",
+              "example": "vol -f mem.raw windows.cachedump.Cachedump"
+            }
+          ]
+        },
+        {
+          "name": "callbacks",
+          "children": [
+            {
+              "name": "Callbacks",
+              "help": "Description for Callbacks goes here.",
+              "example": "vol -f mem.raw windows.callbacks.Callbacks"
+            }
+          ]
+        },
+        {
+          "name": "cmdline",
+          "children": [
+            {
+              "name": "CmdLine",
+              "help": "Description for CmdLine goes here.",
+              "example": "vol -f mem.raw windows.cmdline.CmdLine"
+            }
+          ]
+        },
+        {
+          "name": "cmdscan",
+          "children": [
+            {
+              "name": "CmdScan",
+              "help": "Description for CmdScan goes here.",
+              "example": "vol -f mem.raw windows.cmdscan.CmdScan"
+            }
+          ]
+        },
+        {
+          "name": "consoles",
+          "children": [
+            {
+              "name": "Consoles",
+              "help": "Description for Consoles goes here.",
+              "example": "vol -f mem.raw windows.consoles.Consoles"
+            }
+          ]
+        },
+        {
+          "name": "crashinfo",
+          "children": [
+            {
+              "name": "Crashinfo",
+              "help": "Description for Crashinfo goes here.",
+              "example": "vol -f mem.raw windows.crashinfo.Crashinfo"
+            }
+          ]
+        },
+        {
+          "name": "debugregisters",
+          "children": [
+            {
+              "name": "DebugRegisters",
+              "help": "Description for DebugRegisters goes here.",
+              "example": "vol -f mem.raw windows.debugregisters.DebugRegisters"
+            }
+          ]
+        },
+        {
+          "name": "deskscan",
+          "children": [
+            {
+              "name": "DeskScan",
+              "help": "Description for DeskScan goes here.",
+              "example": "vol -f mem.raw windows.deskscan.DeskScan"
+            }
+          ]
+        },
+        {
+          "name": "desktops",
+          "children": [
+            {
+              "name": "Desktops",
+              "help": "Description for Desktops goes here.",
+              "example": "vol -f mem.raw windows.desktops.Desktops"
+            }
+          ]
+        },
+        {
+          "name": "devicetree",
+          "children": [
+            {
+              "name": "DeviceTree",
+              "help": "Description for DeviceTree goes here.",
+              "example": "vol -f mem.raw windows.devicetree.DeviceTree"
+            }
+          ]
+        },
+        {
+          "name": "direct_system_calls",
+          "children": [
+            {
+              "name": "DirectSystemCalls",
+              "help": "Description for DirectSystemCalls goes here.",
+              "example": "vol -f mem.raw windows.direct_system_calls.DirectSystemCalls"
+            }
+          ]
+        },
+        {
+          "name": "dlllist",
+          "children": [
+            {
+              "name": "DllList",
+              "help": "Description for DllList goes here.",
+              "example": "vol -f mem.raw windows.dlllist.DllList"
+            }
+          ]
+        },
+        {
+          "name": "driverirp",
+          "children": [
+            {
+              "name": "DriverIrp",
+              "help": "Description for DriverIrp goes here.",
+              "example": "vol -f mem.raw windows.driverirp.DriverIrp"
+            }
+          ]
+        },
+        {
+          "name": "drivermodule",
+          "children": [
+            {
+              "name": "DriverModule",
+              "help": "Description for DriverModule goes here.",
+              "example": "vol -f mem.raw windows.drivermodule.DriverModule"
+            }
+          ]
+        },
+        {
+          "name": "driverscan",
+          "children": [
+            {
+              "name": "DriverScan",
+              "help": "Description for DriverScan goes here.",
+              "example": "vol -f mem.raw windows.driverscan.DriverScan"
+            }
+          ]
+        },
+        {
+          "name": "dumpfiles",
+          "children": [
+            {
+              "name": "DumpFiles",
+              "help": "Description for DumpFiles goes here.",
+              "example": "vol -f mem.raw windows.dumpfiles.DumpFiles"
+            }
+          ]
+        },
+        {
+          "name": "envars",
+          "children": [
+            {
+              "name": "Envars",
+              "help": "Description for Envars goes here.",
+              "example": "vol -f mem.raw windows.envars.Envars"
+            }
+          ]
+        },
+        {
+          "name": "etwpatch",
+          "children": [
+            {
+              "name": "EtwPatch",
+              "help": "Description for EtwPatch goes here.",
+              "example": "vol -f mem.raw windows.etwpatch.EtwPatch"
+            }
+          ]
+        },
+        {
+          "name": "filescan",
+          "children": [
+            {
+              "name": "FileScan",
+              "help": "Description for FileScan goes here.",
+              "example": "vol -f mem.raw windows.filescan.FileScan"
+            }
+          ]
+        },
+        {
+          "name": "getservicesids",
+          "children": [
+            {
+              "name": "GetServiceSIDs",
+              "help": "Description for GetServiceSIDs goes here.",
+              "example": "vol -f mem.raw windows.getservicesids.GetServiceSIDs"
+            }
+          ]
+        },
+        {
+          "name": "getsids",
+          "children": [
+            {
+              "name": "GetSIDs",
+              "help": "Description for GetSIDs goes here.",
+              "example": "vol -f mem.raw windows.getsids.GetSIDs"
+            }
+          ]
+        },
+        {
+          "name": "handles",
+          "children": [
+            {
+              "name": "Handles",
+              "help": "Description for Handles goes here.",
+              "example": "vol -f mem.raw windows.handles.Handles"
+            }
+          ]
+        },
+        {
+          "name": "hashdump",
+          "children": [
+            {
+              "name": "Hashdump",
+              "help": "Description for Hashdump goes here.",
+              "example": "vol -f mem.raw windows.hashdump.Hashdump"
+            }
+          ]
+        },
+        {
+          "name": "hollowprocesses",
+          "children": [
+            {
+              "name": "HollowProcesses",
+              "help": "Description for HollowProcesses goes here.",
+              "example": "vol -f mem.raw windows.hollowprocesses.HollowProcesses"
+            }
+          ]
+        },
+        {
+          "name": "iat",
+          "children": [
+            {
+              "name": "IAT",
+              "help": "Description for IAT goes here.",
+              "example": "vol -f mem.raw windows.iat.IAT"
+            }
+          ]
+        },
+        {
+          "name": "indirect_system_calls",
+          "children": [
+            {
+              "name": "IndirectSystemCalls",
+              "help": "Description for IndirectSystemCalls goes here.",
+              "example": "vol -f mem.raw windows.indirect_system_calls.IndirectSystemCalls"
+            }
+          ]
+        },
+        {
+          "name": "info",
+          "children": [
+            {
+              "name": "Info",
+              "help": "Description for Info goes here.",
+              "example": "vol -f mem.raw windows.info.Info"
+            }
+          ]
+        },
+        {
+          "name": "joblinks",
+          "children": [
+            {
+              "name": "JobLinks",
+              "help": "Description for JobLinks goes here.",
+              "example": "vol -f mem.raw windows.joblinks.JobLinks"
+            }
+          ]
+        },
+        {
+          "name": "kpcrs",
+          "children": [
+            {
+              "name": "KPCRs",
+              "help": "Description for KPCRs goes here.",
+              "example": "vol -f mem.raw windows.kpcrs.KPCRs"
+            }
+          ]
+        },
+        {
+          "name": "ldrmodules",
+          "children": [
+            {
+              "name": "LdrModules",
+              "help": "Description for LdrModules goes here.",
+              "example": "vol -f mem.raw windows.ldrmodules.LdrModules"
+            }
+          ]
+        },
+        {
+          "name": "lsadump",
+          "children": [
+            {
+              "name": "Lsadump",
+              "help": "Description for Lsadump goes here.",
+              "example": "vol -f mem.raw windows.lsadump.Lsadump"
+            }
+          ]
+        },
+        {
+          "name": "malfind",
+          "children": [
+            {
+              "name": "Malfind",
+              "help": "Description for Malfind goes here.",
+              "example": "vol -f mem.raw windows.malfind.Malfind"
+            }
+          ]
+        },
+        {
+          "name": "malware",
+          "children": [
+            {
+              "name": "direct_system_calls",
+              "children": [
+                {
+                  "name": "DirectSystemCalls",
+                  "help": "Description for DirectSystemCalls goes here.",
+                  "example": "vol -f mem.raw windows.malware.direct_system_calls.DirectSystemCalls"
+                }
+              ]
+            },
+            {
+              "name": "drivermodule",
+              "children": [
+                {
+                  "name": "DriverModule",
+                  "help": "Description for DriverModule goes here.",
+                  "example": "vol -f mem.raw windows.malware.drivermodule.DriverModule"
+                }
+              ]
+            },
+            {
+              "name": "hollowprocesses",
+              "children": [
+                {
+                  "name": "HollowProcesses",
+                  "help": "Description for HollowProcesses goes here.",
+                  "example": "vol -f mem.raw windows.malware.hollowprocesses.HollowProcesses"
+                }
+              ]
+            },
+            {
+              "name": "indirect_system_calls",
+              "children": [
+                {
+                  "name": "IndirectSystemCalls",
+                  "help": "Description for IndirectSystemCalls goes here.",
+                  "example": "vol -f mem.raw windows.malware.indirect_system_calls.IndirectSystemCalls"
+                }
+              ]
+            },
+            {
+              "name": "ldrmodules",
+              "children": [
+                {
+                  "name": "LdrModules",
+                  "help": "Description for LdrModules goes here.",
+                  "example": "vol -f mem.raw windows.malware.ldrmodules.LdrModules"
+                }
+              ]
+            },
+            {
+              "name": "malfind",
+              "children": [
+                {
+                  "name": "Malfind",
+                  "help": "Description for Malfind goes here.",
+                  "example": "vol -f mem.raw windows.malware.malfind.Malfind"
+                }
+              ]
+            },
+            {
+              "name": "pebmasquerade",
+              "children": [
+                {
+                  "name": "PebMasquerade",
+                  "help": "Description for PebMasquerade goes here.",
+                  "example": "vol -f mem.raw windows.malware.pebmasquerade.PebMasquerade"
+                }
+              ]
+            },
+            {
+              "name": "processghosting",
+              "children": [
+                {
+                  "name": "ProcessGhosting",
+                  "help": "Description for ProcessGhosting goes here.",
+                  "example": "vol -f mem.raw windows.malware.processghosting.ProcessGhosting"
+                }
+              ]
+            },
+            {
+              "name": "psxview",
+              "children": [
+                {
+                  "name": "PsXView",
+                  "help": "Description for PsXView goes here.",
+                  "example": "vol -f mem.raw windows.malware.psxview.PsXView"
+                }
+              ]
+            },
+            {
+              "name": "skeleton_key_check",
+              "children": [
+                {
+                  "name": "Skeleton_Key_Check",
+                  "help": "Description for Skeleton_Key_Check goes here.",
+                  "example": "vol -f mem.raw windows.malware.skeleton_key_check.Skeleton_Key_Check"
+                }
+              ]
+            },
+            {
+              "name": "suspicious_threads",
+              "children": [
+                {
+                  "name": "SuspiciousThreads",
+                  "help": "Description for SuspiciousThreads goes here.",
+                  "example": "vol -f mem.raw windows.malware.suspicious_threads.SuspiciousThreads"
+                }
+              ]
+            },
+            {
+              "name": "svcdiff",
+              "children": [
+                {
+                  "name": "SvcDiff",
+                  "help": "Description for SvcDiff goes here.",
+                  "example": "vol -f mem.raw windows.malware.svcdiff.SvcDiff"
+                }
+              ]
+            },
+            {
+              "name": "unhooked_system_calls",
+              "children": [
+                {
+                  "name": "UnhookedSystemCalls",
+                  "help": "Description for UnhookedSystemCalls goes here.",
+                  "example": "vol -f mem.raw windows.malware.unhooked_system_calls.UnhookedSystemCalls"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mbrscan",
+          "children": [
+            {
+              "name": "MBRScan",
+              "help": "Description for MBRScan goes here.",
+              "example": "vol -f mem.raw windows.mbrscan.MBRScan"
+            }
+          ]
+        },
+        {
+          "name": "memmap",
+          "children": [
+            {
+              "name": "Memmap",
+              "help": "Description for Memmap goes here.",
+              "example": "vol -f mem.raw windows.memmap.Memmap"
+            }
+          ]
+        },
+        {
+          "name": "mftscan",
+          "children": [
+            {
+              "name": "ADS",
+              "help": "Description for ADS goes here.",
+              "example": "vol -f mem.raw windows.mftscan.ADS"
+            },
+            {
+              "name": "MFTScan",
+              "help": "Description for MFTScan goes here.",
+              "example": "vol -f mem.raw windows.mftscan.MFTScan"
+            },
+            {
+              "name": "ResidentData",
+              "help": "Description for ResidentData goes here.",
+              "example": "vol -f mem.raw windows.mftscan.ResidentData"
+            }
+          ]
+        },
+        {
+          "name": "modscan",
+          "children": [
+            {
+              "name": "ModScan",
+              "help": "Description for ModScan goes here.",
+              "example": "vol -f mem.raw windows.modscan.ModScan"
+            }
+          ]
+        },
+        {
+          "name": "modules",
+          "children": [
+            {
+              "name": "Modules",
+              "help": "Description for Modules goes here.",
+              "example": "vol -f mem.raw windows.modules.Modules"
+            }
+          ]
+        },
+        {
+          "name": "mutantscan",
+          "children": [
+            {
+              "name": "MutantScan",
+              "help": "Description for MutantScan goes here.",
+              "example": "vol -f mem.raw windows.mutantscan.MutantScan"
+            }
+          ]
+        },
+        {
+          "name": "netscan",
+          "children": [
+            {
+              "name": "NetScan",
+              "help": "Description for NetScan goes here.",
+              "example": "vol -f mem.raw windows.netscan.NetScan"
+            }
+          ]
+        },
+        {
+          "name": "netstat",
+          "children": [
+            {
+              "name": "NetStat",
+              "help": "Description for NetStat goes here.",
+              "example": "vol -f mem.raw windows.netstat.NetStat"
+            }
+          ]
+        },
+        {
+          "name": "orphan_kernel_threads",
+          "children": [
+            {
+              "name": "Threads",
+              "help": "Description for Threads goes here.",
+              "example": "vol -f mem.raw windows.orphan_kernel_threads.Threads"
+            }
+          ]
+        },
+        {
+          "name": "pe_symbols",
+          "children": [
+            {
+              "name": "PESymbols",
+              "help": "Description for PESymbols goes here.",
+              "example": "vol -f mem.raw windows.pe_symbols.PESymbols"
+            }
+          ]
+        },
+        {
+          "name": "pedump",
+          "children": [
+            {
+              "name": "PEDump",
+              "help": "Description for PEDump goes here.",
+              "example": "vol -f mem.raw windows.pedump.PEDump"
+            }
+          ]
+        },
+        {
+          "name": "poolscanner",
+          "children": [
+            {
+              "name": "PoolScanner",
+              "help": "Description for PoolScanner goes here.",
+              "example": "vol -f mem.raw windows.poolscanner.PoolScanner"
+            }
+          ]
+        },
+        {
+          "name": "privileges",
+          "children": [
+            {
+              "name": "Privs",
+              "help": "Description for Privs goes here.",
+              "example": "vol -f mem.raw windows.privileges.Privs"
+            }
+          ]
+        },
+        {
+          "name": "processghosting",
+          "children": [
+            {
+              "name": "ProcessGhosting",
+              "help": "Description for ProcessGhosting goes here.",
+              "example": "vol -f mem.raw windows.processghosting.ProcessGhosting"
+            }
+          ]
+        },
+        {
+          "name": "pslist",
+          "children": [
+            {
+              "name": "PsList",
+              "help": "Description for PsList goes here.",
+              "example": "vol -f mem.raw windows.pslist.PsList"
+            }
+          ]
+        },
+        {
+          "name": "psscan",
+          "children": [
+            {
+              "name": "PsScan",
+              "help": "Description for PsScan goes here.",
+              "example": "vol -f mem.raw windows.psscan.PsScan"
+            }
+          ]
+        },
+        {
+          "name": "pstree",
+          "children": [
+            {
+              "name": "PsTree",
+              "help": "Description for PsTree goes here.",
+              "example": "vol -f mem.raw windows.pstree.PsTree"
+            }
+          ]
+        },
+        {
+          "name": "psxview",
+          "children": [
+            {
+              "name": "PsXView",
+              "help": "Description for PsXView goes here.",
+              "example": "vol -f mem.raw windows.psxview.PsXView"
+            }
+          ]
+        },
+        {
+          "name": "registry",
+          "children": [
+            {
+              "name": "amcache",
+              "children": [
+                {
+                  "name": "Amcache",
+                  "help": "Description for Amcache goes here.",
+                  "example": "vol -f mem.raw windows.registry.amcache.Amcache"
+                }
+              ]
+            },
+            {
+              "name": "cachedump",
+              "children": [
+                {
+                  "name": "Cachedump",
+                  "help": "Description for Cachedump goes here.",
+                  "example": "vol -f mem.raw windows.registry.cachedump.Cachedump"
+                }
+              ]
+            },
+            {
+              "name": "certificates",
+              "children": [
+                {
+                  "name": "Certificates",
+                  "help": "Description for Certificates goes here.",
+                  "example": "vol -f mem.raw windows.registry.certificates.Certificates"
+                }
+              ]
+            },
+            {
+              "name": "getcellroutine",
+              "children": [
+                {
+                  "name": "GetCellRoutine",
+                  "help": "Description for GetCellRoutine goes here.",
+                  "example": "vol -f mem.raw windows.registry.getcellroutine.GetCellRoutine"
+                }
+              ]
+            },
+            {
+              "name": "hashdump",
+              "children": [
+                {
+                  "name": "Hashdump",
+                  "help": "Description for Hashdump goes here.",
+                  "example": "vol -f mem.raw windows.registry.hashdump.Hashdump"
+                }
+              ]
+            },
+            {
+              "name": "hivelist",
+              "children": [
+                {
+                  "name": "HiveList",
+                  "help": "Description for HiveList goes here.",
+                  "example": "vol -f mem.raw windows.registry.hivelist.HiveList"
+                }
+              ]
+            },
+            {
+              "name": "hivescan",
+              "children": [
+                {
+                  "name": "HiveScan",
+                  "help": "Description for HiveScan goes here.",
+                  "example": "vol -f mem.raw windows.registry.hivescan.HiveScan"
+                }
+              ]
+            },
+            {
+              "name": "lsadump",
+              "children": [
+                {
+                  "name": "Lsadump",
+                  "help": "Description for Lsadump goes here.",
+                  "example": "vol -f mem.raw windows.registry.lsadump.Lsadump"
+                }
+              ]
+            },
+            {
+              "name": "printkey",
+              "children": [
+                {
+                  "name": "PrintKey",
+                  "help": "Description for PrintKey goes here.",
+                  "example": "vol -f mem.raw windows.registry.printkey.PrintKey"
+                }
+              ]
+            },
+            {
+              "name": "scheduled_tasks",
+              "children": [
+                {
+                  "name": "ScheduledTasks",
+                  "help": "Description for ScheduledTasks goes here.",
+                  "example": "vol -f mem.raw windows.registry.scheduled_tasks.ScheduledTasks"
+                }
+              ]
+            },
+            {
+              "name": "userassist",
+              "children": [
+                {
+                  "name": "UserAssist",
+                  "help": "Description for UserAssist goes here.",
+                  "example": "vol -f mem.raw windows.registry.userassist.UserAssist"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "scheduled_tasks",
+          "children": [
+            {
+              "name": "ScheduledTasks",
+              "help": "Description for ScheduledTasks goes here.",
+              "example": "vol -f mem.raw windows.scheduled_tasks.ScheduledTasks"
+            }
+          ]
+        },
+        {
+          "name": "sessions",
+          "children": [
+            {
+              "name": "Sessions",
+              "help": "Description for Sessions goes here.",
+              "example": "vol -f mem.raw windows.sessions.Sessions"
+            }
+          ]
+        },
+        {
+          "name": "shimcachemem",
+          "children": [
+            {
+              "name": "ShimcacheMem",
+              "help": "Description for ShimcacheMem goes here.",
+              "example": "vol -f mem.raw windows.shimcachemem.ShimcacheMem"
+            }
+          ]
+        },
+        {
+          "name": "skeleton_key_check",
+          "children": [
+            {
+              "name": "Skeleton_Key_Check",
+              "help": "Description for Skeleton_Key_Check goes here.",
+              "example": "vol -f mem.raw windows.skeleton_key_check.Skeleton_Key_Check"
+            }
+          ]
+        },
+        {
+          "name": "ssdt",
+          "children": [
+            {
+              "name": "SSDT",
+              "help": "Description for SSDT goes here.",
+              "example": "vol -f mem.raw windows.ssdt.SSDT"
+            }
+          ]
+        },
+        {
+          "name": "statistics",
+          "children": [
+            {
+              "name": "Statistics",
+              "help": "Description for Statistics goes here.",
+              "example": "vol -f mem.raw windows.statistics.Statistics"
+            }
+          ]
+        },
+        {
+          "name": "strings",
+          "children": [
+            {
+              "name": "Strings",
+              "help": "Description for Strings goes here.",
+              "example": "vol -f mem.raw windows.strings.Strings"
+            }
+          ]
+        },
+        {
+          "name": "suspended_threads",
+          "children": [
+            {
+              "name": "SuspendedThreads",
+              "help": "Description for SuspendedThreads goes here.",
+              "example": "vol -f mem.raw windows.suspended_threads.SuspendedThreads"
+            }
+          ]
+        },
+        {
+          "name": "suspicious_threads",
+          "children": [
+            {
+              "name": "SuspiciousThreads",
+              "help": "Description for SuspiciousThreads goes here.",
+              "example": "vol -f mem.raw windows.suspicious_threads.SuspiciousThreads"
+            }
+          ]
+        },
+        {
+          "name": "svcdiff",
+          "children": [
+            {
+              "name": "SvcDiff",
+              "help": "Description for SvcDiff goes here.",
+              "example": "vol -f mem.raw windows.svcdiff.SvcDiff"
+            }
+          ]
+        },
+        {
+          "name": "svclist",
+          "children": [
+            {
+              "name": "SvcList",
+              "help": "Description for SvcList goes here.",
+              "example": "vol -f mem.raw windows.svclist.SvcList"
+            }
+          ]
+        },
+        {
+          "name": "svcscan",
+          "children": [
+            {
+              "name": "SvcScan",
+              "help": "Description for SvcScan goes here.",
+              "example": "vol -f mem.raw windows.svcscan.SvcScan"
+            }
+          ]
+        },
+        {
+          "name": "symlinkscan",
+          "children": [
+            {
+              "name": "SymlinkScan",
+              "help": "Description for SymlinkScan goes here.",
+              "example": "vol -f mem.raw windows.symlinkscan.SymlinkScan"
+            }
+          ]
+        },
+        {
+          "name": "thrdscan",
+          "children": [
+            {
+              "name": "ThrdScan",
+              "help": "Description for ThrdScan goes here.",
+              "example": "vol -f mem.raw windows.thrdscan.ThrdScan"
+            }
+          ]
+        },
+        {
+          "name": "threads",
+          "children": [
+            {
+              "name": "Threads",
+              "help": "Description for Threads goes here.",
+              "example": "vol -f mem.raw windows.threads.Threads"
+            }
+          ]
+        },
+        {
+          "name": "timers",
+          "children": [
+            {
+              "name": "Timers",
+              "help": "Description for Timers goes here.",
+              "example": "vol -f mem.raw windows.timers.Timers"
+            }
+          ]
+        },
+        {
+          "name": "truecrypt",
+          "children": [
+            {
+              "name": "Passphrase",
+              "help": "Description for Passphrase goes here.",
+              "example": "vol -f mem.raw windows.truecrypt.Passphrase"
+            }
+          ]
+        },
+        {
+          "name": "unhooked_system_calls",
+          "children": [
+            {
+              "name": "unhooked_system_calls",
+              "help": "Description for unhooked_system_calls goes here.",
+              "example": "vol -f mem.raw windows.unhooked_system_calls.unhooked_system_calls"
+            }
+          ]
+        },
+        {
+          "name": "unloadedmodules",
+          "children": [
+            {
+              "name": "UnloadedModules",
+              "help": "Description for UnloadedModules goes here.",
+              "example": "vol -f mem.raw windows.unloadedmodules.UnloadedModules"
+            }
+          ]
+        },
+        {
+          "name": "vadinfo",
+          "children": [
+            {
+              "name": "VadInfo",
+              "help": "Description for VadInfo goes here.",
+              "example": "vol -f mem.raw windows.vadinfo.VadInfo"
+            }
+          ]
+        },
+        {
+          "name": "vadregexscan",
+          "children": [
+            {
+              "name": "VadRegExScan",
+              "help": "Description for VadRegExScan goes here.",
+              "example": "vol -f mem.raw windows.vadregexscan.VadRegExScan"
+            }
+          ]
+        },
+        {
+          "name": "vadwalk",
+          "children": [
+            {
+              "name": "VadWalk",
+              "help": "Description for VadWalk goes here.",
+              "example": "vol -f mem.raw windows.vadwalk.VadWalk"
+            }
+          ]
+        },
+        {
+          "name": "vadyarascan",
+          "children": [
+            {
+              "name": "VadYaraScan",
+              "help": "Description for VadYaraScan goes here.",
+              "example": "vol -f mem.raw windows.vadyarascan.VadYaraScan"
+            }
+          ]
+        },
+        {
+          "name": "verinfo",
+          "children": [
+            {
+              "name": "VerInfo",
+              "help": "Description for VerInfo goes here.",
+              "example": "vol -f mem.raw windows.verinfo.VerInfo"
+            }
+          ]
+        },
+        {
+          "name": "virtmap",
+          "children": [
+            {
+              "name": "VirtMap",
+              "help": "Description for VirtMap goes here.",
+              "example": "vol -f mem.raw windows.virtmap.VirtMap"
+            }
+          ]
+        },
+        {
+          "name": "windows",
+          "children": [
+            {
+              "name": "Windows",
+              "help": "Description for Windows goes here.",
+              "example": "vol -f mem.raw windows.windows.Windows"
+            }
+          ]
+        },
+        {
+          "name": "windowstations",
+          "children": [
+            {
+              "name": "WindowStations",
+              "help": "Description for WindowStations goes here.",
+              "example": "vol -f mem.raw windows.windowstations.WindowStations"
+            }
+          ]
+        }
+      ]
+    },
         {
           "name": "Malware",
           "children": [
@@ -24,3 +1068,5 @@
     { "name": "macOS", "children": [] }
   ]
 }
+
+
