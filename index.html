@@ -7,7 +7,7 @@
     <style>
         body { font-family: sans-serif; background-color: #1a1a1a; color: #eee; margin: 0; overflow: hidden; }
         .node circle { fill: #00ffcc; stroke: #fff; stroke-width: 1.5px; cursor: pointer; }
-        .node text { font: 13px sans-serif; fill: #ccc; pointer-events: none; }
+        .node text { font: 13px sans-serif; fill: #eee; pointer-events: none; text-shadow: 2px 2px 3px #000, -2px -2px 3px #000, 2px -2px 3px #000, -2px 2px 3px #000; }
         .link { fill: none; stroke: #444; stroke-width: 1.5px; }
         #info-box {
             position: fixed; top: 20px; right: 20px; width: 320px; 
@@ -97,7 +97,7 @@
 
                 nodeEnter.append('text')
                     .attr("dy", ".35em")
-                    .attr("x", d => d.children || d._children ? -15 : 15)
+                    .attr("x", d => d.children || d._children ? -20 : 20)
                     .attr("text-anchor", d => d.children || d._children ? "end" : "start")
                     .text(d => d.data.name);
 
