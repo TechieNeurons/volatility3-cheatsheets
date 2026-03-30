@@ -6,7 +6,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         body { font-family: sans-serif; background-color: #1a1a1a; color: #eee; margin: 0; overflow: hidden; }
-        .node circle { fill: #00ffcc; stroke: #fff; stroke-width: 1.5px; cursor: pointer; }
+        .node circle { fill: #ff0000; stroke: #fff; stroke-width: 2px; cursor: pointer; }
         .node text { font: 13px sans-serif; fill: #eee; pointer-events: none; text-shadow: 2px 2px 3px #000, -2px -2px 3px #000, 2px -2px 3px #000, -2px 2px 3px #000; }
         .link { fill: none; stroke: #444; stroke-width: 1.5px; }
         #info-box {
@@ -15,7 +15,7 @@
             display: none; border-radius: 8px; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
             display: flex; flex-direction: column;
         }
-        pre { background: #000; padding: 10px; color: #00ff00; font-size: 12px; border-radius: 4px; white-space: pre-wrap; margin-top: 10px; border: 1px solid #333;}
+        pre { background: #000; padding: 15px; color: #00ff00; font-size: 12px; border-radius: 4px; margin-top: 10px; border: 1px solid #333; white-space: pre; overflow-x: hidden; width: max-content; min-width: 100%; box-sizing: border-box;}
         .close-btn { float: right; cursor: pointer; }
     </style>
 </head>
@@ -44,7 +44,7 @@
             .append("g");
 
         const svgGroup = svg.append("g").attr("transform", "translate(100,0)");
-        const treeLayout = d3.tree().nodeSize([40, 200]);
+        const treeLayout = d3.tree().nodeSize([60, 300]);
 
         // FETCH THE EXTERNAL JSON FILE
         d3.json("data.json").then(data => {
@@ -104,11 +104,10 @@
                     .attr("transform", d => `translate(${d.y},${d.x})`);
 
                 nodeUpdate.select('circle')
-                    .style("fill", d => {
-                        if (d.depth === 0) return "#555"; // Make root dark/static looking
-                            return d._children ? "#00ffcc" : "#666";
-                        })
-                    .style("cursor", d => d.depth === 0 ? "default" : "pointer");
+                    .attr('r', 8)
+                    .style("fill", d => d._children ? "#ff0000" : "#800000") // Bright red if has children, dark red if leaf
+                    .style("stroke", "#ffffff")
+                    .style("stroke-width", "2px");
 
                 node.exit().transition().duration(500)
                     .attr("transform", d => `translate(${source.y},${source.x})`).remove();
