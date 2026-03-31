@@ -7,13 +7,8 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <!-- Info box -->
-    <div id="info-box" style="display: none;">
-        <span class="close-btn" onclick="document.getElementById('info-box').style.display='none'">✖</span>
-        <h2 id="plugin-name"></h2>
-        <p id="plugin-desc"></p>
-        <strong>Usage:</strong>
-        <pre id="plugin-usage"></pre>
+    <div id="search-container">
+        <button id="theme-toggle" title="Toggle Light/Dark Mode">🌓</button>
     </div>
 
     <!-- Search bar -->
@@ -25,6 +20,15 @@
         </select>
         <input type="text" id="plugin-search" placeholder="Search plugin (e.g. pslist)...">
         <div id="search-results"></div>
+    </div>
+
+    <!-- Info box -->
+    <div id="info-box" style="display: none;">
+        <span class="close-btn" onclick="document.getElementById('info-box').style.display='none'">✖</span>
+        <h2 id="plugin-name"></h2>
+        <p id="plugin-desc"></p>
+        <strong>Usage:</strong>
+        <pre id="plugin-usage"></pre>
     </div>
 
     <!-- Display the tree -->

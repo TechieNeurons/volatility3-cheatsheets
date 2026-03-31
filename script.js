@@ -6,6 +6,26 @@ const searchInput = document.getElementById('plugin-search');
 const osSelector = document.getElementById('os-selector');
 const resultsContainer = document.getElementById('search-results');
 
+// for the themes
+const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+}
+
+themeToggle.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    
+    if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+});
+
 const svg = d3.select("#tree-display")
     .attr("width", width)
     .attr("height", height)
