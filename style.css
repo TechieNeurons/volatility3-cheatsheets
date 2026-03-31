@@ -38,7 +38,10 @@ body { font-family: sans-serif; background-color: var(--bg-color); color: var(--
     padding-bottom: 5px;
 }
 pre { background: #000; padding: 15px; color: #00ff41; font-family: 'Courier New', Courier, monospace; font-size: 12px; border-radius: 4px; margin-top: 10px; border: 1px solid #ff0000; white-space: pre; overflow-x: hidden; width: max-content; min-width: 100%; box-sizing: border-box;}
-.close-btn { float: right; cursor: pointer; color: #ff0000; font-weight: bold;}
+.close-btn { position: absolute; top: 10px; right: 15px; cursor: pointer; color: #ff0000; font-weight: bold; font-size: 20px; z-index: 101}
+.close-btn:hover {
+    color: #ffffff; text-shadow: 0 0 5px #ff0000;
+}
 
 /* for the search box */
 #search-container {
