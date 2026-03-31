@@ -1056,9 +1056,610 @@
         }
       ]
     },
-    {
-      "name": "Linux",
-      "children": []
+{
+      "name": "linux",
+      "children": [
+        {
+          "name": "bash",
+          "children": [
+            {
+              "name": "Bash",
+              "help": "Description for Bash goes here.",
+              "example": "vol -f mem.raw linux.bash.Bash"
+            }
+          ]
+        },
+        {
+          "name": "boottime",
+          "children": [
+            {
+              "name": "Boottime",
+              "help": "Description for Boottime goes here.",
+              "example": "vol -f mem.raw linux.boottime.Boottime"
+            }
+          ]
+        },
+        {
+          "name": "capabilities",
+          "children": [
+            {
+              "name": "Capabilities",
+              "help": "Description for Capabilities goes here.",
+              "example": "vol -f mem.raw linux.capabilities.Capabilities"
+            }
+          ]
+        },
+        {
+          "name": "check_afinfo",
+          "children": [
+            {
+              "name": "Check_afinfo",
+              "help": "Description for Check_afinfo goes here.",
+              "example": "vol -f mem.raw linux.check_afinfo.Check_afinfo"
+            }
+          ]
+        },
+        {
+          "name": "check_creds",
+          "children": [
+            {
+              "name": "Check_creds",
+              "help": "Description for Check_creds goes here.",
+              "example": "vol -f mem.raw linux.check_creds.Check_creds"
+            }
+          ]
+        },
+        {
+          "name": "check_idt",
+          "children": [
+            {
+              "name": "Check_idt",
+              "help": "Description for Check_idt goes here.",
+              "example": "vol -f mem.raw linux.check_idt.Check_idt"
+            }
+          ]
+        },
+        {
+          "name": "check_modules",
+          "children": [
+            {
+              "name": "Check_modules",
+              "help": "Description for Check_modules goes here.",
+              "example": "vol -f mem.raw linux.check_modules.Check_modules"
+            }
+          ]
+        },
+        {
+          "name": "check_syscall",
+          "children": [
+            {
+              "name": "Check_syscall",
+              "help": "Description for Check_syscall goes here.",
+              "example": "vol -f mem.raw linux.check_syscall.Check_syscall"
+            }
+          ]
+        },
+        {
+          "name": "ebpf",
+          "children": [
+            {
+              "name": "EBPF",
+              "help": "Description for EBPF goes here.",
+              "example": "vol -f mem.raw linux.ebpf.EBPF"
+            }
+          ]
+        },
+        {
+          "name": "elfs",
+          "children": [
+            {
+              "name": "Elfs",
+              "help": "Description for Elfs goes here.",
+              "example": "vol -f mem.raw linux.elfs.Elfs"
+            }
+          ]
+        },
+        {
+          "name": "envars",
+          "children": [
+            {
+              "name": "Envars",
+              "help": "Description for Envars goes here.",
+              "example": "vol -f mem.raw linux.envars.Envars"
+            }
+          ]
+        },
+        {
+          "name": "graphics",
+          "children": [
+            {
+              "name": "fbdev",
+              "children": [
+                {
+                  "name": "Fbdev",
+                  "help": "Description for Fbdev goes here.",
+                  "example": "vol -f mem.raw linux.graphics.fbdev.Fbdev"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "hidden_modules",
+          "children": [
+            {
+              "name": "Hidden_modules",
+              "help": "Description for Hidden_modules goes here.",
+              "example": "vol -f mem.raw linux.hidden_modules.Hidden_modules"
+            }
+          ]
+        },
+        {
+          "name": "iomem",
+          "children": [
+            {
+              "name": "IOMem",
+              "help": "Description for IOMem goes here.",
+              "example": "vol -f mem.raw linux.iomem.IOMem"
+            }
+          ]
+        },
+        {
+          "name": "ip",
+          "children": [
+            {
+              "name": "Addr",
+              "help": "Description for Addr goes here.",
+              "example": "vol -f mem.raw linux.ip.Addr"
+            },
+            {
+              "name": "Link",
+              "help": "Description for Link goes here.",
+              "example": "vol -f mem.raw linux.ip.Link"
+            }
+          ]
+        },
+        {
+          "name": "kallsyms",
+          "children": [
+            {
+              "name": "Kallsyms",
+              "help": "Description for Kallsyms goes here.",
+              "example": "vol -f mem.raw linux.kallsyms.Kallsyms"
+            }
+          ]
+        },
+        {
+          "name": "keyboard_notifiers",
+          "children": [
+            {
+              "name": "Keyboard_notifiers",
+              "help": "Description for Keyboard_notifiers goes here.",
+              "example": "vol -f mem.raw linux.keyboard_notifiers.Keyboard_notifiers"
+            }
+          ]
+        },
+        {
+          "name": "kmsg",
+          "children": [
+            {
+              "name": "Kmsg",
+              "help": "Description for Kmsg goes here.",
+              "example": "vol -f mem.raw linux.kmsg.Kmsg"
+            }
+          ]
+        },
+        {
+          "name": "kthreads",
+          "children": [
+            {
+              "name": "Kthreads",
+              "help": "Description for Kthreads goes here.",
+              "example": "vol -f mem.raw linux.kthreads.Kthreads"
+            }
+          ]
+        },
+        {
+          "name": "library_list",
+          "children": [
+            {
+              "name": "LibraryList",
+              "help": "Description for LibraryList goes here.",
+              "example": "vol -f mem.raw linux.library_list.LibraryList"
+            }
+          ]
+        },
+        {
+          "name": "lsmod",
+          "children": [
+            {
+              "name": "Lsmod",
+              "help": "Description for Lsmod goes here.",
+              "example": "vol -f mem.raw linux.lsmod.Lsmod"
+            }
+          ]
+        },
+        {
+          "name": "lsof",
+          "children": [
+            {
+              "name": "Lsof",
+              "help": "Description for Lsof goes here.",
+              "example": "vol -f mem.raw linux.lsof.Lsof"
+            }
+          ]
+        },
+        {
+          "name": "malfind",
+          "children": [
+            {
+              "name": "Malfind",
+              "help": "Description for Malfind goes here.",
+              "example": "vol -f mem.raw linux.malfind.Malfind"
+            }
+          ]
+        },
+        {
+          "name": "malware",
+          "children": [
+            {
+              "name": "check_afinfo",
+              "children": [
+                {
+                  "name": "Check_afinfo",
+                  "help": "Description for Check_afinfo goes here.",
+                  "example": "vol -f mem.raw linux.malware.check_afinfo.Check_afinfo"
+                }
+              ]
+            },
+            {
+              "name": "check_creds",
+              "children": [
+                {
+                  "name": "Check_creds",
+                  "help": "Description for Check_creds goes here.",
+                  "example": "vol -f mem.raw linux.malware.check_creds.Check_creds"
+                }
+              ]
+            },
+            {
+              "name": "check_idt",
+              "children": [
+                {
+                  "name": "Check_idt",
+                  "help": "Description for Check_idt goes here.",
+                  "example": "vol -f mem.raw linux.malware.check_idt.Check_idt"
+                }
+              ]
+            },
+            {
+              "name": "check_modules",
+              "children": [
+                {
+                  "name": "Check_modules",
+                  "help": "Description for Check_modules goes here.",
+                  "example": "vol -f mem.raw linux.malware.check_modules.Check_modules"
+                }
+              ]
+            },
+            {
+              "name": "check_syscall",
+              "children": [
+                {
+                  "name": "Check_syscall",
+                  "help": "Description for Check_syscall goes here.",
+                  "example": "vol -f mem.raw linux.malware.check_syscall.Check_syscall"
+                }
+              ]
+            },
+            {
+              "name": "hidden_modules",
+              "children": [
+                {
+                  "name": "Hidden_modules",
+                  "help": "Description for Hidden_modules goes here.",
+                  "example": "vol -f mem.raw linux.malware.hidden_modules.Hidden_modules"
+                }
+              ]
+            },
+            {
+              "name": "keyboard_notifiers",
+              "children": [
+                {
+                  "name": "Keyboard_notifiers",
+                  "help": "Description for Keyboard_notifiers goes here.",
+                  "example": "vol -f mem.raw linux.malware.keyboard_notifiers.Keyboard_notifiers"
+                }
+              ]
+            },
+            {
+              "name": "malfind",
+              "children": [
+                {
+                  "name": "Malfind",
+                  "help": "Description for Malfind goes here.",
+                  "example": "vol -f mem.raw linux.malware.malfind.Malfind"
+                }
+              ]
+            },
+            {
+              "name": "modxview",
+              "children": [
+                {
+                  "name": "Modxview",
+                  "help": "Description for Modxview goes here.",
+                  "example": "vol -f mem.raw linux.malware.modxview.Modxview"
+                }
+              ]
+            },
+            {
+              "name": "netfilter",
+              "children": [
+                {
+                  "name": "Netfilter",
+                  "help": "Description for Netfilter goes here.",
+                  "example": "vol -f mem.raw linux.malware.netfilter.Netfilter"
+                }
+              ]
+            },
+            {
+              "name": "process_spoofing",
+              "children": [
+                {
+                  "name": "ProcessSpoofing",
+                  "help": "Description for ProcessSpoofing goes here.",
+                  "example": "vol -f mem.raw linux.malware.process_spoofing.ProcessSpoofing"
+                }
+              ]
+            },
+            {
+              "name": "tty_check",
+              "children": [
+                {
+                  "name": "Tty_Check",
+                  "help": "Description for Tty_Check goes here.",
+                  "example": "vol -f mem.raw linux.malware.tty_check.Tty_Check"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "module_extract",
+          "children": [
+            {
+              "name": "ModuleExtract",
+              "help": "Description for ModuleExtract goes here.",
+              "example": "vol -f mem.raw linux.module_extract.ModuleExtract"
+            }
+          ]
+        },
+        {
+          "name": "modxview",
+          "children": [
+            {
+              "name": "Modxview",
+              "help": "Description for Modxview goes here.",
+              "example": "vol -f mem.raw linux.modxview.Modxview"
+            }
+          ]
+        },
+        {
+          "name": "mountinfo",
+          "children": [
+            {
+              "name": "MountInfo",
+              "help": "Description for MountInfo goes here.",
+              "example": "vol -f mem.raw linux.mountinfo.MountInfo"
+            }
+          ]
+        },
+        {
+          "name": "netfilter",
+          "children": [
+            {
+              "name": "Netfilter",
+              "help": "Description for Netfilter goes here.",
+              "example": "vol -f mem.raw linux.netfilter.Netfilter"
+            }
+          ]
+        },
+        {
+          "name": "pagecache",
+          "children": [
+            {
+              "name": "Files",
+              "help": "Description for Files goes here.",
+              "example": "vol -f mem.raw linux.pagecache.Files"
+            },
+            {
+              "name": "InodePages",
+              "help": "Description for InodePages goes here.",
+              "example": "vol -f mem.raw linux.pagecache.InodePages"
+            },
+            {
+              "name": "RecoverFs",
+              "help": "Description for RecoverFs goes here.",
+              "example": "vol -f mem.raw linux.pagecache.RecoverFs"
+            }
+          ]
+        },
+        {
+          "name": "pidhashtable",
+          "children": [
+            {
+              "name": "PIDHashTable",
+              "help": "Description for PIDHashTable goes here.",
+              "example": "vol -f mem.raw linux.pidhashtable.PIDHashTable"
+            }
+          ]
+        },
+        {
+          "name": "proc",
+          "children": [
+            {
+              "name": "Maps",
+              "help": "Description for Maps goes here.",
+              "example": "vol -f mem.raw linux.proc.Maps"
+            }
+          ]
+        },
+        {
+          "name": "psaux",
+          "children": [
+            {
+              "name": "PsAux",
+              "help": "Description for PsAux goes here.",
+              "example": "vol -f mem.raw linux.psaux.PsAux"
+            }
+          ]
+        },
+        {
+          "name": "pscallstack",
+          "children": [
+            {
+              "name": "PsCallStack",
+              "help": "Description for PsCallStack goes here.",
+              "example": "vol -f mem.raw linux.pscallstack.PsCallStack"
+            }
+          ]
+        },
+        {
+          "name": "pslist",
+          "children": [
+            {
+              "name": "PsList",
+              "help": "Description for PsList goes here.",
+              "example": "vol -f mem.raw linux.pslist.PsList"
+            }
+          ]
+        },
+        {
+          "name": "psscan",
+          "children": [
+            {
+              "name": "PsScan",
+              "help": "Description for PsScan goes here.",
+              "example": "vol -f mem.raw linux.psscan.PsScan"
+            }
+          ]
+        },
+        {
+          "name": "pstree",
+          "children": [
+            {
+              "name": "PsTree",
+              "help": "Description for PsTree goes here.",
+              "example": "vol -f mem.raw linux.pstree.PsTree"
+            }
+          ]
+        },
+        {
+          "name": "ptrace",
+          "children": [
+            {
+              "name": "Ptrace",
+              "help": "Description for Ptrace goes here.",
+              "example": "vol -f mem.raw linux.ptrace.Ptrace"
+            }
+          ]
+        },
+        {
+          "name": "sockscan",
+          "children": [
+            {
+              "name": "Sockscan",
+              "help": "Description for Sockscan goes here.",
+              "example": "vol -f mem.raw linux.sockscan.Sockscan"
+            }
+          ]
+        },
+        {
+          "name": "sockstat",
+          "children": [
+            {
+              "name": "Sockstat",
+              "help": "Description for Sockstat goes here.",
+              "example": "vol -f mem.raw linux.sockstat.Sockstat"
+            }
+          ]
+        },
+        {
+          "name": "tracing",
+          "children": [
+            {
+              "name": "ftrace",
+              "children": [
+                {
+                  "name": "CheckFtrace",
+                  "help": "Description for CheckFtrace goes here.",
+                  "example": "vol -f mem.raw linux.tracing.ftrace.CheckFtrace"
+                }
+              ]
+            },
+            {
+              "name": "perf_events",
+              "children": [
+                {
+                  "name": "PerfEvents",
+                  "help": "Description for PerfEvents goes here.",
+                  "example": "vol -f mem.raw linux.tracing.perf_events.PerfEvents"
+                }
+              ]
+            },
+            {
+              "name": "tracepoints",
+              "children": [
+                {
+                  "name": "CheckTracepoints",
+                  "help": "Description for CheckTracepoints goes here.",
+                  "example": "vol -f mem.raw linux.tracing.tracepoints.CheckTracepoints"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "tty_check",
+          "children": [
+            {
+              "name": "tty_check",
+              "help": "Description for tty_check goes here.",
+              "example": "vol -f mem.raw linux.tty_check.tty_check"
+            }
+          ]
+        },
+        {
+          "name": "vmaregexscan",
+          "children": [
+            {
+              "name": "VmaRegExScan",
+              "help": "Description for VmaRegExScan goes here.",
+              "example": "vol -f mem.raw linux.vmaregexscan.VmaRegExScan"
+            }
+          ]
+        },
+        {
+          "name": "vmayarascan",
+          "children": [
+            {
+              "name": "VmaYaraScan",
+              "help": "Description for VmaYaraScan goes here.",
+              "example": "vol -f mem.raw linux.vmayarascan.VmaYaraScan"
+            }
+          ]
+        },
+        {
+          "name": "vmcoreinfo",
+          "children": [
+            {
+              "name": "VMCoreInfo",
+              "help": "Description for VMCoreInfo goes here.",
+              "example": "vol -f mem.raw linux.vmcoreinfo.VMCoreInfo"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "macOS",
