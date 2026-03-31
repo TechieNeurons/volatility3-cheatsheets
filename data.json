@@ -49,7 +49,7 @@
           "children": [
             {
               "name": "CmdLine",
-              "help": "Description for CmdLine goes here.",
+              "help": "Lists process command line arguments.",
               "example": "vol -f mem.raw windows.cmdline.CmdLine"
             }
           ]
@@ -59,7 +59,7 @@
           "children": [
             {
               "name": "CmdScan",
-              "help": "Description for CmdScan goes here.",
+              "help": "Looks for Windows Command History lists",
               "example": "vol -f mem.raw windows.cmdscan.CmdScan"
             }
           ]
@@ -69,7 +69,7 @@
           "children": [
             {
               "name": "Consoles",
-              "help": "Description for Consoles goes here.",
+              "help": "Looks for Windows console buffers",
               "example": "vol -f mem.raw windows.consoles.Consoles"
             }
           ]
@@ -79,7 +79,7 @@
           "children": [
             {
               "name": "Crashinfo",
-              "help": "Description for Crashinfo goes here.",
+              "help": "Lists the information from a Windows crash dump.",
               "example": "vol -f mem.raw windows.crashinfo.Crashinfo"
             }
           ]
@@ -289,7 +289,7 @@
           "children": [
             {
               "name": "Info",
-              "help": "Description for Info goes here.",
+              "help": "Show OS & kernel details of the memory sample being analyzed.",
               "example": "vol -f mem.raw windows.info.Info"
             }
           ]
@@ -432,7 +432,7 @@
               "children": [
                 {
                   "name": "PsXView",
-                  "help": "Description for PsXView goes here.",
+                  "help": "Lists all processes found via four of the methods described in \"The Art of Memory Forensics\" which may help identify processes that are trying to hide themselves.",
                   "example": "vol -f mem.raw windows.malware.psxview.PsXView"
                 }
               ]
@@ -634,7 +634,7 @@
           "children": [
             {
               "name": "PsList",
-              "help": "Description for PsList goes here.",
+              "help": "Lists the processes present in a particular windows memory image.",
               "example": "vol -f mem.raw windows.pslist.PsList"
             }
           ]
@@ -654,7 +654,7 @@
           "children": [
             {
               "name": "PsTree",
-              "help": "Description for PsTree goes here.",
+              "help": "Plugin for listing processes in a tree based on their parent process ID.",
               "example": "vol -f mem.raw windows.pstree.PsTree"
             }
           ]
@@ -664,7 +664,7 @@
           "children": [
             {
               "name": "PsXView",
-              "help": "Description for PsXView goes here.",
+              "help": "Lists all processes found via four of the methods described in \"The Art of Memory Forensics\" which may help identify processes that are trying to hide themselves.\nThis plugin is deprecated, use windows.malware.psxview.PsXView instead",
               "example": "vol -f mem.raw windows.psxview.PsXView"
             }
           ]
@@ -919,7 +919,7 @@
           "children": [
             {
               "name": "ThrdScan",
-              "help": "Description for ThrdScan goes here.",
+              "help": "Scans for windows threads.",
               "example": "vol -f mem.raw windows.thrdscan.ThrdScan"
             }
           ]
@@ -929,7 +929,7 @@
           "children": [
             {
               "name": "Threads",
-              "help": "Description for Threads goes here.",
+              "help": "Lists process threads",
               "example": "vol -f mem.raw windows.threads.Threads"
             }
           ]
@@ -1539,7 +1539,7 @@
           "children": [
             {
               "name": "PsScan",
-              "help": "Description for PsScan goes here.",
+              "help": "Scans for processes present in a particular windows memory image.",
               "example": "vol -f mem.raw linux.psscan.PsScan"
             }
           ]
