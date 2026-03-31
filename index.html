@@ -10,9 +10,10 @@
         .node text { font: 13px sans-serif; fill: #eee; pointer-events: none; text-shadow: 2px 2px 3px #000, -2px -2px 3px #000, 2px -2px 3px #000, -2px 2px 3px #000; }
         .link { fill: none; stroke: #444; stroke-width: 1.5px; }
         #info-box {
+            display: none;
             position: fixed; top: 20px; right: 20px; width: auto; min-width: 300px; max-width: 600px;
             background: #1a1a1a; border: 2px solid #ff0000; padding: 20px;
-            display: none; border-radius: 4px; z-index: 100; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+            border-radius: 4px; z-index: 100; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
             display: flex; flex-direction: column;
         }
         #plugin-name {
