@@ -1,0 +1,109 @@
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+const svg = d3.select("#tree-display")
+    .attr("width", width)
+    .attr("height", height)
+    .call(d3.zoom().on("zoom", (event) => {
+        svgGroup.attr("transform", event.transform);
+    }))
+    .append("g");
+
+const svgGroup = svg.append("g").attr("transform", "translate(100,0)");
+const treeLayout = d3.tree().nodeSize([60, 300]);
+
+// FETCH THE EXTERNAL JSON FILE
+d3.json("data.json").then(data => {
+    let root = d3.hierarchy(data);
+    root.x0 = height / 2;
+    root.y0 = 0;
+
+    // Collapse all except top level
+    if (root.children) {
+        root.children.forEach(collapse);
+    }
+
+    update(root);
+
+    function collapse(d) {
+        if (d.children) {
+            d._children = d.children;
+            d._children.forEach(collapse);
+            d.children = null;
+        }
+    }
+
+    function update(source) {
+        const nodes = treeLayout(root).descendants();
+        const links = nodes.slice(1);
+
+        const node = svgGroup.selectAll('g.node')
+            .data(nodes, d => d.data.name);
+
+        const nodeEnter = node.enter().append('g')
+            .attr('class', 'node')
+            .attr("transform", d => `translate(${source.y0},${source.x0})`)
+            .on('click', (event, d) => {
+                if (d.depth === 0) return; // can't click on root "volatility 3"
+
+                // activate the click on folder
+                if (d.children || d._children) {
+                    d.children = d.children ? null : d._children;
+                    update(d);
+                } else {
+                    if (d.data.help || d.data.example) {
+                        showInfo(d.data);
+                    }
+                }
+            });
+
+        nodeEnter.append('circle').attr('r', 8);
+
+        nodeEnter.append('text')
+            .attr("dy", ".35em")
+            .attr("x", d => d.children || d._children ? -20 : 20)
+            .attr("text-anchor", d => d.children || d._children ? "end" : "start")
+            .text(d => d.data.name);
+
+        const nodeUpdate = nodeEnter.merge(node);
+        nodeUpdate.transition().duration(500)
+            .attr("transform", d => `translate(${d.y},${d.x})`);
+
+        nodeUpdate.select('circle')
+            .attr('r', 8)
+            .style("fill", d => {
+                if (d.depth ===0) return "#ffffff";
+                return d._children ? "#ff0000" : "#cc0000";})
+            .style("stroke", "#ffffff")
+            .style("stroke-width", "2px");
+
+        node.exit().transition().duration(500)
+            .attr("transform", d => `translate(${source.y},${source.x})`).remove();
+
+        const link = svgGroup.selectAll('path.link').data(links, d => d.data.name);
+        const linkEnter = link.enter().insert('path', "g")
+            .attr("class", "link")
+            .attr('d', d => {
+                const o = {x: source.x0, y: source.y0};
+                return diagonal(o, o);
+            });
+
+        link.merge(linkEnter).transition().duration(500)
+            .attr('d', d => diagonal(d, d.parent));
+
+        link.exit().remove();
+        nodes.forEach(d => { d.x0 = d.x; d.y0 = d.y; });
+    }
+});
+
+function diagonal(s, d) {
+    return `M ${s.y} ${s.x} C ${(s.y + d.y) / 2} ${s.x}, ${(s.y + d.y) / 2} ${d.x}, ${d.y} ${d.x}`;
+}
+
+function showInfo(data) {
+    const box = document.getElementById('info-box');
+    box.style.display = 'block';
+    document.getElementById('plugin-name').innerText = data.name;
+    document.getElementById('plugin-desc').innerText = data.help || "No description available.";
+    document.getElementById('plugin-usage').innerText = data.example || "No example available.";
+}
