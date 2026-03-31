@@ -1661,9 +1661,240 @@
         }
       ]
     },
-    {
-      "name": "macOS",
-      "children": []
+{
+      "name": "mac",
+      "children": [
+        {
+          "name": "bash",
+          "children": [
+            {
+              "name": "Bash",
+              "help": "Description for Bash goes here.",
+              "example": "vol -f mem.raw mac.bash.Bash"
+            }
+          ]
+        },
+        {
+          "name": "check_syscall",
+          "children": [
+            {
+              "name": "Check_syscall",
+              "help": "Description for Check_syscall goes here.",
+              "example": "vol -f mem.raw mac.check_syscall.Check_syscall"
+            }
+          ]
+        },
+        {
+          "name": "check_sysctl",
+          "children": [
+            {
+              "name": "Check_sysctl",
+              "help": "Description for Check_sysctl goes here.",
+              "example": "vol -f mem.raw mac.check_sysctl.Check_sysctl"
+            }
+          ]
+        },
+        {
+          "name": "check_trap_table",
+          "children": [
+            {
+              "name": "Check_trap_table",
+              "help": "Description for Check_trap_table goes here.",
+              "example": "vol -f mem.raw mac.check_trap_table.Check_trap_table"
+            }
+          ]
+        },
+        {
+          "name": "dmesg",
+          "children": [
+            {
+              "name": "Dmesg",
+              "help": "Description for Dmesg goes here.",
+              "example": "vol -f mem.raw mac.dmesg.Dmesg"
+            }
+          ]
+        },
+        {
+          "name": "ifconfig",
+          "children": [
+            {
+              "name": "Ifconfig",
+              "help": "Description for Ifconfig goes here.",
+              "example": "vol -f mem.raw mac.ifconfig.Ifconfig"
+            }
+          ]
+        },
+        {
+          "name": "kauth_listeners",
+          "children": [
+            {
+              "name": "Kauth_listeners",
+              "help": "Description for Kauth_listeners goes here.",
+              "example": "vol -f mem.raw mac.kauth_listeners.Kauth_listeners"
+            }
+          ]
+        },
+        {
+          "name": "kauth_scopes",
+          "children": [
+            {
+              "name": "Kauth_scopes",
+              "help": "Description for Kauth_scopes goes here.",
+              "example": "vol -f mem.raw mac.kauth_scopes.Kauth_scopes"
+            }
+          ]
+        },
+        {
+          "name": "kevents",
+          "children": [
+            {
+              "name": "Kevents",
+              "help": "Description for Kevents goes here.",
+              "example": "vol -f mem.raw mac.kevents.Kevents"
+            }
+          ]
+        },
+        {
+          "name": "list_files",
+          "children": [
+            {
+              "name": "List_Files",
+              "help": "Description for List_Files goes here.",
+              "example": "vol -f mem.raw mac.list_files.List_Files"
+            }
+          ]
+        },
+        {
+          "name": "lsmod",
+          "children": [
+            {
+              "name": "Lsmod",
+              "help": "Description for Lsmod goes here.",
+              "example": "vol -f mem.raw mac.lsmod.Lsmod"
+            }
+          ]
+        },
+        {
+          "name": "lsof",
+          "children": [
+            {
+              "name": "Lsof",
+              "help": "Description for Lsof goes here.",
+              "example": "vol -f mem.raw mac.lsof.Lsof"
+            }
+          ]
+        },
+        {
+          "name": "malfind",
+          "children": [
+            {
+              "name": "Malfind",
+              "help": "Description for Malfind goes here.",
+              "example": "vol -f mem.raw mac.malfind.Malfind"
+            }
+          ]
+        },
+        {
+          "name": "mount",
+          "children": [
+            {
+              "name": "Mount",
+              "help": "Description for Mount goes here.",
+              "example": "vol -f mem.raw mac.mount.Mount"
+            }
+          ]
+        },
+        {
+          "name": "netstat",
+          "children": [
+            {
+              "name": "Netstat",
+              "help": "Description for Netstat goes here.",
+              "example": "vol -f mem.raw mac.netstat.Netstat"
+            }
+          ]
+        },
+        {
+          "name": "proc_maps",
+          "children": [
+            {
+              "name": "Maps",
+              "help": "Description for Maps goes here.",
+              "example": "vol -f mem.raw mac.proc_maps.Maps"
+            }
+          ]
+        },
+        {
+          "name": "psaux",
+          "children": [
+            {
+              "name": "Psaux",
+              "help": "Description for Psaux goes here.",
+              "example": "vol -f mem.raw mac.psaux.Psaux"
+            }
+          ]
+        },
+        {
+          "name": "pslist",
+          "children": [
+            {
+              "name": "PsList",
+              "help": "Description for PsList goes here.",
+              "example": "vol -f mem.raw mac.pslist.PsList"
+            }
+          ]
+        },
+        {
+          "name": "pstree",
+          "children": [
+            {
+              "name": "PsTree",
+              "help": "Description for PsTree goes here.",
+              "example": "vol -f mem.raw mac.pstree.PsTree"
+            }
+          ]
+        },
+        {
+          "name": "socket_filters",
+          "children": [
+            {
+              "name": "Socket_filters",
+              "help": "Description for Socket_filters goes here.",
+              "example": "vol -f mem.raw mac.socket_filters.Socket_filters"
+            }
+          ]
+        },
+        {
+          "name": "timers",
+          "children": [
+            {
+              "name": "Timers",
+              "help": "Description for Timers goes here.",
+              "example": "vol -f mem.raw mac.timers.Timers"
+            }
+          ]
+        },
+        {
+          "name": "trustedbsd",
+          "children": [
+            {
+              "name": "Trustedbsd",
+              "help": "Description for Trustedbsd goes here.",
+              "example": "vol -f mem.raw mac.trustedbsd.Trustedbsd"
+            }
+          ]
+        },
+        {
+          "name": "vfsevents",
+          "children": [
+            {
+              "name": "VFSevents",
+              "help": "Description for VFSevents goes here.",
+              "example": "vol -f mem.raw mac.vfsevents.VFSevents"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
