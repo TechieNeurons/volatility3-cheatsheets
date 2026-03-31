@@ -7,19 +7,19 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <div id="search-container">
-        <button id="theme-toggle" title="Toggle Light/Dark Mode">🌓</button>
-    </div>
-
     <!-- Search bar -->
     <div id="search-container">
+        <button id="theme-toggle" title="Toggle Light/Dark Mode">🌓</button>
+
         <select id="os-selector">
             <option value="windows">windows</option>
             <option value="linux">linux</option>
             <option value="mac">mac</option>
         </select>
-        <input type="text" id="plugin-search" placeholder="Search plugin (e.g. pslist)...">
-        <div id="search-results"></div>
+
+        <div style="position: relative;"> <input type="text" id="plugin-search" placeholder="Search plugin...">
+            <div id="search-results"></div>
+        </div>
     </div>
 
     <!-- Info box -->

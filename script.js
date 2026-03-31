@@ -185,7 +185,7 @@ function diagonal(s, d) {
 
 function showInfo(data) {
     const box = document.getElementById('info-box');
-    box.style.display = 'block';
+    box.style.display = 'flex';
     document.getElementById('plugin-name').innerText = data.name;
     document.getElementById('plugin-desc').innerText = data.help || "No description available.";
     document.getElementById('plugin-usage').innerText = data.example || "No example available.";
