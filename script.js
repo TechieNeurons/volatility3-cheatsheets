@@ -1,6 +1,11 @@
 const width = window.innerWidth;
 const height = window.innerHeight;
 
+// for the search
+const searchInput = document.getElementById('plugin-search');
+const osSelector = document.getElementById('os-selector');
+const resultsContainer = document.getElementById('search-results');
+
 const svg = d3.select("#tree-display")
     .attr("width", width)
     .attr("height", height)
@@ -94,6 +99,64 @@ d3.json("data.json").then(data => {
         link.exit().remove();
         nodes.forEach(d => { d.x0 = d.x; d.y0 = d.y; });
     }
+
+    // for the search
+    searchInput.addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        const selectedOS = osSelector.value;
+        resultsContainer.innerHTML = '';
+        
+        if (query.length < 2) {
+            resultsContainer.style.display = 'none';
+            return;
+        }
+
+        // 1. Find the OS branch in your data
+        const osData = data.children.find(d => d.name === selectedOS);
+        if (!osData) return;
+
+        // 2. Recursively find all plugins (leaf nodes) in that OS
+        const matches = [];
+        function findPlugins(node, path = "") {
+            if (node.help) { // It's a leaf node
+                if (node.name.toLowerCase().includes(query)) {
+                    matches.push(node);
+                }
+            }
+            if (node.children) {
+                node.children.forEach(child => findPlugins(child));
+            }
+            if (node._children) {
+                node._children.forEach(child => findPlugins(child));
+            }
+        }
+        findPlugins(osData);
+
+        // 3. Show results
+        if (matches.length > 0) {
+            resultsContainer.style.display = 'block';
+            matches.forEach(match => {
+                const div = document.createElement('div');
+                div.className = 'search-item';
+                div.innerText = match.name;
+                div.onclick = () => {
+                    showInfo(match); // Open the info box immediately
+                    resultsContainer.style.display = 'none';
+                    searchInput.value = '';
+                };
+                resultsContainer.appendChild(div);
+            });
+        } else {
+            resultsContainer.style.display = 'none';
+        }
+    });
+
+    // Close search if clicking outside
+    document.addEventListener('click', (e) => {
+        if (!document.getElementById('search-container').contains(e.target)) {
+            resultsContainer.style.display = 'none';
+        }
+    });
 });
 
 function diagonal(s, d) {

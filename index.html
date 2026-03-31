@@ -7,7 +7,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-
+    <!-- Info box -->
     <div id="info-box" style="display: none;">
         <span class="close-btn" onclick="document.getElementById('info-box').style.display='none'">✖</span>
         <h2 id="plugin-name"></h2>
@@ -16,8 +16,21 @@
         <pre id="plugin-usage"></pre>
     </div>
 
+    <!-- Search bar -->
+    <div id="search-container">
+        <select id="os-selector">
+            <option value="windows">windows</option>
+            <option value="linux">linux</option>
+            <option value="mac">mac</option>
+        </select>
+        <input type="text" id="plugin-search" placeholder="Search plugin (e.g. pslist)...">
+        <div id="search-results"></div>
+    </div>
+
+    <!-- Display the tree -->
     <svg id="tree-display"></svg>
 
+    <!-- All my logic for generating tree/searching-->
     <script src="script.js"></script>
 </body>
 </html>

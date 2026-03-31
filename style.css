@@ -19,3 +19,54 @@ body { font-family: sans-serif; background-color: #1a1a1a; color: #eee; margin: 
 }
 pre { background: #000; padding: 15px; color: #00ff41; font-family: 'Courier New', Courier, monospace; font-size: 12px; border-radius: 4px; margin-top: 10px; border: 1px solid #ff0000; white-space: pre; overflow-x: hidden; width: max-content; min-width: 100%; box-sizing: border-box;}
 .close-btn { float: right; cursor: pointer; color: #ff0000; font-weight: bold;}
+
+/* for the search box */
+#search-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+    background: rgba(26, 26, 26, 0.9);
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+}
+
+#os-selector, #plugin-search {
+    background: #000;
+    color: #00ff41; /* Matrix green text */
+    border: 1px solid #444;
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#plugin-search:focus {
+    outline: none;
+    border-color: #ff0000;
+}
+
+/* Style for the autocomplete dropdown */
+#search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+
+.search-item {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #333;
+}
+
+.search-item:hover {
+    background: #333;
+    color: #ff0000;
+}

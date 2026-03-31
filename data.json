@@ -2,7 +2,7 @@
   "name": "Volatility 3",
   "children": [
     {
-      "name": "Windows",
+      "name": "windows",
       "children": [
         {
           "name": "amcache",
