@@ -9,7 +9,28 @@
 
 <url>
   <loc>https://techieneurons.github.io/volatility3-cheatsheets/</loc>
-  <lastmod>2026-04-02T14:01:44+00:00</lastmod>
+  <lastmod>2026-04-03T11:12:43+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://techieneurons.github.io/volatility3-cheatsheets/tool.html</loc>
+  <lastmod>2026-04-03T11:12:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://techieneurons.github.io/volatility3-cheatsheets/index.html</loc>
+  <lastmod>2026-04-03T11:12:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://techieneurons.github.io/volatility3-cheatsheets/tools/vadwalk_output.txt</loc>
+  <lastmod>2026-04-03T11:12:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://techieneurons.github.io/volatility3-cheatsheets/tools/vad_tree.html</loc>
+  <lastmod>2026-04-03T11:16:39+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
