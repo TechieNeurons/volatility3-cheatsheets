@@ -34,7 +34,12 @@ const svg = d3.select("#tree-display")
     }))
     .append("g");
 
-const svgGroup = svg.append("g").attr("transform", "translate(100,0)");
+// find center of screen
+const centerX = width / 2;
+const centerY = height / 2;
+
+// center tree
+const svgGroup = svg.append("g").attr("transform", `translate(${centerX - 100}, ${centerY})`);
 const treeLayout = d3.tree().nodeSize([60, 300]);
 
 // FETCH THE EXTERNAL JSON FILE
