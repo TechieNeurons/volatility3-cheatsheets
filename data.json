@@ -631,13 +631,13 @@
         },
         {
           "name": "pslist",
-          "children": [
-            {
-              "name": "PsList",
-              "help": "Lists the processes present in a particular windows memory image.",
-              "example": "vol -f mem.raw windows.pslist.PsList"
-            }
-          ]
+          "help": [
+            "This simple plugin is following the EPROCESS doubly-linked list",
+            "to get a list of all running process.",
+            "",
+            "Note: This does not show unlinked/hidden processes."
+          ],
+          "terminal_help": "usage: vol.py windows.pslist.PsList [-h] [--physical] [--pid [PID ...]]\n\noptions:\n-h, --help       show this help message and exit\n--physical       Display physical offsets instead of virtual\n--pid [PID ...]  Process ID to include"
         },
         {
           "name": "psscan",

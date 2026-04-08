@@ -29,6 +29,31 @@ body { font-family: sans-serif; background-color: var(--bg-color); color: var(--
     border-radius: 4px; z-index: 100; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
     flex-direction: column;
 }
+
+#plugin-desc-container {
+    margin: 15px 0;
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#plugin-desc-container p {
+    margin: 5px 0; /* Creates the line breaks */
+}
+
+pre#plugin-terminal {
+    background: #000;
+    color: #00ff41;
+    padding: 15px;
+    border: 1px solid #003300;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    white-space: pre-wrap; /* Maintains the 'usage' layout */
+    overflow-x: auto;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
 #plugin-name {
     color: #ff0000; /* Red Plugin Name */
     margin-top: 0;
