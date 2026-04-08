@@ -190,8 +190,29 @@ function diagonal(s, d) {
 
 function showInfo(data) {
     const box = document.getElementById('info-box');
+    const descContainer = document.getElementById('plugin-desc-container');
+
     box.style.display = 'flex';
     document.getElementById('plugin-name').innerText = data.name;
-    document.getElementById('plugin-desc').innerText = data.help || "No description available.";
-    document.getElementById('plugin-usage').innerText = data.example || "No example available.";
+
+    // 2. Handle Multi-line Description
+    descContainer.innerHTML = ''; // Clear old text
+    if (Array.isArray(data.help)) {
+        // If it's an array, create a <p> for each string
+        data.help.forEach(line => {
+            const p = document.createElement('p');
+            p.innerText = line;
+            descContainer.appendChild(p);
+        });
+    } else {
+        // Fallback for single strings
+        const p = document.createElement('p');
+        p.innerText = data.help || "No description available.";
+        descContainer.appendChild(p);
+    }
+
+    // 3. Set Terminal Help text
+    document.getElementById('plugin-terminal').innerText = data.terminal_help || "No terminal help found.";
+
+    box.style.display = 'flex';
 }
