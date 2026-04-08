@@ -127,7 +127,7 @@ d3.json("data.json").then(data => {
         nodes.forEach(d => { d.x0 = d.x; d.y0 = d.y; });
     }
 
-    // for the search
+// IMPROVED SEARCH LOGIC
     searchInput.addEventListener('input', function() {
         const query = this.value.toLowerCase();
         const selectedOS = osSelector.value;
@@ -138,34 +138,45 @@ d3.json("data.json").then(data => {
             return;
         }
 
-        // 1. Find the OS branch in your data
         const osData = data.children.find(d => d.name === selectedOS);
         if (!osData) return;
 
-        // 2. Recursively find all plugins (leaf nodes) in that OS
         const matches = [];
-        function findPlugins(node) {
-            // Check for help or terminal_help to identify a leaf node
+
+        // We track the 'path' as we dig through the categories
+        function findPlugins(node, path = []) {
+            let currentPath = [...path, node.name];
+            
+            // Check if it's a leaf node
             if (node.help || node.terminal_help) { 
                 if (node.name.toLowerCase().includes(query)) {
-                    matches.push(node);
+                    matches.push({
+                        data: node,
+                        path: currentPath // Store the breadcrumb path
+                    });
                 }
             }
-            // Check both expanded and collapsed children
-            if (node.children) node.children.forEach(child => findPlugins(child));
-            if (node._children) node._children.forEach(child => findPlugins(child));
+            if (node.children) node.children.forEach(c => findPlugins(c, currentPath));
+            if (node._children) node._children.forEach(c => findPlugins(c, currentPath));
         }
-        findPlugins(osData);
 
-        // 3. Show results
+        findPlugins(osData, [selectedOS]);
+
         if (matches.length > 0) {
             resultsContainer.style.display = 'block';
             matches.forEach(match => {
                 const div = document.createElement('div');
                 div.className = 'search-item';
-                div.innerText = match.name;
+                
+                // Show the category path above the plugin name
+                const categoryPath = match.path.slice(1, -1).join(' > ');
+                div.innerHTML = `
+                    <small style="color: #888; display: block; font-size: 10px;">${categoryPath}</small>
+                    <span style="color: #00ff41;">${match.data.name}</span>
+                `;
+                
                 div.onclick = () => {
-                    showInfo(match); // Open the info box immediately
+                    expandAndCenter(match.path); // Use our new helper function
                     resultsContainer.style.display = 'none';
                     searchInput.value = '';
                 };
@@ -225,4 +236,35 @@ function centerNode(source) {
     svg.transition()
         .duration(750)
         .call(d3.zoom().transform, d3.zoomIdentity.translate(x, y).scale(t.k));
+}
+
+function expandAndCenter(pathArray) {
+    let currentNode = root;
+
+    // We skip the first element ("windows") because 'root' is already there
+    for (let i = 1; i < pathArray.length; i++) {
+        const targetName = pathArray[i];
+        const children = currentNode.children ? currentNode.children : currentNode._children;
+        
+        if (children) {
+            const nextNode = children.find(c => c.data.name === targetName);
+            if (nextNode) {
+                // If this folder is collapsed, expand it
+                if (nextNode._children) {
+                    nextNode.children = nextNode._children;
+                    nextNode._children = null;
+                }
+                currentNode = nextNode;
+            }
+        }
+    }
+
+    // 1. Re-draw the tree with the newly expanded folders
+    update(currentNode);
+
+    // 2. Wait a split second for D3 to calculate positions, then move camera
+    setTimeout(() => {
+        showInfo(currentNode.data);
+        centerNode(currentNode);
+    }, 100);
 }
