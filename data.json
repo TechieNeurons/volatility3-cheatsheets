@@ -750,13 +750,6 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.strings.Strings [-h] [--pid [PID ...]]\n                                      --strings-file STRINGS_FILE\n\nReads output from the strings command and indicates which process(es) each\nstring belongs to.\n\noptions:\n  -h, --help            show this help message and exit\n  --pid [PID ...]       Process ID to include (all other processes are\n                        excluded)\n  --strings-file STRINGS_FILE\n                        Strings file\n"
-            },
-            {
-              "name": "psxview",
-              "help": [
-                "Lists all processes found via four of the methods described in \"The Art of"
-              ],
-              "terminal_help": "usage: vol.py windows.malware.psxview.PsXView [-h] [--physical-offsets]\n\nLists all processes found via four of the methods described in \"The Art of\nMemory Forensics\" which may help identify processes that are trying to hide\nthemselves.\n\noptions:\n  -h, --help          show this help message and exit\n  --physical-offsets  List processes with physical offsets instead of virtual\n                      offsets.\n\nWe recommend using -r pretty if you are looking at this plugin's output in a\nterminal.\n"
             }
           ]
         }
