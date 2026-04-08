@@ -193,78 +193,78 @@ d3.json("data.json").then(data => {
             resultsContainer.style.display = 'none';
         }
     });
-});
 
-function diagonal(s, d) {
-    return `M ${s.y} ${s.x} C ${(s.y + d.y) / 2} ${s.x}, ${(s.y + d.y) / 2} ${d.x}, ${d.y} ${d.x}`;
-}
-
-function showInfo(data) {
-    const box = document.getElementById('info-box');
-    const descContainer = document.getElementById('plugin-desc-container');
-
-    box.style.display = 'flex';
-    document.getElementById('plugin-name').innerText = data.name;
-
-    // 2. Handle Multi-line Description
-    descContainer.innerHTML = ''; // Clear old text
-    if (Array.isArray(data.help)) {
-        // If it's an array, create a <p> for each string
-        data.help.forEach(line => {
-            const p = document.createElement('p');
-            p.innerText = line;
-            descContainer.appendChild(p);
-        });
-    } else {
-        // Fallback for single strings
-        const p = document.createElement('p');
-        p.innerText = data.help || "No description available.";
-        descContainer.appendChild(p);
+    function diagonal(s, d) {
+        return `M ${s.y} ${s.x} C ${(s.y + d.y) / 2} ${s.x}, ${(s.y + d.y) / 2} ${d.x}, ${d.y} ${d.x}`;
     }
 
-    // 3. Set Terminal Help text
-    document.getElementById('plugin-terminal').innerText = data.terminal_help || "No terminal help found.";
+    function showInfo(data) {
+        const box = document.getElementById('info-box');
+        const descContainer = document.getElementById('plugin-desc-container');
 
-    box.style.display = 'flex';
-}
+        box.style.display = 'flex';
+        document.getElementById('plugin-name').innerText = data.name;
 
-function centerNode(source) {
-    const t = d3.zoomTransform(svg.node());
-    let x = -source.y * t.k + (window.innerWidth / 3); 
-    let y = -source.x * t.k + (window.innerHeight / 2);
+        // 2. Handle Multi-line Description
+        descContainer.innerHTML = ''; // Clear old text
+        if (Array.isArray(data.help)) {
+            // If it's an array, create a <p> for each string
+            data.help.forEach(line => {
+                const p = document.createElement('p');
+                p.innerText = line;
+                descContainer.appendChild(p);
+            });
+        } else {
+            // Fallback for single strings
+            const p = document.createElement('p');
+            p.innerText = data.help || "No description available.";
+            descContainer.appendChild(p);
+        }
 
-    svg.transition()
-        .duration(750)
-        .call(d3.zoom().transform, d3.zoomIdentity.translate(x, y).scale(t.k));
-}
+        // 3. Set Terminal Help text
+        document.getElementById('plugin-terminal').innerText = data.terminal_help || "No terminal help found.";
 
-function expandAndCenter(pathArray) {
-    let currentNode = root;
+        box.style.display = 'flex';
+    }
 
-    // We skip the first element ("windows") because 'root' is already there
-    for (let i = 1; i < pathArray.length; i++) {
-        const targetName = pathArray[i];
-        const children = currentNode.children ? currentNode.children : currentNode._children;
-        
-        if (children) {
-            const nextNode = children.find(c => c.data.name === targetName);
-            if (nextNode) {
-                // If this folder is collapsed, expand it
-                if (nextNode._children) {
-                    nextNode.children = nextNode._children;
-                    nextNode._children = null;
+    function centerNode(source) {
+        const t = d3.zoomTransform(svg.node());
+        let x = -source.y * t.k + (window.innerWidth / 3); 
+        let y = -source.x * t.k + (window.innerHeight / 2);
+
+        svg.transition()
+            .duration(750)
+            .call(d3.zoom().transform, d3.zoomIdentity.translate(x, y).scale(t.k));
+    }
+
+    function expandAndCenter(pathArray) {
+        let currentNode = root;
+
+        // We skip the first element ("windows") because 'root' is already there
+        for (let i = 1; i < pathArray.length; i++) {
+            const targetName = pathArray[i];
+            const children = currentNode.children ? currentNode.children : currentNode._children;
+            
+            if (children) {
+                const nextNode = children.find(c => c.data.name === targetName);
+                if (nextNode) {
+                    // If this folder is collapsed, expand it
+                    if (nextNode._children) {
+                        nextNode.children = nextNode._children;
+                        nextNode._children = null;
+                    }
+                    currentNode = nextNode;
                 }
-                currentNode = nextNode;
             }
         }
+
+        // 1. Re-draw the tree with the newly expanded folders
+        update(currentNode);
+
+        // 2. Wait a split second for D3 to calculate positions, then move camera
+        setTimeout(() => {
+            showInfo(currentNode.data);
+            centerNode(currentNode);
+        }, 100);
     }
-
-    // 1. Re-draw the tree with the newly expanded folders
-    update(currentNode);
-
-    // 2. Wait a split second for D3 to calculate positions, then move camera
-    setTimeout(() => {
-        showInfo(currentNode.data);
-        centerNode(currentNode);
-    }, 100);
-}
+});
