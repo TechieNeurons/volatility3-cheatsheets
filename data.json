@@ -5,1896 +5,770 @@
       "name": "windows",
       "children": [
         {
-          "name": "amcache",
+          "name": "Memory Dump infos",
           "children": [
             {
-              "name": "Amcache",
-              "help": "Description for Amcache goes here.",
-              "example": "vol -f mem.raw windows.amcache.Amcache"
-            }
-          ]
-        },
-        {
-          "name": "bigpools",
-          "children": [
-            {
-              "name": "BigPools",
-              "help": "Description for BigPools goes here.",
-              "example": "vol -f mem.raw windows.bigpools.BigPools"
-            }
-          ]
-        },
-        {
-          "name": "cachedump",
-          "children": [
-            {
-              "name": "Cachedump",
-              "help": "Description for Cachedump goes here.",
-              "example": "vol -f mem.raw windows.cachedump.Cachedump"
-            }
-          ]
-        },
-        {
-          "name": "callbacks",
-          "children": [
-            {
-              "name": "Callbacks",
-              "help": "Description for Callbacks goes here.",
-              "example": "vol -f mem.raw windows.callbacks.Callbacks"
-            }
-          ]
-        },
-        {
-          "name": "cmdline",
-          "children": [
-            {
-              "name": "CmdLine",
-              "help": "Lists process command line arguments.",
-              "example": "vol -f mem.raw windows.cmdline.CmdLine"
-            }
-          ]
-        },
-        {
-          "name": "cmdscan",
-          "children": [
-            {
-              "name": "CmdScan",
-              "help": "Looks for Windows Command History lists",
-              "example": "vol -f mem.raw windows.cmdscan.CmdScan"
-            }
-          ]
-        },
-        {
-          "name": "consoles",
-          "children": [
-            {
-              "name": "Consoles",
-              "help": "Looks for Windows console buffers",
-              "example": "vol -f mem.raw windows.consoles.Consoles"
-            }
-          ]
-        },
-        {
-          "name": "crashinfo",
-          "children": [
-            {
-              "name": "Crashinfo",
-              "help": "Lists the information from a Windows crash dump.",
-              "example": "vol -f mem.raw windows.crashinfo.Crashinfo"
-            }
-          ]
-        },
-        {
-          "name": "debugregisters",
-          "children": [
-            {
-              "name": "DebugRegisters",
-              "help": "Description for DebugRegisters goes here.",
-              "example": "vol -f mem.raw windows.debugregisters.DebugRegisters"
-            }
-          ]
-        },
-        {
-          "name": "deskscan",
-          "children": [
-            {
-              "name": "DeskScan",
-              "help": "Description for DeskScan goes here.",
-              "example": "vol -f mem.raw windows.deskscan.DeskScan"
-            }
-          ]
-        },
-        {
-          "name": "desktops",
-          "children": [
-            {
-              "name": "Desktops",
-              "help": "Description for Desktops goes here.",
-              "example": "vol -f mem.raw windows.desktops.Desktops"
-            }
-          ]
-        },
-        {
-          "name": "devicetree",
-          "children": [
-            {
-              "name": "DeviceTree",
-              "help": "Description for DeviceTree goes here.",
-              "example": "vol -f mem.raw windows.devicetree.DeviceTree"
-            }
-          ]
-        },
-        {
-          "name": "direct_system_calls",
-          "children": [
-            {
-              "name": "DirectSystemCalls",
-              "help": "Description for DirectSystemCalls goes here.",
-              "example": "vol -f mem.raw windows.direct_system_calls.DirectSystemCalls"
-            }
-          ]
-        },
-        {
-          "name": "dlllist",
-          "children": [
-            {
-              "name": "DllList",
-              "help": "Description for DllList goes here.",
-              "example": "vol -f mem.raw windows.dlllist.DllList"
-            }
-          ]
-        },
-        {
-          "name": "driverirp",
-          "children": [
-            {
-              "name": "DriverIrp",
-              "help": "Description for DriverIrp goes here.",
-              "example": "vol -f mem.raw windows.driverirp.DriverIrp"
-            }
-          ]
-        },
-        {
-          "name": "drivermodule",
-          "children": [
-            {
-              "name": "DriverModule",
-              "help": "Description for DriverModule goes here.",
-              "example": "vol -f mem.raw windows.drivermodule.DriverModule"
-            }
-          ]
-        },
-        {
-          "name": "driverscan",
-          "children": [
-            {
-              "name": "DriverScan",
-              "help": "Description for DriverScan goes here.",
-              "example": "vol -f mem.raw windows.driverscan.DriverScan"
-            }
-          ]
-        },
-        {
-          "name": "dumpfiles",
-          "children": [
-            {
-              "name": "DumpFiles",
-              "help": "Description for DumpFiles goes here.",
-              "example": "vol -f mem.raw windows.dumpfiles.DumpFiles"
-            }
-          ]
-        },
-        {
-          "name": "envars",
-          "children": [
-            {
-              "name": "Envars",
-              "help": "Description for Envars goes here.",
-              "example": "vol -f mem.raw windows.envars.Envars"
-            }
-          ]
-        },
-        {
-          "name": "etwpatch",
-          "children": [
-            {
-              "name": "EtwPatch",
-              "help": "Description for EtwPatch goes here.",
-              "example": "vol -f mem.raw windows.etwpatch.EtwPatch"
-            }
-          ]
-        },
-        {
-          "name": "filescan",
-          "children": [
-            {
-              "name": "FileScan",
-              "help": "Description for FileScan goes here.",
-              "example": "vol -f mem.raw windows.filescan.FileScan"
-            }
-          ]
-        },
-        {
-          "name": "getservicesids",
-          "children": [
-            {
-              "name": "GetServiceSIDs",
-              "help": "Description for GetServiceSIDs goes here.",
-              "example": "vol -f mem.raw windows.getservicesids.GetServiceSIDs"
-            }
-          ]
-        },
-        {
-          "name": "getsids",
-          "children": [
-            {
-              "name": "GetSIDs",
-              "help": "Description for GetSIDs goes here.",
-              "example": "vol -f mem.raw windows.getsids.GetSIDs"
-            }
-          ]
-        },
-        {
-          "name": "handles",
-          "children": [
-            {
-              "name": "Handles",
-              "help": "Description for Handles goes here.",
-              "example": "vol -f mem.raw windows.handles.Handles"
-            }
-          ]
-        },
-        {
-          "name": "hashdump",
-          "children": [
-            {
-              "name": "Hashdump",
-              "help": "Description for Hashdump goes here.",
-              "example": "vol -f mem.raw windows.hashdump.Hashdump"
-            }
-          ]
-        },
-        {
-          "name": "hollowprocesses",
-          "children": [
-            {
-              "name": "HollowProcesses",
-              "help": "Description for HollowProcesses goes here.",
-              "example": "vol -f mem.raw windows.hollowprocesses.HollowProcesses"
-            }
-          ]
-        },
-        {
-          "name": "iat",
-          "children": [
-            {
-              "name": "IAT",
-              "help": "Description for IAT goes here.",
-              "example": "vol -f mem.raw windows.iat.IAT"
-            }
-          ]
-        },
-        {
-          "name": "indirect_system_calls",
-          "children": [
-            {
-              "name": "IndirectSystemCalls",
-              "help": "Description for IndirectSystemCalls goes here.",
-              "example": "vol -f mem.raw windows.indirect_system_calls.IndirectSystemCalls"
-            }
-          ]
-        },
-        {
-          "name": "info",
-          "children": [
-            {
-              "name": "Info",
-              "help": "Show OS & kernel details of the memory sample being analyzed.",
-              "example": "vol -f mem.raw windows.info.Info"
-            }
-          ]
-        },
-        {
-          "name": "joblinks",
-          "children": [
-            {
-              "name": "JobLinks",
-              "help": "Description for JobLinks goes here.",
-              "example": "vol -f mem.raw windows.joblinks.JobLinks"
-            }
-          ]
-        },
-        {
-          "name": "kpcrs",
-          "children": [
-            {
-              "name": "KPCRs",
-              "help": "Description for KPCRs goes here.",
-              "example": "vol -f mem.raw windows.kpcrs.KPCRs"
-            }
-          ]
-        },
-        {
-          "name": "ldrmodules",
-          "children": [
-            {
-              "name": "LdrModules",
-              "help": "Description for LdrModules goes here.",
-              "example": "vol -f mem.raw windows.ldrmodules.LdrModules"
-            }
-          ]
-        },
-        {
-          "name": "lsadump",
-          "children": [
-            {
-              "name": "Lsadump",
-              "help": "Description for Lsadump goes here.",
-              "example": "vol -f mem.raw windows.lsadump.Lsadump"
-            }
-          ]
-        },
-        {
-          "name": "malfind",
-          "children": [
-            {
-              "name": "Malfind",
-              "help": "Description for Malfind goes here.",
-              "example": "vol -f mem.raw windows.malfind.Malfind"
-            }
-          ]
-        },
-        {
-          "name": "malware",
-          "children": [
-            {
-              "name": "direct_system_calls",
-              "children": [
-                {
-                  "name": "DirectSystemCalls",
-                  "help": "Description for DirectSystemCalls goes here.",
-                  "example": "vol -f mem.raw windows.malware.direct_system_calls.DirectSystemCalls"
-                }
-              ]
+              "name": "info",
+              "help": [
+                "Show OS & kernel details of the memory sample being analyzed."
+              ],
+              "terminal_help": "usage: vol.py windows.info.Info [-h]\n\nShow OS & kernel details of the memory sample being analyzed.\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "drivermodule",
-              "children": [
-                {
-                  "name": "DriverModule",
-                  "help": "Description for DriverModule goes here.",
-                  "example": "vol -f mem.raw windows.malware.drivermodule.DriverModule"
-                }
-              ]
+              "name": "crashinfo",
+              "help": [
+                "Lists the information from a Windows crash dump."
+              ],
+              "terminal_help": "usage: vol.py windows.crashinfo.Crashinfo [-h]\n\nLists the information from a Windows crash dump.\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "hollowprocesses",
-              "children": [
-                {
-                  "name": "HollowProcesses",
-                  "help": "Description for HollowProcesses goes here.",
-                  "example": "vol -f mem.raw windows.malware.hollowprocesses.HollowProcesses"
-                }
-              ]
+              "name": "statistics",
+              "help": [
+                "Lists statistics about the memory space."
+              ],
+              "terminal_help": "usage: vol.py windows.statistics.Statistics [-h]\n\nLists statistics about the memory space.\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "indirect_system_calls",
-              "children": [
-                {
-                  "name": "IndirectSystemCalls",
-                  "help": "Description for IndirectSystemCalls goes here.",
-                  "example": "vol -f mem.raw windows.malware.indirect_system_calls.IndirectSystemCalls"
-                }
-              ]
+              "name": "bigpools",
+              "help": [
+                "List big page pools."
+              ],
+              "terminal_help": "usage: vol.py windows.bigpools.BigPools [-h] [--tags TAGS] [--show-free]\n\nList big page pools.\n\noptions:\n  -h, --help   show this help message and exit\n  --tags TAGS  Comma separated list of pool tags to filter pools returned\n  --show-free  Show freed regions (otherwise only show allocations in use)\n"
             },
             {
-              "name": "ldrmodules",
-              "children": [
-                {
-                  "name": "LdrModules",
-                  "help": "Description for LdrModules goes here.",
-                  "example": "vol -f mem.raw windows.malware.ldrmodules.LdrModules"
-                }
-              ]
+              "name": "poolscanner",
+              "help": [
+                "A generic pool scanner plugin."
+              ],
+              "terminal_help": "usage: vol.py windows.poolscanner.PoolScanner [-h]\n\nA generic pool scanner plugin.\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "malfind",
-              "children": [
-                {
-                  "name": "Malfind",
-                  "help": "Description for Malfind goes here.",
-                  "example": "vol -f mem.raw windows.malware.malfind.Malfind"
-                }
-              ]
+              "name": "kpcrs",
+              "help": [
+                "Print KPCR structure for each processor"
+              ],
+              "terminal_help": "usage: vol.py windows.kpcrs.KPCRs [-h]\n\nPrint KPCR structure for each processor\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "pebmasquerade",
-              "children": [
-                {
-                  "name": "PebMasquerade",
-                  "help": "Description for PebMasquerade goes here.",
-                  "example": "vol -f mem.raw windows.malware.pebmasquerade.PebMasquerade"
-                }
-              ]
+              "name": "debugregisters",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.debugregisters.DebugRegisters [-h]\n\noptions:\n  -h, --help  show this help message and exit\n"
+            }
+          ]
+        },
+        {
+          "name": "Desktops",
+          "children": [
+            {
+              "name": "windowstations",
+              "help": [
+                "Scans for top level Windows Stations"
+              ],
+              "terminal_help": "usage: vol.py windows.windowstations.WindowStations [-h]\n\nScans for top level Windows Stations\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "processghosting",
-              "children": [
-                {
-                  "name": "ProcessGhosting",
-                  "help": "Description for ProcessGhosting goes here.",
-                  "example": "vol -f mem.raw windows.malware.processghosting.ProcessGhosting"
-                }
-              ]
+              "name": "desktops",
+              "help": [
+                "Enumerates the Desktop instances of each Window Station"
+              ],
+              "terminal_help": "usage: vol.py windows.desktops.Desktops [-h]\n\nEnumerates the Desktop instances of each Window Station\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "deskscan",
+              "help": [
+                "Scans for the Desktop instances of each Window Station"
+              ],
+              "terminal_help": "usage: vol.py windows.deskscan.DeskScan [-h]\n\nScans for the Desktop instances of each Window Station\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "windows.Windows",
+              "help": [
+                "Enumerates the Windows of Desktop instances"
+              ],
+              "terminal_help": "usage: vol.py windows.windows.Windows [-h]\n\nEnumerates the Windows of Desktop instances\n\noptions:\n  -h, --help  show this help message and exit\n"
+            }
+          ]
+        },
+        {
+          "name": "Processes",
+          "children": [
+            {
+              "name": "pslist",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.pslist.PsList [-h] [--physical] [--pid [PID ...]]\n                                    [--dump]\n\nLists the processes present in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --physical       Display physical offsets instead of virtual\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n  --dump           Extract listed processes\n"
+            },
+            {
+              "name": "pstree",
+              "help": [
+                "Plugin for listing processes in a tree based on their parent process ID."
+              ],
+              "terminal_help": "usage: vol.py windows.pstree.PsTree [-h] [--physical] [--pid [PID ...]]\n\nPlugin for listing processes in a tree based on their parent process ID.\n\noptions:\n  -h, --help       show this help message and exit\n  --physical       Display physical offsets instead of virtual\n  --pid [PID ...]  Process ID to include (with ancestors and descendants, all\n                   other processes are excluded)\n"
+            },
+            {
+              "name": "psscan",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.psscan.PsScan [-h] [--pid [PID ...]] [--dump]\n                                    [--physical]\n\nScans for processes present in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n  --dump           Extract listed processes\n  --physical       Display physical offset instead of virtual\n"
             },
             {
               "name": "psxview",
-              "children": [
-                {
-                  "name": "PsXView",
-                  "help": "Lists all processes found via four of the methods described in \"The Art of Memory Forensics\" which may help identify processes that are trying to hide themselves.",
-                  "example": "vol -f mem.raw windows.malware.psxview.PsXView"
-                }
-              ]
+              "help": [
+                "Lists all processes found via four of the methods described in \"The Art of"
+              ],
+              "terminal_help": "usage: vol.py windows.malware.psxview.PsXView [-h] [--physical-offsets]\n\nLists all processes found via four of the methods described in \"The Art of\nMemory Forensics\" which may help identify processes that are trying to hide\nthemselves.\n\noptions:\n  -h, --help          show this help message and exit\n  --physical-offsets  List processes with physical offsets instead of virtual\n                      offsets.\n\nWe recommend using -r pretty if you are looking at this plugin's output in a\nterminal.\n"
             },
             {
-              "name": "skeleton_key_check",
-              "children": [
-                {
-                  "name": "Skeleton_Key_Check",
-                  "help": "Description for Skeleton_Key_Check goes here.",
-                  "example": "vol -f mem.raw windows.malware.skeleton_key_check.Skeleton_Key_Check"
-                }
-              ]
+              "name": "sessions",
+              "help": [
+                "lists Processes with Session information extracted from Environmental"
+              ],
+              "terminal_help": "usage: vol.py windows.sessions.Sessions [-h] [--pid [PID ...]]\n\nlists Processes with Session information extracted from Environmental\nVariables\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n"
+            },
+            {
+              "name": "verinfo",
+              "help": [
+                "Lists version information from PE files."
+              ],
+              "terminal_help": "usage: vol.py windows.verinfo.VerInfo [-h] [--extensive]\n\nLists version information from PE files.\n\noptions:\n  -h, --help   show this help message and exit\n  --extensive  Search physical layer for version information\n"
+            }
+          ]
+        },
+        {
+          "name": "Command lines",
+          "children": [
+            {
+              "name": "cmdline",
+              "help": [
+                "Lists process command line arguments."
+              ],
+              "terminal_help": "usage: vol.py windows.cmdline.CmdLine [-h] [--pid [PID ...]]\n\nLists process command line arguments.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n"
+            },
+            {
+              "name": "cmdscan",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.cmdscan.CmdScan [-h] [--no-registry]\n                                      [--max-history [MAX_HISTORY ...]]\n\nLooks for Windows Command History lists\n\noptions:\n  -h, --help            show this help message and exit\n  --no-registry         Don't search the registry for possible values of\n                        CommandHistorySize\n  --max-history [MAX_HISTORY ...]\n                        CommandHistorySize values to search for.\n"
+            },
+            {
+              "name": "consoles",
+              "help": [
+                "[--max-buffers [MAX_BUFFERS ...]]"
+              ],
+              "terminal_help": "usage: vol.py windows.consoles.Consoles [-h] [--no-registry]\n                                        [--max-history [MAX_HISTORY ...]]\n                                        [--max-buffers [MAX_BUFFERS ...]]\n\nLooks for Windows console buffers\n\noptions:\n  -h, --help            show this help message and exit\n  --no-registry         Don't search the registry for possible values of\n                        CommandHistorySize and HistoryBufferMax\n  --max-history [MAX_HISTORY ...]\n                        CommandHistorySize values to search for.\n  --max-buffers [MAX_BUFFERS ...]\n                        HistoryBufferMax values to search for.\n"
+            }
+          ]
+        },
+        {
+          "name": "Threads",
+          "children": [
+            {
+              "name": "threads",
+              "help": [
+                "Lists process threads"
+              ],
+              "terminal_help": "usage: vol.py windows.orphan_kernel_threads.Threads [-h]\n\nLists process threads\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "thrdscan",
+              "help": [
+                "Scans for windows threads."
+              ],
+              "terminal_help": "usage: vol.py windows.thrdscan.ThrdScan [-h]\n\nScans for windows threads.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "orphan_kernel_threads",
+              "help": [
+                "Lists process threads"
+              ],
+              "terminal_help": "usage: vol.py windows.orphan_kernel_threads.Threads [-h]\n\nLists process threads\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "suspended_threads",
+              "help": [
+                "Enumerates suspended threads."
+              ],
+              "terminal_help": "usage: vol.py windows.suspended_threads.SuspendedThreads [-h]\n\nEnumerates suspended threads.\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
               "name": "suspicious_threads",
-              "children": [
-                {
-                  "name": "SuspiciousThreads",
-                  "help": "Description for SuspiciousThreads goes here.",
-                  "example": "vol -f mem.raw windows.malware.suspicious_threads.SuspiciousThreads"
-                }
-              ]
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.malware.suspicious_threads.SuspiciousThreads\n       [-h] [--pid [PID ...]]\n\nLists suspicious userland process threads\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n"
+            }
+          ]
+        },
+        {
+          "name": "Processes' objects",
+          "children": [
+            {
+              "name": "envars",
+              "help": [
+                "Display process environment variables"
+              ],
+              "terminal_help": "usage: vol.py windows.envars.Envars [-h] [--pid [PID ...]] [--silent]\n\nDisplay process environment variables\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n  --silent         Suppress common and non-persistent variables\n"
             },
             {
-              "name": "svcdiff",
-              "children": [
-                {
-                  "name": "SvcDiff",
-                  "help": "Description for SvcDiff goes here.",
-                  "example": "vol -f mem.raw windows.malware.svcdiff.SvcDiff"
-                }
-              ]
+              "name": "getsids",
+              "help": [
+                "Print the SIDs owning each process"
+              ],
+              "terminal_help": "usage: vol.py windows.getsids.GetSIDs [-h] [--pid [PID ...]]\n\nPrint the SIDs owning each process\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n"
             },
             {
-              "name": "unhooked_system_calls",
-              "children": [
-                {
-                  "name": "UnhookedSystemCalls",
-                  "help": "Description for UnhookedSystemCalls goes here.",
-                  "example": "vol -f mem.raw windows.malware.unhooked_system_calls.UnhookedSystemCalls"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "mbrscan",
-          "children": [
-            {
-              "name": "MBRScan",
-              "help": "Description for MBRScan goes here.",
-              "example": "vol -f mem.raw windows.mbrscan.MBRScan"
-            }
-          ]
-        },
-        {
-          "name": "memmap",
-          "children": [
-            {
-              "name": "Memmap",
-              "help": "Description for Memmap goes here.",
-              "example": "vol -f mem.raw windows.memmap.Memmap"
-            }
-          ]
-        },
-        {
-          "name": "mftscan",
-          "children": [
-            {
-              "name": "ADS",
-              "help": "Description for ADS goes here.",
-              "example": "vol -f mem.raw windows.mftscan.ADS"
+              "name": "privileges",
+              "help": [
+                "Lists process token privileges"
+              ],
+              "terminal_help": "usage: vol.py windows.privileges.Privs [-h] [--pid [PID ...]]\n\nLists process token privileges\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n"
             },
             {
-              "name": "MFTScan",
-              "help": "Description for MFTScan goes here.",
-              "example": "vol -f mem.raw windows.mftscan.MFTScan"
+              "name": "dlllist",
+              "help": [
+                "[--ignore-case] [--dump]"
+              ],
+              "terminal_help": "usage: vol.py windows.dlllist.DllList [-h] [--pid [PID ...]] [--offset OFFSET]\n                                      [--base BASE] [--name NAME]\n                                      [--ignore-case] [--dump]\n\nLists the loaded DLLs in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --offset OFFSET  Process offset in the physical address space\n  --base BASE      Specify a base virtual address in process memory\n  --name NAME      Specify a regular expression to match dll name(s)\n  --ignore-case    Specify case insensitivity for the regular expression name\n                   matching\n  --dump           Extract listed DLLs\n"
             },
             {
-              "name": "ResidentData",
-              "help": "Description for ResidentData goes here.",
-              "example": "vol -f mem.raw windows.mftscan.ResidentData"
-            }
-          ]
-        },
-        {
-          "name": "modscan",
-          "children": [
-            {
-              "name": "ModScan",
-              "help": "Description for ModScan goes here.",
-              "example": "vol -f mem.raw windows.modscan.ModScan"
-            }
-          ]
-        },
-        {
-          "name": "modules",
-          "children": [
-            {
-              "name": "Modules",
-              "help": "Description for Modules goes here.",
-              "example": "vol -f mem.raw windows.modules.Modules"
-            }
-          ]
-        },
-        {
-          "name": "mutantscan",
-          "children": [
-            {
-              "name": "MutantScan",
-              "help": "Description for MutantScan goes here.",
-              "example": "vol -f mem.raw windows.mutantscan.MutantScan"
-            }
-          ]
-        },
-        {
-          "name": "netscan",
-          "children": [
-            {
-              "name": "NetScan",
-              "help": "Description for NetScan goes here.",
-              "example": "vol -f mem.raw windows.netscan.NetScan"
-            }
-          ]
-        },
-        {
-          "name": "netstat",
-          "children": [
-            {
-              "name": "NetStat",
-              "help": "Description for NetStat goes here.",
-              "example": "vol -f mem.raw windows.netstat.NetStat"
-            }
-          ]
-        },
-        {
-          "name": "orphan_kernel_threads",
-          "children": [
-            {
-              "name": "Threads",
-              "help": "Description for Threads goes here.",
-              "example": "vol -f mem.raw windows.orphan_kernel_threads.Threads"
-            }
-          ]
-        },
-        {
-          "name": "pe_symbols",
-          "children": [
-            {
-              "name": "PESymbols",
-              "help": "Description for PESymbols goes here.",
-              "example": "vol -f mem.raw windows.pe_symbols.PESymbols"
-            }
-          ]
-        },
-        {
-          "name": "pedump",
-          "children": [
-            {
-              "name": "PEDump",
-              "help": "Description for PEDump goes here.",
-              "example": "vol -f mem.raw windows.pedump.PEDump"
-            }
-          ]
-        },
-        {
-          "name": "poolscanner",
-          "children": [
-            {
-              "name": "PoolScanner",
-              "help": "Description for PoolScanner goes here.",
-              "example": "vol -f mem.raw windows.poolscanner.PoolScanner"
-            }
-          ]
-        },
-        {
-          "name": "privileges",
-          "children": [
-            {
-              "name": "Privs",
-              "help": "Description for Privs goes here.",
-              "example": "vol -f mem.raw windows.privileges.Privs"
-            }
-          ]
-        },
-        {
-          "name": "processghosting",
-          "children": [
-            {
-              "name": "ProcessGhosting",
-              "help": "Description for ProcessGhosting goes here.",
-              "example": "vol -f mem.raw windows.processghosting.ProcessGhosting"
-            }
-          ]
-        },
-        {
-          "name": "pslist",
-          "help": [
-            "This simple plugin is following the EPROCESS doubly-linked list",
-            "to get a list of all running process.",
-            "",
-            "Note: This does not show unlinked/hidden processes."
-          ],
-          "terminal_help": "usage: vol.py windows.pslist.PsList [-h] [--physical] [--pid [PID ...]]\n\noptions:\n-h, --help       show this help message and exit\n--physical       Display physical offsets instead of virtual\n--pid [PID ...]  Process ID to include"
-        },
-        {
-          "name": "psscan",
-          "children": [
-            {
-              "name": "PsScan",
-              "help": "Description for PsScan goes here.",
-              "example": "vol -f mem.raw windows.psscan.PsScan"
-            }
-          ]
-        },
-        {
-          "name": "pstree",
-          "children": [
-            {
-              "name": "PsTree",
-              "help": "Plugin for listing processes in a tree based on their parent process ID.",
-              "example": "vol -f mem.raw windows.pstree.PsTree"
-            }
-          ]
-        },
-        {
-          "name": "psxview",
-          "children": [
-            {
-              "name": "PsXView",
-              "help": "Lists all processes found via four of the methods described in \"The Art of Memory Forensics\" which may help identify processes that are trying to hide themselves.\nThis plugin is deprecated, use windows.malware.psxview.PsXView instead",
-              "example": "vol -f mem.raw windows.psxview.PsXView"
-            }
-          ]
-        },
-        {
-          "name": "registry",
-          "children": [
-            {
-              "name": "amcache",
-              "children": [
-                {
-                  "name": "Amcache",
-                  "help": "Description for Amcache goes here.",
-                  "example": "vol -f mem.raw windows.registry.amcache.Amcache"
-                }
-              ]
+              "name": "iat",
+              "help": [
+                "Extract Import Address Table to list API (functions) used by a program"
+              ],
+              "terminal_help": "usage: vol.py windows.iat.IAT [-h] [--pid [PID ...]]\n\nExtract Import Address Table to list API (functions) used by a program\ncontained in external libraries\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n"
             },
             {
-              "name": "cachedump",
-              "children": [
-                {
-                  "name": "Cachedump",
-                  "help": "Description for Cachedump goes here.",
-                  "example": "vol -f mem.raw windows.registry.cachedump.Cachedump"
-                }
-              ]
+              "name": "handles",
+              "help": [
+                "Lists process open handles."
+              ],
+              "terminal_help": "usage: vol.py windows.handles.Handles [-h] [--pid [PID ...]] [--offset OFFSET]\n\nLists process open handles.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --offset OFFSET  Process offset in the physical address space\n"
             },
             {
-              "name": "certificates",
-              "children": [
-                {
-                  "name": "Certificates",
-                  "help": "Description for Certificates goes here.",
-                  "example": "vol -f mem.raw windows.registry.certificates.Certificates"
-                }
-              ]
+              "name": "mutantscan",
+              "help": [
+                "Scans for mutexes present in a particular windows memory image."
+              ],
+              "terminal_help": "usage: vol.py windows.mutantscan.MutantScan [-h]\n\nScans for mutexes present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            }
+          ]
+        },
+        {
+          "name": "VAD Tree",
+          "children": [
+            {
+              "name": "virtmap",
+              "help": [
+                "Lists virtual mapped sections."
+              ],
+              "terminal_help": "usage: vol.py windows.virtmap.VirtMap [-h]\n\nLists virtual mapped sections.\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "getcellroutine",
-              "children": [
-                {
-                  "name": "GetCellRoutine",
-                  "help": "Description for GetCellRoutine goes here.",
-                  "example": "vol -f mem.raw windows.registry.getcellroutine.GetCellRoutine"
-                }
-              ]
+              "name": "vadinfo",
+              "help": [
+                "[--maxsize MAXSIZE]"
+              ],
+              "terminal_help": "usage: vol.py windows.vadinfo.VadInfo [-h] [--address ADDRESS]\n                                      [--pid [PID ...]] [--dump]\n                                      [--maxsize MAXSIZE]\n\nLists process memory ranges.\n\noptions:\n  -h, --help         show this help message and exit\n  --address ADDRESS  Process virtual memory address to include (all other\n                     address ranges are excluded).\n  --pid [PID ...]    Filter on specific process IDs\n  --dump             Extract listed memory ranges\n  --maxsize MAXSIZE  Maximum size for dumped VAD sections (all the bigger\n                     sections will be ignored)\n"
             },
             {
-              "name": "hashdump",
-              "children": [
-                {
-                  "name": "Hashdump",
-                  "help": "Description for Hashdump goes here.",
-                  "example": "vol -f mem.raw windows.registry.hashdump.Hashdump"
-                }
-              ]
+              "name": "vadwalk",
+              "help": [
+                "Walk the VAD tree."
+              ],
+              "terminal_help": "usage: vol.py windows.vadwalk.VadWalk [-h] [--pid [PID ...]]\n\nWalk the VAD tree.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n"
+            },
+            {
+              "name": "vadregexscan",
+              "help": [
+                "[--maxsize MAXSIZE]"
+              ],
+              "terminal_help": "usage: vol.py windows.vadregexscan.VadRegExScan [-h] [--pid [PID ...]]\n                                                --pattern PATTERN\n                                                [--maxsize MAXSIZE]\n\nScans all virtual memory areas for tasks using RegEx.\n\noptions:\n  -h, --help         show this help message and exit\n  --pid [PID ...]    Filter on specific process IDs\n  --pattern PATTERN  RegEx pattern\n  --maxsize MAXSIZE  Maximum size in bytes for displayed context\n"
+            },
+            {
+              "name": "vadyarascan",
+              "help": [
+                "[--yara-file YARA_FILE]"
+              ],
+              "terminal_help": "usage: vol.py windows.vadyarascan.VadYaraScan [-h] [--insensitive] [--wide]\n                                              [--yara-string YARA_STRING]\n                                              [--yara-file YARA_FILE]\n                                              [--yara-compiled-file YARA_COMPILED_FILE]\n                                              [--max-size MAX_SIZE]\n                                              [--pid [PID ...]]\n\nScans all the Virtual Address Descriptor memory maps using yara.\n\noptions:\n  -h, --help            show this help message and exit\n  --insensitive         Makes the search case insensitive\n  --wide                Match wide (unicode) strings\n  --yara-string YARA_STRING\n                        Yara rules (as a string)\n  --yara-file YARA_FILE\n                        Yara rules (as a file)\n  --yara-compiled-file YARA_COMPILED_FILE\n                        Yara compiled rules (as a file)\n  --max-size MAX_SIZE   Set the maximum size (default is 1GB)\n  --pid [PID ...]       Process IDs to include (all other processes are\n                        excluded)\n"
+            }
+          ]
+        },
+        {
+          "name": "Networks",
+          "children": [
+            {
+              "name": "netstat",
+              "help": [
+                "Traverses network tracking structures present in a particular windows memory"
+              ],
+              "terminal_help": "usage: vol.py windows.netstat.NetStat [-h] [--include-corrupt]\n\nTraverses network tracking structures present in a particular windows memory\nimage.\n\noptions:\n  -h, --help         show this help message and exit\n  --include-corrupt  Radically eases result validation. This will show\n                     partially overwritten data. WARNING: the results are\n                     likely to include garbage and/or corrupt data. Be\n                     cautious!\n"
+            },
+            {
+              "name": "netscan",
+              "help": [
+                "Scans for network objects present in a particular windows memory image."
+              ],
+              "terminal_help": "usage: vol.py windows.netscan.NetScan [-h] [--include-corrupt]\n\nScans for network objects present in a particular windows memory image.\n\noptions:\n  -h, --help         show this help message and exit\n  --include-corrupt  Radically eases result validation. This will show\n                     partially overwritten data. WARNING: the results are\n                     likely to include garbage and/or corrupt data. Be\n                     cautious!\n"
+            }
+          ]
+        },
+        {
+          "name": "Dumping",
+          "children": [
+            {
+              "name": "pslist",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.pslist.PsList [-h] [--physical] [--pid [PID ...]]\n                                    [--dump]\n\nLists the processes present in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --physical       Display physical offsets instead of virtual\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n  --dump           Extract listed processes\n"
+            },
+            {
+              "name": "psscan",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.psscan.PsScan [-h] [--pid [PID ...]] [--dump]\n                                    [--physical]\n\nScans for processes present in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n  --dump           Extract listed processes\n  --physical       Display physical offset instead of virtual\n"
+            },
+            {
+              "name": "pedump",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.pedump.PEDump [-h] [--pid [PID ...]] --base BASE\n                                    [--kernel-module]\n\nAllows extracting PE Files from a specific address in a specific address space\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --base BASE      Base address to reconstruct a PE file\n  --kernel-module  Extract from kernel address space.\n"
+            },
+            {
+              "name": "dlllist",
+              "help": [
+                "[--ignore-case] [--dump]"
+              ],
+              "terminal_help": "usage: vol.py windows.dlllist.DllList [-h] [--pid [PID ...]] [--offset OFFSET]\n                                      [--base BASE] [--name NAME]\n                                      [--ignore-case] [--dump]\n\nLists the loaded DLLs in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --offset OFFSET  Process offset in the physical address space\n  --base BASE      Specify a base virtual address in process memory\n  --name NAME      Specify a regular expression to match dll name(s)\n  --ignore-case    Specify case insensitivity for the regular expression name\n                   matching\n  --dump           Extract listed DLLs\n"
+            },
+            {
+              "name": "vadinfo",
+              "help": [
+                "[--maxsize MAXSIZE]"
+              ],
+              "terminal_help": "usage: vol.py windows.vadinfo.VadInfo [-h] [--address ADDRESS]\n                                      [--pid [PID ...]] [--dump]\n                                      [--maxsize MAXSIZE]\n\nLists process memory ranges.\n\noptions:\n  -h, --help         show this help message and exit\n  --address ADDRESS  Process virtual memory address to include (all other\n                     address ranges are excluded).\n  --pid [PID ...]    Filter on specific process IDs\n  --dump             Extract listed memory ranges\n  --maxsize MAXSIZE  Maximum size for dumped VAD sections (all the bigger\n                     sections will be ignored)\n"
+            },
+            {
+              "name": "memmap",
+              "help": [
+                "Prints the memory map"
+              ],
+              "terminal_help": "usage: vol.py windows.memmap.Memmap [-h] [--pid PID] [--dump]\n\nPrints the memory map\n\noptions:\n  -h, --help  show this help message and exit\n  --pid PID   Process ID to include (all other processes are excluded)\n  --dump      Extract listed memory segments\n"
+            },
+            {
+              "name": "filescan",
+              "help": [
+                "Scans for file objects present in a particular windows memory image."
+              ],
+              "terminal_help": "usage: vol.py windows.filescan.FileScan [-h]\n\nScans for file objects present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "dumpfiles",
+              "help": [
+                "[--physaddr [PHYSADDR ...]]"
+              ],
+              "terminal_help": "usage: vol.py windows.dumpfiles.DumpFiles [-h] [--pid PID]\n                                          [--virtaddr [VIRTADDR ...]]\n                                          [--physaddr [PHYSADDR ...]]\n                                          [--filter FILTER] [--ignore-case]\n\nDumps cached file contents from Windows memory samples.\n\noptions:\n  -h, --help            show this help message and exit\n  --pid PID             Process ID to include (all other processes are\n                        excluded)\n  --virtaddr [VIRTADDR ...]\n                        Dump the _FILE_OBJECTs at the given virtual\n                        address(es)\n  --physaddr [PHYSADDR ...]\n                        Dump a single _FILE_OBJECTs at the given physical\n                        address(es)\n  --filter FILTER       Dump files matching regular expression FILTER\n  --ignore-case         Ignore case in filter match\n"
             },
             {
               "name": "hivelist",
-              "children": [
-                {
-                  "name": "HiveList",
-                  "help": "Description for HiveList goes here.",
-                  "example": "vol -f mem.raw windows.registry.hivelist.HiveList"
-                }
-              ]
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.registry.hivelist.HiveList [-h] [--filter FILTER]\n                                                 [--dump]\n\nLists the registry hives present in a particular memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --filter FILTER  String to filter hive names returned\n  --dump           Extract listed registry hives\n"
+            },
+            {
+              "name": "certificates",
+              "help": [
+                "Lists the certificates in the registry's Certificate Store."
+              ],
+              "terminal_help": "usage: vol.py windows.registry.certificates.Certificates [-h] [--dump]\n\nLists the certificates in the registry's Certificate Store.\n\noptions:\n  -h, --help  show this help message and exit\n  --dump      Extract listed certificates\n"
+            },
+            {
+              "name": "modules",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.modules.Modules [-h] [--dump] [--base BASE]\n                                      [--name NAME]\n\nLists the loaded kernel modules.\n\noptions:\n  -h, --help   show this help message and exit\n  --dump       Extract listed modules\n  --base BASE  Extract a single module with BASE address\n  --name NAME  module name/sub string\n"
+            },
+            {
+              "name": "modscan",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.modscan.ModScan [-h] [--dump] [--base BASE]\n                                      [--name NAME]\n\nScans for modules present in a particular windows memory image.\n\noptions:\n  -h, --help   show this help message and exit\n  --dump       Extract listed modules\n  --base BASE  Extract a single module with BASE address\n  --name NAME  module name/sub string\n"
+            }
+          ]
+        },
+        {
+          "name": "The MFT",
+          "children": [
+            {
+              "name": "mftscan.MFTScan",
+              "help": [
+                "Scans for MFT FILE objects present in a particular windows memory image."
+              ],
+              "terminal_help": "usage: vol.py windows.mftscan.MFTScan [-h]\n\nScans for MFT FILE objects present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "mftscan.ADS",
+              "help": [
+                "Scans for Alternate Data Stream"
+              ],
+              "terminal_help": "usage: vol.py windows.mftscan.ADS [-h]\n\nScans for Alternate Data Stream\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "mftscan.ResidentData",
+              "help": [
+                "Scans for MFT Records with Resident Data"
+              ],
+              "terminal_help": "usage: vol.py windows.mftscan.ResidentData [-h]\n\nScans for MFT Records with Resident Data\n\noptions:\n  -h, --help  show this help message and exit\n"
+            }
+          ]
+        },
+        {
+          "name": "Registry",
+          "children": [
+            {
+              "name": "hivelist",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.registry.hivelist.HiveList [-h] [--filter FILTER]\n                                                 [--dump]\n\nLists the registry hives present in a particular memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --filter FILTER  String to filter hive names returned\n  --dump           Extract listed registry hives\n"
             },
             {
               "name": "hivescan",
-              "children": [
-                {
-                  "name": "HiveScan",
-                  "help": "Description for HiveScan goes here.",
-                  "example": "vol -f mem.raw windows.registry.hivescan.HiveScan"
-                }
-              ]
-            },
-            {
-              "name": "lsadump",
-              "children": [
-                {
-                  "name": "Lsadump",
-                  "help": "Description for Lsadump goes here.",
-                  "example": "vol -f mem.raw windows.registry.lsadump.Lsadump"
-                }
-              ]
+              "help": [
+                "Scans for registry hives present in a particular windows memory image."
+              ],
+              "terminal_help": "usage: vol.py windows.registry.hivescan.HiveScan [-h]\n\nScans for registry hives present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
               "name": "printkey",
-              "children": [
-                {
-                  "name": "PrintKey",
-                  "help": "Description for PrintKey goes here.",
-                  "example": "vol -f mem.raw windows.registry.printkey.PrintKey"
-                }
-              ]
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.registry.printkey.PrintKey [-h] [--offset OFFSET]\n                                                 [--key KEY] [--recurse]\n\nLists the registry keys under a hive or specific key value.\n\noptions:\n  -h, --help       show this help message and exit\n  --offset OFFSET  Hive Offset\n  --key KEY        Key to start from\n  --recurse        Recurses through keys\n"
             },
             {
-              "name": "scheduled_tasks",
-              "children": [
-                {
-                  "name": "ScheduledTasks",
-                  "help": "Description for ScheduledTasks goes here.",
-                  "example": "vol -f mem.raw windows.registry.scheduled_tasks.ScheduledTasks"
-                }
-              ]
+              "name": "cachedump",
+              "help": [
+                "Dumps lsa secrets from memory (deprecated)"
+              ],
+              "terminal_help": "usage: vol.py windows.cachedump.Cachedump [-h]\n\nDumps lsa secrets from memory (deprecated)\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "hashdump",
+              "help": [
+                "Dumps user hashes from memory (deprecated)"
+              ],
+              "terminal_help": "usage: vol.py windows.hashdump.Hashdump [-h]\n\nDumps user hashes from memory (deprecated)\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "lsadump",
+              "help": [
+                "Dumps lsa secrets from memory (deprecated)"
+              ],
+              "terminal_help": "usage: vol.py windows.lsadump.Lsadump [-h]\n\nDumps lsa secrets from memory (deprecated)\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "amcache",
+              "help": [
+                "Extract information on executed applications from the AmCache (deprecated)."
+              ],
+              "terminal_help": "usage: vol.py windows.amcache.Amcache [-h]\n\nExtract information on executed applications from the AmCache (deprecated).\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
               "name": "userassist",
-              "children": [
-                {
-                  "name": "UserAssist",
-                  "help": "Description for UserAssist goes here.",
-                  "example": "vol -f mem.raw windows.registry.userassist.UserAssist"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "scheduled_tasks",
-          "children": [
-            {
-              "name": "ScheduledTasks",
-              "help": "Description for ScheduledTasks goes here.",
-              "example": "vol -f mem.raw windows.scheduled_tasks.ScheduledTasks"
-            }
-          ]
-        },
-        {
-          "name": "sessions",
-          "children": [
-            {
-              "name": "Sessions",
-              "help": "Description for Sessions goes here.",
-              "example": "vol -f mem.raw windows.sessions.Sessions"
-            }
-          ]
-        },
-        {
-          "name": "shimcachemem",
-          "children": [
-            {
-              "name": "ShimcacheMem",
-              "help": "Description for ShimcacheMem goes here.",
-              "example": "vol -f mem.raw windows.shimcachemem.ShimcacheMem"
-            }
-          ]
-        },
-        {
-          "name": "skeleton_key_check",
-          "children": [
-            {
-              "name": "Skeleton_Key_Check",
-              "help": "Description for Skeleton_Key_Check goes here.",
-              "example": "vol -f mem.raw windows.skeleton_key_check.Skeleton_Key_Check"
-            }
-          ]
-        },
-        {
-          "name": "ssdt",
-          "children": [
-            {
-              "name": "SSDT",
-              "help": "Description for SSDT goes here.",
-              "example": "vol -f mem.raw windows.ssdt.SSDT"
-            }
-          ]
-        },
-        {
-          "name": "statistics",
-          "children": [
-            {
-              "name": "Statistics",
-              "help": "Description for Statistics goes here.",
-              "example": "vol -f mem.raw windows.statistics.Statistics"
-            }
-          ]
-        },
-        {
-          "name": "strings",
-          "children": [
-            {
-              "name": "Strings",
-              "help": "Description for Strings goes here.",
-              "example": "vol -f mem.raw windows.strings.Strings"
-            }
-          ]
-        },
-        {
-          "name": "suspended_threads",
-          "children": [
-            {
-              "name": "SuspendedThreads",
-              "help": "Description for SuspendedThreads goes here.",
-              "example": "vol -f mem.raw windows.suspended_threads.SuspendedThreads"
-            }
-          ]
-        },
-        {
-          "name": "suspicious_threads",
-          "children": [
-            {
-              "name": "SuspiciousThreads",
-              "help": "Description for SuspiciousThreads goes here.",
-              "example": "vol -f mem.raw windows.suspicious_threads.SuspiciousThreads"
-            }
-          ]
-        },
-        {
-          "name": "svcdiff",
-          "children": [
-            {
-              "name": "SvcDiff",
-              "help": "Description for SvcDiff goes here.",
-              "example": "vol -f mem.raw windows.svcdiff.SvcDiff"
-            }
-          ]
-        },
-        {
-          "name": "svclist",
-          "children": [
-            {
-              "name": "SvcList",
-              "help": "Description for SvcList goes here.",
-              "example": "vol -f mem.raw windows.svclist.SvcList"
-            }
-          ]
-        },
-        {
-          "name": "svcscan",
-          "children": [
-            {
-              "name": "SvcScan",
-              "help": "Description for SvcScan goes here.",
-              "example": "vol -f mem.raw windows.svcscan.SvcScan"
-            }
-          ]
-        },
-        {
-          "name": "symlinkscan",
-          "children": [
-            {
-              "name": "SymlinkScan",
-              "help": "Description for SymlinkScan goes here.",
-              "example": "vol -f mem.raw windows.symlinkscan.SymlinkScan"
-            }
-          ]
-        },
-        {
-          "name": "thrdscan",
-          "children": [
-            {
-              "name": "ThrdScan",
-              "help": "Scans for windows threads.",
-              "example": "vol -f mem.raw windows.thrdscan.ThrdScan"
-            }
-          ]
-        },
-        {
-          "name": "threads",
-          "children": [
-            {
-              "name": "Threads",
-              "help": "Lists process threads",
-              "example": "vol -f mem.raw windows.threads.Threads"
-            }
-          ]
-        },
-        {
-          "name": "timers",
-          "children": [
-            {
-              "name": "Timers",
-              "help": "Description for Timers goes here.",
-              "example": "vol -f mem.raw windows.timers.Timers"
-            }
-          ]
-        },
-        {
-          "name": "truecrypt",
-          "children": [
-            {
-              "name": "Passphrase",
-              "help": "Description for Passphrase goes here.",
-              "example": "vol -f mem.raw windows.truecrypt.Passphrase"
-            }
-          ]
-        },
-        {
-          "name": "unhooked_system_calls",
-          "children": [
-            {
-              "name": "unhooked_system_calls",
-              "help": "Description for unhooked_system_calls goes here.",
-              "example": "vol -f mem.raw windows.unhooked_system_calls.unhooked_system_calls"
-            }
-          ]
-        },
-        {
-          "name": "unloadedmodules",
-          "children": [
-            {
-              "name": "UnloadedModules",
-              "help": "Description for UnloadedModules goes here.",
-              "example": "vol -f mem.raw windows.unloadedmodules.UnloadedModules"
-            }
-          ]
-        },
-        {
-          "name": "vadinfo",
-          "children": [
-            {
-              "name": "VadInfo",
-              "help": "Description for VadInfo goes here.",
-              "example": "vol -f mem.raw windows.vadinfo.VadInfo"
-            }
-          ]
-        },
-        {
-          "name": "vadregexscan",
-          "children": [
-            {
-              "name": "VadRegExScan",
-              "help": "Description for VadRegExScan goes here.",
-              "example": "vol -f mem.raw windows.vadregexscan.VadRegExScan"
-            }
-          ]
-        },
-        {
-          "name": "vadwalk",
-          "children": [
-            {
-              "name": "VadWalk",
-              "help": "Description for VadWalk goes here.",
-              "example": "vol -f mem.raw windows.vadwalk.VadWalk"
-            }
-          ]
-        },
-        {
-          "name": "vadyarascan",
-          "children": [
-            {
-              "name": "VadYaraScan",
-              "help": "Description for VadYaraScan goes here.",
-              "example": "vol -f mem.raw windows.vadyarascan.VadYaraScan"
-            }
-          ]
-        },
-        {
-          "name": "verinfo",
-          "children": [
-            {
-              "name": "VerInfo",
-              "help": "Description for VerInfo goes here.",
-              "example": "vol -f mem.raw windows.verinfo.VerInfo"
-            }
-          ]
-        },
-        {
-          "name": "virtmap",
-          "children": [
-            {
-              "name": "VirtMap",
-              "help": "Description for VirtMap goes here.",
-              "example": "vol -f mem.raw windows.virtmap.VirtMap"
-            }
-          ]
-        },
-        {
-          "name": "windows",
-          "children": [
-            {
-              "name": "Windows",
-              "help": "Description for Windows goes here.",
-              "example": "vol -f mem.raw windows.windows.Windows"
-            }
-          ]
-        },
-        {
-          "name": "windowstations",
-          "children": [
-            {
-              "name": "WindowStations",
-              "help": "Description for WindowStations goes here.",
-              "example": "vol -f mem.raw windows.windowstations.WindowStations"
-            }
-          ]
-        }
-      ]
-    },
-{
-      "name": "linux",
-      "children": [
-        {
-          "name": "bash",
-          "children": [
-            {
-              "name": "Bash",
-              "help": "Description for Bash goes here.",
-              "example": "vol -f mem.raw linux.bash.Bash"
-            }
-          ]
-        },
-        {
-          "name": "boottime",
-          "children": [
-            {
-              "name": "Boottime",
-              "help": "Description for Boottime goes here.",
-              "example": "vol -f mem.raw linux.boottime.Boottime"
-            }
-          ]
-        },
-        {
-          "name": "capabilities",
-          "children": [
-            {
-              "name": "Capabilities",
-              "help": "Description for Capabilities goes here.",
-              "example": "vol -f mem.raw linux.capabilities.Capabilities"
-            }
-          ]
-        },
-        {
-          "name": "check_afinfo",
-          "children": [
-            {
-              "name": "Check_afinfo",
-              "help": "Description for Check_afinfo goes here.",
-              "example": "vol -f mem.raw linux.check_afinfo.Check_afinfo"
-            }
-          ]
-        },
-        {
-          "name": "check_creds",
-          "children": [
-            {
-              "name": "Check_creds",
-              "help": "Description for Check_creds goes here.",
-              "example": "vol -f mem.raw linux.check_creds.Check_creds"
-            }
-          ]
-        },
-        {
-          "name": "check_idt",
-          "children": [
-            {
-              "name": "Check_idt",
-              "help": "Description for Check_idt goes here.",
-              "example": "vol -f mem.raw linux.check_idt.Check_idt"
-            }
-          ]
-        },
-        {
-          "name": "check_modules",
-          "children": [
-            {
-              "name": "Check_modules",
-              "help": "Description for Check_modules goes here.",
-              "example": "vol -f mem.raw linux.check_modules.Check_modules"
-            }
-          ]
-        },
-        {
-          "name": "check_syscall",
-          "children": [
-            {
-              "name": "Check_syscall",
-              "help": "Description for Check_syscall goes here.",
-              "example": "vol -f mem.raw linux.check_syscall.Check_syscall"
-            }
-          ]
-        },
-        {
-          "name": "ebpf",
-          "children": [
-            {
-              "name": "EBPF",
-              "help": "Description for EBPF goes here.",
-              "example": "vol -f mem.raw linux.ebpf.EBPF"
-            }
-          ]
-        },
-        {
-          "name": "elfs",
-          "children": [
-            {
-              "name": "Elfs",
-              "help": "Description for Elfs goes here.",
-              "example": "vol -f mem.raw linux.elfs.Elfs"
-            }
-          ]
-        },
-        {
-          "name": "envars",
-          "children": [
-            {
-              "name": "Envars",
-              "help": "Description for Envars goes here.",
-              "example": "vol -f mem.raw linux.envars.Envars"
-            }
-          ]
-        },
-        {
-          "name": "graphics",
-          "children": [
-            {
-              "name": "fbdev",
-              "children": [
-                {
-                  "name": "Fbdev",
-                  "help": "Description for Fbdev goes here.",
-                  "example": "vol -f mem.raw linux.graphics.fbdev.Fbdev"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "hidden_modules",
-          "children": [
-            {
-              "name": "Hidden_modules",
-              "help": "Description for Hidden_modules goes here.",
-              "example": "vol -f mem.raw linux.hidden_modules.Hidden_modules"
-            }
-          ]
-        },
-        {
-          "name": "iomem",
-          "children": [
-            {
-              "name": "IOMem",
-              "help": "Description for IOMem goes here.",
-              "example": "vol -f mem.raw linux.iomem.IOMem"
-            }
-          ]
-        },
-        {
-          "name": "ip",
-          "children": [
-            {
-              "name": "Addr",
-              "help": "Description for Addr goes here.",
-              "example": "vol -f mem.raw linux.ip.Addr"
+              "help": [
+                "Print userassist registry keys and information."
+              ],
+              "terminal_help": "usage: vol.py windows.registry.userassist.UserAssist [-h] [--offset OFFSET]\n\nPrint userassist registry keys and information.\n\noptions:\n  -h, --help       show this help message and exit\n  --offset OFFSET  Hive Offset\n"
             },
             {
-              "name": "Link",
-              "help": "Description for Link goes here.",
-              "example": "vol -f mem.raw linux.ip.Link"
-            }
-          ]
-        },
-        {
-          "name": "kallsyms",
-          "children": [
-            {
-              "name": "Kallsyms",
-              "help": "Description for Kallsyms goes here.",
-              "example": "vol -f mem.raw linux.kallsyms.Kallsyms"
-            }
-          ]
-        },
-        {
-          "name": "keyboard_notifiers",
-          "children": [
-            {
-              "name": "Keyboard_notifiers",
-              "help": "Description for Keyboard_notifiers goes here.",
-              "example": "vol -f mem.raw linux.keyboard_notifiers.Keyboard_notifiers"
-            }
-          ]
-        },
-        {
-          "name": "kmsg",
-          "children": [
-            {
-              "name": "Kmsg",
-              "help": "Description for Kmsg goes here.",
-              "example": "vol -f mem.raw linux.kmsg.Kmsg"
-            }
-          ]
-        },
-        {
-          "name": "kthreads",
-          "children": [
-            {
-              "name": "Kthreads",
-              "help": "Description for Kthreads goes here.",
-              "example": "vol -f mem.raw linux.kthreads.Kthreads"
-            }
-          ]
-        },
-        {
-          "name": "library_list",
-          "children": [
-            {
-              "name": "LibraryList",
-              "help": "Description for LibraryList goes here.",
-              "example": "vol -f mem.raw linux.library_list.LibraryList"
-            }
-          ]
-        },
-        {
-          "name": "lsmod",
-          "children": [
-            {
-              "name": "Lsmod",
-              "help": "Description for Lsmod goes here.",
-              "example": "vol -f mem.raw linux.lsmod.Lsmod"
-            }
-          ]
-        },
-        {
-          "name": "lsof",
-          "children": [
-            {
-              "name": "Lsof",
-              "help": "Description for Lsof goes here.",
-              "example": "vol -f mem.raw linux.lsof.Lsof"
-            }
-          ]
-        },
-        {
-          "name": "malfind",
-          "children": [
-            {
-              "name": "Malfind",
-              "help": "Description for Malfind goes here.",
-              "example": "vol -f mem.raw linux.malfind.Malfind"
-            }
-          ]
-        },
-        {
-          "name": "malware",
-          "children": [
-            {
-              "name": "check_afinfo",
-              "children": [
-                {
-                  "name": "Check_afinfo",
-                  "help": "Description for Check_afinfo goes here.",
-                  "example": "vol -f mem.raw linux.malware.check_afinfo.Check_afinfo"
-                }
-              ]
+              "name": "shimcache",
+              "help": [
+                "Reads Shimcache entries from the ahcache.sys AVL tree"
+              ],
+              "terminal_help": "usage: vol.py windows.shimcachemem.ShimcacheMem [-h]\n\nReads Shimcache entries from the ahcache.sys AVL tree\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "check_creds",
-              "children": [
-                {
-                  "name": "Check_creds",
-                  "help": "Description for Check_creds goes here.",
-                  "example": "vol -f mem.raw linux.malware.check_creds.Check_creds"
-                }
-              ]
+              "name": "scheduled_tasks",
+              "help": [
+                "Decodes scheduled task information from the Windows registry, including"
+              ],
+              "terminal_help": "usage: vol.py windows.registry.scheduled_tasks.ScheduledTasks [-h]\n\nDecodes scheduled task information from the Windows registry, including\ninformation about triggers, actions, run times, and creation times.\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "check_idt",
-              "children": [
-                {
-                  "name": "Check_idt",
-                  "help": "Description for Check_idt goes here.",
-                  "example": "vol -f mem.raw linux.malware.check_idt.Check_idt"
-                }
-              ]
+              "name": "certificates",
+              "help": [
+                "Lists the certificates in the registry's Certificate Store."
+              ],
+              "terminal_help": "usage: vol.py windows.registry.certificates.Certificates [-h] [--dump]\n\nLists the certificates in the registry's Certificate Store.\n\noptions:\n  -h, --help  show this help message and exit\n  --dump      Extract listed certificates\n"
             },
             {
-              "name": "check_modules",
-              "children": [
-                {
-                  "name": "Check_modules",
-                  "help": "Description for Check_modules goes here.",
-                  "example": "vol -f mem.raw linux.malware.check_modules.Check_modules"
-                }
-              ]
+              "name": "getcellroutine",
+              "help": [
+                "Reports registry hives with a hooked GetCellRoutine handler"
+              ],
+              "terminal_help": "usage: vol.py windows.registry.getcellroutine.GetCellRoutine [-h]\n\nReports registry hives with a hooked GetCellRoutine handler\n\noptions:\n  -h, --help  show this help message and exit\n"
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "children": [
+            {
+              "name": "svclist",
+              "help": [
+                "Lists services contained with the services.exe doubly linked list of services"
+              ],
+              "terminal_help": "usage: vol.py windows.svclist.SvcList [-h]\n\nLists services contained with the services.exe doubly linked list of services\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "check_syscall",
-              "children": [
-                {
-                  "name": "Check_syscall",
-                  "help": "Description for Check_syscall goes here.",
-                  "example": "vol -f mem.raw linux.malware.check_syscall.Check_syscall"
-                }
-              ]
+              "name": "svcscan",
+              "help": [
+                "Scans for windows services."
+              ],
+              "terminal_help": "usage: vol.py windows.svcscan.SvcScan [-h]\n\nScans for windows services.\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "hidden_modules",
-              "children": [
-                {
-                  "name": "Hidden_modules",
-                  "help": "Description for Hidden_modules goes here.",
-                  "example": "vol -f mem.raw linux.malware.hidden_modules.Hidden_modules"
-                }
-              ]
+              "name": "svcdiff",
+              "help": [
+                "Compares services found through list walking versus scanning to find rootkits"
+              ],
+              "terminal_help": "usage: vol.py windows.malware.svcdiff.SvcDiff [-h]\n\nCompares services found through list walking versus scanning to find rootkits\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "keyboard_notifiers",
-              "children": [
-                {
-                  "name": "Keyboard_notifiers",
-                  "help": "Description for Keyboard_notifiers goes here.",
-                  "example": "vol -f mem.raw linux.malware.keyboard_notifiers.Keyboard_notifiers"
-                }
-              ]
+              "name": "getservicesids",
+              "help": [
+                "Lists process token sids."
+              ],
+              "terminal_help": "usage: vol.py windows.getservicesids.GetServiceSIDs [-h]\n\nLists process token sids.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            }
+          ]
+        },
+        {
+          "name": "Rootkits detection",
+          "children": [
+            {
+              "name": "modules",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.modules.Modules [-h] [--dump] [--base BASE]\n                                      [--name NAME]\n\nLists the loaded kernel modules.\n\noptions:\n  -h, --help   show this help message and exit\n  --dump       Extract listed modules\n  --base BASE  Extract a single module with BASE address\n  --name NAME  module name/sub string\n"
+            },
+            {
+              "name": "modscan",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.modscan.ModScan [-h] [--dump] [--base BASE]\n                                      [--name NAME]\n\nScans for modules present in a particular windows memory image.\n\noptions:\n  -h, --help   show this help message and exit\n  --dump       Extract listed modules\n  --base BASE  Extract a single module with BASE address\n  --name NAME  module name/sub string\n"
+            },
+            {
+              "name": "driverscan",
+              "help": [
+                "Scans for drivers present in a particular windows memory image."
+              ],
+              "terminal_help": "usage: vol.py windows.driverscan.DriverScan [-h]\n\nScans for drivers present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "unloadedmodules",
+              "help": [
+                "Lists the unloaded kernel modules."
+              ],
+              "terminal_help": "usage: vol.py windows.unloadedmodules.UnloadedModules [-h]\n\nLists the unloaded kernel modules.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "devicetree",
+              "help": [
+                "Listing tree based on drivers and attached devices in a particular windows"
+              ],
+              "terminal_help": "usage: vol.py windows.devicetree.DeviceTree [-h]\n\nListing tree based on drivers and attached devices in a particular windows\nmemory image.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "driverirp",
+              "help": [
+                "List IRPs for drivers in a particular windows memory image."
+              ],
+              "terminal_help": "usage: vol.py windows.driverirp.DriverIrp [-h]\n\nList IRPs for drivers in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "ssdt",
+              "help": [
+                "Lists the system call table."
+              ],
+              "terminal_help": "usage: vol.py windows.ssdt.SSDT [-h]\n\nLists the system call table.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "symlinkscan",
+              "help": [
+                "Scans for links present in a particular windows memory image."
+              ],
+              "terminal_help": "usage: vol.py windows.symlinkscan.SymlinkScan [-h]\n\nScans for links present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "callbacks",
+              "help": [
+                "Lists kernel callbacks and notification routines."
+              ],
+              "terminal_help": "usage: vol.py windows.callbacks.Callbacks [-h]\n\nLists kernel callbacks and notification routines.\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "timers",
+              "help": [
+                "Print kernel timers and associated module DPCs"
+              ],
+              "terminal_help": "usage: vol.py windows.timers.Timers [-h]\n\nPrint kernel timers and associated module DPCs\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "joblinks",
+              "help": [
+                "Print process job link information"
+              ],
+              "terminal_help": "usage: vol.py windows.joblinks.JobLinks [-h] [--physical]\n\nPrint process job link information\n\noptions:\n  -h, --help  show this help message and exit\n  --physical  Display physical offset instead of virtual\n"
+            },
+            {
+              "name": "mbrscan",
+              "help": [
+                "Scans for and parses potential Master Boot Records (MBRs)"
+              ],
+              "terminal_help": "usage: vol.py windows.mbrscan.MBRScan [-h] [--full]\n\nScans for and parses potential Master Boot Records (MBRs)\n\noptions:\n  -h, --help  show this help message and exit\n  --full      It analyzes and provides all the information in the partition\n              entry and bootcode hexdump. (It returns a lot of information, so\n              we recommend you render it in CSV.)\n"
+            }
+          ]
+        },
+        {
+          "name": "Malware detection",
+          "children": [
+            {
+              "name": "psxview",
+              "help": [
+                "Lists all processes found via four of the methods described in \"The Art of"
+              ],
+              "terminal_help": "usage: vol.py windows.malware.psxview.PsXView [-h] [--physical-offsets]\n\nLists all processes found via four of the methods described in \"The Art of\nMemory Forensics\" which may help identify processes that are trying to hide\nthemselves.\n\noptions:\n  -h, --help          show this help message and exit\n  --physical-offsets  List processes with physical offsets instead of virtual\n                      offsets.\n\nWe recommend using -r pretty if you are looking at this plugin's output in a\nterminal.\n"
+            },
+            {
+              "name": "pebmasquerade",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.malware.pebmasquerade.PebMasquerade [-h]\n                                                          [--pid [PID ...]]\n\nDetects potential process name spoofing by comparing EPROCESS and PEB data.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n"
+            },
+            {
+              "name": "suspicious_threads",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.malware.suspicious_threads.SuspiciousThreads\n       [-h] [--pid [PID ...]]\n\nLists suspicious userland process threads\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n"
+            },
+            {
+              "name": "drivermodule",
+              "help": [
+                "Determines if any loaded drivers were hidden by a rootkit"
+              ],
+              "terminal_help": "usage: vol.py windows.malware.drivermodule.DriverModule [-h]\n\nDetermines if any loaded drivers were hidden by a rootkit\n\noptions:\n  -h, --help  show this help message and exit\n"
+            },
+            {
+              "name": "ldrmodules",
+              "help": [
+                "Lists the loaded modules in a particular windows memory image."
+              ],
+              "terminal_help": "usage: vol.py windows.malware.ldrmodules.LdrModules [-h] [--pid [PID ...]]\n\nLists the loaded modules in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n"
+            },
+            {
+              "name": "hollowprocesses",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.malware.hollowprocesses.HollowProcesses\n       [-h] [--pid [PID ...]]\n\nLists hollowed processes\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n"
             },
             {
               "name": "malfind",
-              "children": [
-                {
-                  "name": "Malfind",
-                  "help": "Description for Malfind goes here.",
-                  "example": "vol -f mem.raw linux.malware.malfind.Malfind"
-                }
-              ]
+              "help": [
+                "Lists process memory ranges that potentially contain injected code."
+              ],
+              "terminal_help": "usage: vol.py windows.malware.malfind.Malfind [-h] [--pid [PID ...]] [--dump]\n\nLists process memory ranges that potentially contain injected code.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --dump           Extract injected VADs\n"
             },
             {
-              "name": "modxview",
-              "children": [
-                {
-                  "name": "Modxview",
-                  "help": "Description for Modxview goes here.",
-                  "example": "vol -f mem.raw linux.malware.modxview.Modxview"
-                }
-              ]
+              "name": "direct_system_calls",
+              "help": [
+                "[--yara-file YARA_FILE] [--yara-compiled-file YARA_COMPILED_FILE]"
+              ],
+              "terminal_help": "usage: vol.py windows.malware.direct_system_calls.DirectSystemCalls\n       [-h] [--insensitive] [--wide] [--yara-string YARA_STRING]\n       [--yara-file YARA_FILE] [--yara-compiled-file YARA_COMPILED_FILE]\n       [--max-size MAX_SIZE]\n\nDetects the Direct System Call technique used to bypass EDRs\n\noptions:\n  -h, --help            show this help message and exit\n  --insensitive         Makes the search case insensitive\n  --wide                Match wide (unicode) strings\n  --yara-string YARA_STRING\n                        Yara rules (as a string)\n  --yara-file YARA_FILE\n                        Yara rules (as a file)\n  --yara-compiled-file YARA_COMPILED_FILE\n                        Yara compiled rules (as a file)\n  --max-size MAX_SIZE   Set the maximum size (default is 1GB)\n"
             },
             {
-              "name": "netfilter",
-              "children": [
-                {
-                  "name": "Netfilter",
-                  "help": "Description for Netfilter goes here.",
-                  "example": "vol -f mem.raw linux.malware.netfilter.Netfilter"
-                }
-              ]
+              "name": "indirect_system_calls",
+              "help": [
+                "[--yara-file YARA_FILE] [--yara-compiled-file YARA_COMPILED_FILE]"
+              ],
+              "terminal_help": "usage: vol.py windows.malware.indirect_system_calls.IndirectSystemCalls\n       [-h] [--insensitive] [--wide] [--yara-string YARA_STRING]\n       [--yara-file YARA_FILE] [--yara-compiled-file YARA_COMPILED_FILE]\n       [--max-size MAX_SIZE]\n\nDetects the Indirect System Call technique used to bypass EDRs.\n\noptions:\n  -h, --help            show this help message and exit\n  --insensitive         Makes the search case insensitive\n  --wide                Match wide (unicode) strings\n  --yara-string YARA_STRING\n                        Yara rules (as a string)\n  --yara-file YARA_FILE\n                        Yara rules (as a file)\n  --yara-compiled-file YARA_COMPILED_FILE\n                        Yara compiled rules (as a file)\n  --max-size MAX_SIZE   Set the maximum size (default is 1GB)\n"
             },
             {
-              "name": "process_spoofing",
-              "children": [
-                {
-                  "name": "ProcessSpoofing",
-                  "help": "Description for ProcessSpoofing goes here.",
-                  "example": "vol -f mem.raw linux.malware.process_spoofing.ProcessSpoofing"
-                }
-              ]
+              "name": "processghosting",
+              "help": [
+                "Lists processes whose DeletePending bit is set or whose FILE_OBJECT is set to"
+              ],
+              "terminal_help": "usage: vol.py windows.malware.processghosting.ProcessGhosting [-h]\n\nLists processes whose DeletePending bit is set or whose FILE_OBJECT is set to\n0 or Vads that are DeleteOnClose\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "tty_check",
-              "children": [
-                {
-                  "name": "Tty_Check",
-                  "help": "Description for Tty_Check goes here.",
-                  "example": "vol -f mem.raw linux.malware.tty_check.Tty_Check"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "module_extract",
-          "children": [
-            {
-              "name": "ModuleExtract",
-              "help": "Description for ModuleExtract goes here.",
-              "example": "vol -f mem.raw linux.module_extract.ModuleExtract"
-            }
-          ]
-        },
-        {
-          "name": "modxview",
-          "children": [
-            {
-              "name": "Modxview",
-              "help": "Description for Modxview goes here.",
-              "example": "vol -f mem.raw linux.modxview.Modxview"
-            }
-          ]
-        },
-        {
-          "name": "mountinfo",
-          "children": [
-            {
-              "name": "MountInfo",
-              "help": "Description for MountInfo goes here.",
-              "example": "vol -f mem.raw linux.mountinfo.MountInfo"
-            }
-          ]
-        },
-        {
-          "name": "netfilter",
-          "children": [
-            {
-              "name": "Netfilter",
-              "help": "Description for Netfilter goes here.",
-              "example": "vol -f mem.raw linux.netfilter.Netfilter"
-            }
-          ]
-        },
-        {
-          "name": "pagecache",
-          "children": [
-            {
-              "name": "Files",
-              "help": "Description for Files goes here.",
-              "example": "vol -f mem.raw linux.pagecache.Files"
+              "name": "unhooked_system_calls",
+              "help": [
+                "Detects hooked ntdll.dll stub functions in Windows processes."
+              ],
+              "terminal_help": "usage: vol.py windows.malware.unhooked_system_calls.UnhookedSystemCalls [-h]\n\nDetects hooked ntdll.dll stub functions in Windows processes.\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "InodePages",
-              "help": "Description for InodePages goes here.",
-              "example": "vol -f mem.raw linux.pagecache.InodePages"
+              "name": "skeleton_key_check",
+              "help": [
+                "Looks for signs of Skeleton Key malware"
+              ],
+              "terminal_help": "usage: vol.py windows.malware.skeleton_key_check.Skeleton_Key_Check [-h]\n\nLooks for signs of Skeleton Key malware\n\noptions:\n  -h, --help  show this help message and exit\n"
             },
             {
-              "name": "RecoverFs",
-              "help": "Description for RecoverFs goes here.",
-              "example": "vol -f mem.raw linux.pagecache.RecoverFs"
-            }
-          ]
-        },
-        {
-          "name": "pidhashtable",
-          "children": [
-            {
-              "name": "PIDHashTable",
-              "help": "Description for PIDHashTable goes here.",
-              "example": "vol -f mem.raw linux.pidhashtable.PIDHashTable"
-            }
-          ]
-        },
-        {
-          "name": "proc",
-          "children": [
-            {
-              "name": "Maps",
-              "help": "Description for Maps goes here.",
-              "example": "vol -f mem.raw linux.proc.Maps"
-            }
-          ]
-        },
-        {
-          "name": "psaux",
-          "children": [
-            {
-              "name": "PsAux",
-              "help": "Description for PsAux goes here.",
-              "example": "vol -f mem.raw linux.psaux.PsAux"
-            }
-          ]
-        },
-        {
-          "name": "pscallstack",
-          "children": [
-            {
-              "name": "PsCallStack",
-              "help": "Description for PsCallStack goes here.",
-              "example": "vol -f mem.raw linux.pscallstack.PsCallStack"
-            }
-          ]
-        },
-        {
-          "name": "pslist",
-          "children": [
-            {
-              "name": "PsList",
-              "help": "Description for PsList goes here.",
-              "example": "vol -f mem.raw linux.pslist.PsList"
-            }
-          ]
-        },
-        {
-          "name": "psscan",
-          "children": [
-            {
-              "name": "PsScan",
-              "help": "Scans for processes present in a particular windows memory image.",
-              "example": "vol -f mem.raw linux.psscan.PsScan"
-            }
-          ]
-        },
-        {
-          "name": "pstree",
-          "children": [
-            {
-              "name": "PsTree",
-              "help": "Description for PsTree goes here.",
-              "example": "vol -f mem.raw linux.pstree.PsTree"
-            }
-          ]
-        },
-        {
-          "name": "ptrace",
-          "children": [
-            {
-              "name": "Ptrace",
-              "help": "Description for Ptrace goes here.",
-              "example": "vol -f mem.raw linux.ptrace.Ptrace"
-            }
-          ]
-        },
-        {
-          "name": "sockscan",
-          "children": [
-            {
-              "name": "Sockscan",
-              "help": "Description for Sockscan goes here.",
-              "example": "vol -f mem.raw linux.sockscan.Sockscan"
-            }
-          ]
-        },
-        {
-          "name": "sockstat",
-          "children": [
-            {
-              "name": "Sockstat",
-              "help": "Description for Sockstat goes here.",
-              "example": "vol -f mem.raw linux.sockstat.Sockstat"
-            }
-          ]
-        },
-        {
-          "name": "tracing",
-          "children": [
-            {
-              "name": "ftrace",
-              "children": [
-                {
-                  "name": "CheckFtrace",
-                  "help": "Description for CheckFtrace goes here.",
-                  "example": "vol -f mem.raw linux.tracing.ftrace.CheckFtrace"
-                }
-              ]
+              "name": "etwpatch",
+              "help": [
+                "Identifies ETW (Event Tracing for Windows) patching techniques used by malware"
+              ],
+              "terminal_help": "usage: vol.py windows.etwpatch.EtwPatch [-h] [--pid [PID ...]]\n\nIdentifies ETW (Event Tracing for Windows) patching techniques used by malware\nto evade detection.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n\nThis plugin examines the first opcode of key ETW functions in ntdll.dll and\nadvapi32.dll to detect common ETW bypass techniques such as return pointer\nmanipulation (RET) or function redirection (JMP). Attackers often patch these\nfunctions to prevent security tools from receiving telemetry about process\nexecution, API calls, and other system events.\n"
             },
             {
-              "name": "perf_events",
-              "children": [
-                {
-                  "name": "PerfEvents",
-                  "help": "Description for PerfEvents goes here.",
-                  "example": "vol -f mem.raw linux.tracing.perf_events.PerfEvents"
-                }
-              ]
+              "name": "pe_symbols",
+              "help": [
+                "[--symbols [SYMBOLS ...]]"
+              ],
+              "terminal_help": "usage: vol.py windows.pe_symbols.PESymbols [-h] --source {kernel,processes}\n                                           --module MODULE\n                                           [--symbols [SYMBOLS ...]]\n                                           [--addresses [ADDRESSES ...]]\n\nPrints symbols in PE files in process and kernel memory\n\noptions:\n  -h, --help            show this help message and exit\n  --source {kernel,processes}\n                        Where to resolve symbols.\n  --module MODULE       Module in which to resolve symbols. Use \"ntoskrnl.exe\"\n                        to resolve in the base kernel executable.\n  --symbols [SYMBOLS ...]\n                        Symbol name to resolve\n  --addresses [ADDRESSES ...]\n                        Address of symbol to resolve\n"
             },
             {
-              "name": "tracepoints",
-              "children": [
-                {
-                  "name": "CheckTracepoints",
-                  "help": "Description for CheckTracepoints goes here.",
-                  "example": "vol -f mem.raw linux.tracing.tracepoints.CheckTracepoints"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "tty_check",
-          "children": [
+              "name": "strings",
+              "help": [
+                "No description extracted."
+              ],
+              "terminal_help": "usage: vol.py windows.strings.Strings [-h] [--pid [PID ...]]\n                                      --strings-file STRINGS_FILE\n\nReads output from the strings command and indicates which process(es) each\nstring belongs to.\n\noptions:\n  -h, --help            show this help message and exit\n  --pid [PID ...]       Process ID to include (all other processes are\n                        excluded)\n  --strings-file STRINGS_FILE\n                        Strings file\n"
+            },
             {
-              "name": "tty_check",
-              "help": "Description for tty_check goes here.",
-              "example": "vol -f mem.raw linux.tty_check.tty_check"
-            }
-          ]
-        },
-        {
-          "name": "vmaregexscan",
-          "children": [
-            {
-              "name": "VmaRegExScan",
-              "help": "Description for VmaRegExScan goes here.",
-              "example": "vol -f mem.raw linux.vmaregexscan.VmaRegExScan"
-            }
-          ]
-        },
-        {
-          "name": "vmayarascan",
-          "children": [
-            {
-              "name": "VmaYaraScan",
-              "help": "Description for VmaYaraScan goes here.",
-              "example": "vol -f mem.raw linux.vmayarascan.VmaYaraScan"
-            }
-          ]
-        },
-        {
-          "name": "vmcoreinfo",
-          "children": [
-            {
-              "name": "VMCoreInfo",
-              "help": "Description for VMCoreInfo goes here.",
-              "example": "vol -f mem.raw linux.vmcoreinfo.VMCoreInfo"
+              "name": "psxview",
+              "help": [
+                "Lists all processes found via four of the methods described in \"The Art of"
+              ],
+              "terminal_help": "usage: vol.py windows.malware.psxview.PsXView [-h] [--physical-offsets]\n\nLists all processes found via four of the methods described in \"The Art of\nMemory Forensics\" which may help identify processes that are trying to hide\nthemselves.\n\noptions:\n  -h, --help          show this help message and exit\n  --physical-offsets  List processes with physical offsets instead of virtual\n                      offsets.\n\nWe recommend using -r pretty if you are looking at this plugin's output in a\nterminal.\n"
             }
           ]
         }
       ]
     },
-{
+    {
+      "name": "linux",
+      "children": []
+    },
+    {
       "name": "mac",
-      "children": [
-        {
-          "name": "bash",
-          "children": [
-            {
-              "name": "Bash",
-              "help": "Description for Bash goes here.",
-              "example": "vol -f mem.raw mac.bash.Bash"
-            }
-          ]
-        },
-        {
-          "name": "check_syscall",
-          "children": [
-            {
-              "name": "Check_syscall",
-              "help": "Description for Check_syscall goes here.",
-              "example": "vol -f mem.raw mac.check_syscall.Check_syscall"
-            }
-          ]
-        },
-        {
-          "name": "check_sysctl",
-          "children": [
-            {
-              "name": "Check_sysctl",
-              "help": "Description for Check_sysctl goes here.",
-              "example": "vol -f mem.raw mac.check_sysctl.Check_sysctl"
-            }
-          ]
-        },
-        {
-          "name": "check_trap_table",
-          "children": [
-            {
-              "name": "Check_trap_table",
-              "help": "Description for Check_trap_table goes here.",
-              "example": "vol -f mem.raw mac.check_trap_table.Check_trap_table"
-            }
-          ]
-        },
-        {
-          "name": "dmesg",
-          "children": [
-            {
-              "name": "Dmesg",
-              "help": "Description for Dmesg goes here.",
-              "example": "vol -f mem.raw mac.dmesg.Dmesg"
-            }
-          ]
-        },
-        {
-          "name": "ifconfig",
-          "children": [
-            {
-              "name": "Ifconfig",
-              "help": "Description for Ifconfig goes here.",
-              "example": "vol -f mem.raw mac.ifconfig.Ifconfig"
-            }
-          ]
-        },
-        {
-          "name": "kauth_listeners",
-          "children": [
-            {
-              "name": "Kauth_listeners",
-              "help": "Description for Kauth_listeners goes here.",
-              "example": "vol -f mem.raw mac.kauth_listeners.Kauth_listeners"
-            }
-          ]
-        },
-        {
-          "name": "kauth_scopes",
-          "children": [
-            {
-              "name": "Kauth_scopes",
-              "help": "Description for Kauth_scopes goes here.",
-              "example": "vol -f mem.raw mac.kauth_scopes.Kauth_scopes"
-            }
-          ]
-        },
-        {
-          "name": "kevents",
-          "children": [
-            {
-              "name": "Kevents",
-              "help": "Description for Kevents goes here.",
-              "example": "vol -f mem.raw mac.kevents.Kevents"
-            }
-          ]
-        },
-        {
-          "name": "list_files",
-          "children": [
-            {
-              "name": "List_Files",
-              "help": "Description for List_Files goes here.",
-              "example": "vol -f mem.raw mac.list_files.List_Files"
-            }
-          ]
-        },
-        {
-          "name": "lsmod",
-          "children": [
-            {
-              "name": "Lsmod",
-              "help": "Description for Lsmod goes here.",
-              "example": "vol -f mem.raw mac.lsmod.Lsmod"
-            }
-          ]
-        },
-        {
-          "name": "lsof",
-          "children": [
-            {
-              "name": "Lsof",
-              "help": "Description for Lsof goes here.",
-              "example": "vol -f mem.raw mac.lsof.Lsof"
-            }
-          ]
-        },
-        {
-          "name": "malfind",
-          "children": [
-            {
-              "name": "Malfind",
-              "help": "Description for Malfind goes here.",
-              "example": "vol -f mem.raw mac.malfind.Malfind"
-            }
-          ]
-        },
-        {
-          "name": "mount",
-          "children": [
-            {
-              "name": "Mount",
-              "help": "Description for Mount goes here.",
-              "example": "vol -f mem.raw mac.mount.Mount"
-            }
-          ]
-        },
-        {
-          "name": "netstat",
-          "children": [
-            {
-              "name": "Netstat",
-              "help": "Description for Netstat goes here.",
-              "example": "vol -f mem.raw mac.netstat.Netstat"
-            }
-          ]
-        },
-        {
-          "name": "proc_maps",
-          "children": [
-            {
-              "name": "Maps",
-              "help": "Description for Maps goes here.",
-              "example": "vol -f mem.raw mac.proc_maps.Maps"
-            }
-          ]
-        },
-        {
-          "name": "psaux",
-          "children": [
-            {
-              "name": "Psaux",
-              "help": "Description for Psaux goes here.",
-              "example": "vol -f mem.raw mac.psaux.Psaux"
-            }
-          ]
-        },
-        {
-          "name": "pslist",
-          "children": [
-            {
-              "name": "PsList",
-              "help": "Description for PsList goes here.",
-              "example": "vol -f mem.raw mac.pslist.PsList"
-            }
-          ]
-        },
-        {
-          "name": "pstree",
-          "children": [
-            {
-              "name": "PsTree",
-              "help": "Description for PsTree goes here.",
-              "example": "vol -f mem.raw mac.pstree.PsTree"
-            }
-          ]
-        },
-        {
-          "name": "socket_filters",
-          "children": [
-            {
-              "name": "Socket_filters",
-              "help": "Description for Socket_filters goes here.",
-              "example": "vol -f mem.raw mac.socket_filters.Socket_filters"
-            }
-          ]
-        },
-        {
-          "name": "timers",
-          "children": [
-            {
-              "name": "Timers",
-              "help": "Description for Timers goes here.",
-              "example": "vol -f mem.raw mac.timers.Timers"
-            }
-          ]
-        },
-        {
-          "name": "trustedbsd",
-          "children": [
-            {
-              "name": "Trustedbsd",
-              "help": "Description for Trustedbsd goes here.",
-              "example": "vol -f mem.raw mac.trustedbsd.Trustedbsd"
-            }
-          ]
-        },
-        {
-          "name": "vfsevents",
-          "children": [
-            {
-              "name": "VFSevents",
-              "help": "Description for VFSevents goes here.",
-              "example": "vol -f mem.raw mac.vfsevents.VFSevents"
-            }
-          ]
-        }
-      ]
+      "children": []
     }
   ]
 }
