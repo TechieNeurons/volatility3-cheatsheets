@@ -67,6 +67,8 @@ d3.json("data.json").then(data => {
         const nodes = treeLayout(root).descendants();
         const links = nodes.slice(1);
 
+        nodes.forEach(d => { d.y = d.depth * 300; });
+
         const node = svgGroup.selectAll('g.node')
             .data(nodes, d => d.data.name);
 
@@ -228,11 +230,18 @@ d3.json("data.json").then(data => {
     }
 
     function centerNode(source) {
-        const t = d3.zoomTransform(svg.node());
+        // Select the actual SVG element by its ID
+        const baseSvg = d3.select("#tree-display");
+        const t = d3.zoomTransform(baseSvg.node());
+
+        // Calculate centering coordinates
+        // window.innerWidth / 3 keeps the node slightly left of center 
+        // so the info-box doesn't cover it.
         let x = -source.y * t.k + (window.innerWidth / 3); 
         let y = -source.x * t.k + (window.innerHeight / 2);
 
-        svg.transition()
+        // Call transition directly on the baseSvg selection
+        baseSvg.transition()
             .duration(750)
             .call(d3.zoom().transform, d3.zoomIdentity.translate(x, y).scale(t.k));
     }
@@ -265,6 +274,6 @@ d3.json("data.json").then(data => {
         setTimeout(() => {
             showInfo(currentNode.data);
             centerNode(currentNode);
-        }, 100);
+        }, 200);
     }
 });
