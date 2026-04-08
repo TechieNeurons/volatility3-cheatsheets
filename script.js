@@ -80,9 +80,11 @@ d3.json("data.json").then(data => {
                 if (d.children || d._children) {
                     d.children = d.children ? null : d._children;
                     update(d);
+                    centerNode(d);
                 } else {
-                    if (d.data.help || d.data.example) {
+                    if (d.data.help || d.data.terminal_help) {
                         showInfo(d.data);
+                        centerNode(d);
                     }
                 }
             });
@@ -142,18 +144,16 @@ d3.json("data.json").then(data => {
 
         // 2. Recursively find all plugins (leaf nodes) in that OS
         const matches = [];
-        function findPlugins(node, path = "") {
-            if (node.help) { // It's a leaf node
+        function findPlugins(node) {
+            // Check for help or terminal_help to identify a leaf node
+            if (node.help || node.terminal_help) { 
                 if (node.name.toLowerCase().includes(query)) {
                     matches.push(node);
                 }
             }
-            if (node.children) {
-                node.children.forEach(child => findPlugins(child));
-            }
-            if (node._children) {
-                node._children.forEach(child => findPlugins(child));
-            }
+            // Check both expanded and collapsed children
+            if (node.children) node.children.forEach(child => findPlugins(child));
+            if (node._children) node._children.forEach(child => findPlugins(child));
         }
         findPlugins(osData);
 
@@ -215,4 +215,14 @@ function showInfo(data) {
     document.getElementById('plugin-terminal').innerText = data.terminal_help || "No terminal help found.";
 
     box.style.display = 'flex';
+}
+
+function centerNode(source) {
+    const t = d3.zoomTransform(svg.node());
+    let x = -source.y * t.k + (window.innerWidth / 3); 
+    let y = -source.x * t.k + (window.innerHeight / 2);
+
+    svg.transition()
+        .duration(750)
+        .call(d3.zoom().transform, d3.zoomIdentity.translate(x, y).scale(t.k));
 }
