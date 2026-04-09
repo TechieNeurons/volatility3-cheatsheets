@@ -26,13 +26,20 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-const svg = d3.select("#tree-display")
+// 1. Define the zoom behavior as a constant
+const zoomBehavior = d3.zoom()
+    .scaleExtent([0.1, 3])
+    .on("zoom", (event) => {
+        svgGroup.attr("transform", event.transform);
+    });
+
+// 2. Apply it to the SVG
+const baseSvg = d3.select("#tree-display")
     .attr("width", width)
     .attr("height", height)
-    .call(d3.zoom().on("zoom", (event) => {
-        svgGroup.attr("transform", event.transform);
-    }))
-    .append("g");
+    .call(zoomBehavior); // Use the constant here
+
+const svg = baseSvg.append("g")
 
 // find center of screen
 const centerX = width / 2;
@@ -243,7 +250,7 @@ d3.json("data.json").then(data => {
         // Call transition directly on the baseSvg selection
         baseSvg.transition()
             .duration(750)
-            .call(d3.zoom().transform, d3.zoomIdentity.translate(x, y).scale(t.k));
+            .call(zoomBehavior.transform, d3.zoomIdentity.translate(x, y).scale(t.k));
     }
 
     function expandAndCenter(pathArray) {
