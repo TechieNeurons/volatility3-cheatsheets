@@ -28,6 +28,8 @@ body { font-family: sans-serif; background-color: var(--bg-color); color: var(--
     background: var(--box-bg); border: 2px solid #ff0000; padding: 20px;
     border-radius: 4px; z-index: 100; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
     flex-direction: column;
+    max-height: 85vh;
+    overflow-y: auto;
 }
 
 #plugin-desc-container {
@@ -127,4 +129,28 @@ pre { background: #000; padding: 15px; color: #00ff41; font-family: 'Courier New
 .search-item:hover {
     background: #333 !important;
     color: #ff0000;
+}
+
+/* Styling for the new Vol 2 terminal */
+.matrix-terminal {
+    background: #000;
+    color: #00ff41;
+    padding: 10px;
+    border: 1px solid #003300;
+    font-family: 'Courier New', monospace;
+    font-size: 11px; /* Slightly smaller to save space */
+    white-space: pre-wrap;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* Styling for the field notes/comments */
+.comment-box {
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 0, 0, 0.05); /* Very subtle red tint */
+    border-left: 3px solid #ff0000;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text-color);
 }

@@ -233,7 +233,18 @@ d3.json("data.json").then(data => {
         // 3. Set Terminal Help text
         document.getElementById('plugin-terminal').innerText = data.terminal_help || "No terminal help found.";
 
-        box.style.display = 'flex';
+        // 3. Volatility 2 Equivalence (NEW)
+        const vol2Term = document.getElementById('plugin-vol2');
+        vol2Term.innerText = data.vol2_command || "No direct Volatility 2 equivalent.";
+
+        // 4. Tactical Comments (NEW)
+        const commentBox = document.getElementById('plugin-comment');
+        if (data.comment) {
+            commentBox.style.display = 'block';
+            commentBox.innerText = "Note: " + data.comment;
+        } else {
+            commentBox.style.display = 'none';
+        }
     }
 
     function centerNode(source) {
