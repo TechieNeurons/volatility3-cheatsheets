@@ -13,8 +13,8 @@
                 "Show OS & kernel details of the memory sample being analyzed."
               ],
               "terminal_help": "usage: vol.py windows.info.Info [-h]\n\nShow OS & kernel details of the memory sample being analyzed.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 info",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "vol.py -f mem.raw imageinfo",
+              "comment": "Note: In volatility 2 imageinfo try to find the best profile to use, in volatility 3 they are no profile so info is just giving info"
             },
             {
               "name": "crashinfo",
@@ -22,17 +22,17 @@
                 "Lists the information from a Windows crash dump."
               ],
               "terminal_help": "usage: vol.py windows.crashinfo.Crashinfo [-h]\n\nLists the information from a Windows crash dump.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 crashinfo",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "statistics",
               "help": [
-                "Lists statistics about the memory space."
+                "Lists statistics about the memory space (about valid/invalid pages)"
               ],
               "terminal_help": "usage: vol.py windows.statistics.Statistics [-h]\n\nLists statistics about the memory space.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 statistics",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "bigpools",
@@ -40,35 +40,44 @@
                 "List big page pools."
               ],
               "terminal_help": "usage: vol.py windows.bigpools.BigPools [-h] [--tags TAGS] [--show-free]\n\nList big page pools.\n\noptions:\n  -h, --help   show this help message and exit\n  --tags TAGS  Comma separated list of pool tags to filter pools returned\n  --show-free  Show freed regions (otherwise only show allocations in use)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 bigpools",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "poolscanner",
               "help": [
-                "A generic pool scanner plugin."
+                "A generic pool scanner plugin.",
+                "This plugin is scanning the whole memory for any strucutres he knows",
+                "This scanner is more useful for creating new plugin."
               ],
               "terminal_help": "usage: vol.py windows.poolscanner.PoolScanner [-h]\n\nA generic pool scanner plugin.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 poolscanner",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "Pool scanning is a technique used by volatility to find particula object inside the memory (he looks for known structures like EPROCESS, ETHREAD, etc.)"
             },
             {
               "name": "kpcrs",
               "help": [
-                "Print KPCR structure for each processor"
+                "Print KPCR structure for each processor",
+                "KPCR is a structure containing per-CPU information.",
+                "There are as many KPCR in the system as there are CPUs",
+                "It stores architectural-specific information that the processor needs to function, such as:",
+                "- Interrupt Dispatcher Tables (IDT)",
+                "- Global Descriptor Tables (GDT)",
+                "- Task State Segments (TSS)",
+                "- The current IRQL (Interrupt Request Level)"
               ],
               "terminal_help": "usage: vol.py windows.kpcrs.KPCRs [-h]\n\nPrint KPCR structure for each processor\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 kpcrs",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "debugregisters",
               "help": [
-                "No description extracted."
+                "x86 and x64 processors have specific hardware registers dedicated to debugging, this plugin read these registers to find the hardware breakpoints."
               ],
               "terminal_help": "usage: vol.py windows.debugregisters.DebugRegisters [-h]\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 debugregisters",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -81,8 +90,8 @@
                 "Scans for top level Windows Stations"
               ],
               "terminal_help": "usage: vol.py windows.windowstations.WindowStations [-h]\n\nScans for top level Windows Stations\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 windowstations",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "desktops",
@@ -90,8 +99,8 @@
                 "Enumerates the Desktop instances of each Window Station"
               ],
               "terminal_help": "usage: vol.py windows.desktops.Desktops [-h]\n\nEnumerates the Desktop instances of each Window Station\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 desktops",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "deskscan",
@@ -99,8 +108,8 @@
                 "Scans for the Desktop instances of each Window Station"
               ],
               "terminal_help": "usage: vol.py windows.deskscan.DeskScan [-h]\n\nScans for the Desktop instances of each Window Station\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 deskscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "windows.Windows",
@@ -108,8 +117,8 @@
                 "Enumerates the Windows of Desktop instances"
               ],
               "terminal_help": "usage: vol.py windows.windows.Windows [-h]\n\nEnumerates the Windows of Desktop instances\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 windows.Windows",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -119,11 +128,12 @@
             {
               "name": "pslist",
               "help": [
-                "No description extracted."
+                "List the processes in memory at the time of the dump",
+                "This plugin find processes following the doubly-linked EPROCESS list"
               ],
               "terminal_help": "usage: vol.py windows.pslist.PsList [-h] [--physical] [--pid [PID ...]]\n                                    [--dump]\n\nLists the processes present in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --physical       Display physical offsets instead of virtual\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n  --dump           Extract listed processes\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 pslist",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> pslist",
+              "comment": "N/A"
             },
             {
               "name": "pstree",
@@ -131,26 +141,28 @@
                 "Plugin for listing processes in a tree based on their parent process ID."
               ],
               "terminal_help": "usage: vol.py windows.pstree.PsTree [-h] [--physical] [--pid [PID ...]]\n\nPlugin for listing processes in a tree based on their parent process ID.\n\noptions:\n  -h, --help       show this help message and exit\n  --physical       Display physical offsets instead of virtual\n  --pid [PID ...]  Process ID to include (with ancestors and descendants, all\n                   other processes are excluded)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 pstree",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> pstree",
+              "comment": "Just like pslist, only the output appearance change"
             },
             {
               "name": "psscan",
               "help": [
-                "No description extracted."
+                "List the processes in memory at the time of the dump",
+                "psscan contrary to pslist, and like all the 'scan' plugin, is using pool scanning to find any EPROCESS structure"
               ],
               "terminal_help": "usage: vol.py windows.psscan.PsScan [-h] [--pid [PID ...]] [--dump]\n                                    [--physical]\n\nScans for processes present in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n  --dump           Extract listed processes\n  --physical       Display physical offset instead of virtual\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 psscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> psscan",
+              "comment": "N/A"
             },
             {
               "name": "psxview",
               "help": [
-                "Lists all processes found via four of the methods described in \"The Art of"
+                "Lists all processes found via four of the methods described in \"The Art of Memory Forensics\"",
+                "mostly used to find unlinked and/or hidden process"
               ],
-              "terminal_help": "usage: vol.py windows.malware.psxview.PsXView [-h] [--physical-offsets]\n\nLists all processes found via four of the methods described in \"The Art of\nMemory Forensics\" which may help identify processes that are trying to hide\nthemselves.\n\noptions:\n  -h, --help          show this help message and exit\n  --physical-offsets  List processes with physical offsets instead of virtual\n                      offsets.\n\nWe recommend using -r pretty if you are looking at this plugin's output in a\nterminal.\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 psxview",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "terminal_help": "usage: vol.py windows.malware.psxview.PsXView [-h] [--physical-offsets]\n\nLists all processes found via four of the methods described in \"The Art of Memory Forensics\"\nwhich may help identify processes that are trying to hide\nthemselves.\n\noptions:\n  -h, --help          show this help message and exit\n  --physical-offsets  List processes with physical offsets instead of virtual\n                      offsets.\n\nWe recommend using -r pretty if you are looking at this plugin's output in a\nterminal.\n",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> psxview",
+              "comment": "Grep and 'False' to spot processes present via one method but not the other"
             },
             {
               "name": "sessions",
@@ -158,8 +170,8 @@
                 "lists Processes with Session information extracted from Environmental"
               ],
               "terminal_help": "usage: vol.py windows.sessions.Sessions [-h] [--pid [PID ...]]\n\nlists Processes with Session information extracted from Environmental\nVariables\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 sessions",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "verinfo",
@@ -167,8 +179,8 @@
                 "Lists version information from PE files."
               ],
               "terminal_help": "usage: vol.py windows.verinfo.VerInfo [-h] [--extensive]\n\nLists version information from PE files.\n\noptions:\n  -h, --help   show this help message and exit\n  --extensive  Search physical layer for version information\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 verinfo",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -181,26 +193,28 @@
                 "Lists process command line arguments."
               ],
               "terminal_help": "usage: vol.py windows.cmdline.CmdLine [-h] [--pid [PID ...]]\n\nLists process command line arguments.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 cmdline",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> cmdline",
+              "comment": "N/A"
             },
             {
               "name": "cmdscan",
               "help": [
-                "No description extracted."
+                "Looks for Windows Command History lists.",
+                "Scan every conhost.exe process to spot history from them"
               ],
               "terminal_help": "usage: vol.py windows.cmdscan.CmdScan [-h] [--no-registry]\n                                      [--max-history [MAX_HISTORY ...]]\n\nLooks for Windows Command History lists\n\noptions:\n  -h, --help            show this help message and exit\n  --no-registry         Don't search the registry for possible values of\n                        CommandHistorySize\n  --max-history [MAX_HISTORY ...]\n                        CommandHistorySize values to search for.\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 cmdscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> cmdscan",
+              "comment": "Since Windows 7, the command line history is not managed by csrss like in the past but each conhost.exe processes have it's own command history structure"
             },
             {
               "name": "consoles",
               "help": [
-                "[--max-buffers [MAX_BUFFERS ...]]"
+                "Looks for Windows console buffers",
+                "cmdscan is only printing the command he find, consoles will also look for the outputs"
               ],
               "terminal_help": "usage: vol.py windows.consoles.Consoles [-h] [--no-registry]\n                                        [--max-history [MAX_HISTORY ...]]\n                                        [--max-buffers [MAX_BUFFERS ...]]\n\nLooks for Windows console buffers\n\noptions:\n  -h, --help            show this help message and exit\n  --no-registry         Don't search the registry for possible values of\n                        CommandHistorySize and HistoryBufferMax\n  --max-history [MAX_HISTORY ...]\n                        CommandHistorySize values to search for.\n  --max-buffers [MAX_BUFFERS ...]\n                        HistoryBufferMax values to search for.\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 consoles",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> consoles",
+              "comment": "N/A"
             }
           ]
         },
@@ -213,8 +227,8 @@
                 "Lists process threads"
               ],
               "terminal_help": "usage: vol.py windows.orphan_kernel_threads.Threads [-h]\n\nLists process threads\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 threads",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "thrdscan",
@@ -222,8 +236,8 @@
                 "Scans for windows threads."
               ],
               "terminal_help": "usage: vol.py windows.thrdscan.ThrdScan [-h]\n\nScans for windows threads.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 thrdscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "orphan_kernel_threads",
@@ -231,8 +245,8 @@
                 "Lists process threads"
               ],
               "terminal_help": "usage: vol.py windows.orphan_kernel_threads.Threads [-h]\n\nLists process threads\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 orphan_kernel_threads",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "suspended_threads",
@@ -240,17 +254,17 @@
                 "Enumerates suspended threads."
               ],
               "terminal_help": "usage: vol.py windows.suspended_threads.SuspendedThreads [-h]\n\nEnumerates suspended threads.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 suspended_threads",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "suspicious_threads",
               "help": [
-                "No description extracted."
+                "Lists suspicious userland process threads"
               ],
               "terminal_help": "usage: vol.py windows.malware.suspicious_threads.SuspiciousThreads\n       [-h] [--pid [PID ...]]\n\nLists suspicious userland process threads\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 suspicious_threads",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -263,8 +277,8 @@
                 "Display process environment variables"
               ],
               "terminal_help": "usage: vol.py windows.envars.Envars [-h] [--pid [PID ...]] [--silent]\n\nDisplay process environment variables\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n  --silent         Suppress common and non-persistent variables\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 envars",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "getsids",
@@ -272,8 +286,8 @@
                 "Print the SIDs owning each process"
               ],
               "terminal_help": "usage: vol.py windows.getsids.GetSIDs [-h] [--pid [PID ...]]\n\nPrint the SIDs owning each process\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 getsids",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "privileges",
@@ -281,8 +295,8 @@
                 "Lists process token privileges"
               ],
               "terminal_help": "usage: vol.py windows.privileges.Privs [-h] [--pid [PID ...]]\n\nLists process token privileges\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 privileges",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "dlllist",
@@ -290,8 +304,8 @@
                 "[--ignore-case] [--dump]"
               ],
               "terminal_help": "usage: vol.py windows.dlllist.DllList [-h] [--pid [PID ...]] [--offset OFFSET]\n                                      [--base BASE] [--name NAME]\n                                      [--ignore-case] [--dump]\n\nLists the loaded DLLs in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --offset OFFSET  Process offset in the physical address space\n  --base BASE      Specify a base virtual address in process memory\n  --name NAME      Specify a regular expression to match dll name(s)\n  --ignore-case    Specify case insensitivity for the regular expression name\n                   matching\n  --dump           Extract listed DLLs\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 dlllist",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "iat",
@@ -299,8 +313,8 @@
                 "Extract Import Address Table to list API (functions) used by a program"
               ],
               "terminal_help": "usage: vol.py windows.iat.IAT [-h] [--pid [PID ...]]\n\nExtract Import Address Table to list API (functions) used by a program\ncontained in external libraries\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 iat",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "handles",
@@ -308,8 +322,8 @@
                 "Lists process open handles."
               ],
               "terminal_help": "usage: vol.py windows.handles.Handles [-h] [--pid [PID ...]] [--offset OFFSET]\n\nLists process open handles.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --offset OFFSET  Process offset in the physical address space\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 handles",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "mutantscan",
@@ -317,8 +331,8 @@
                 "Scans for mutexes present in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.mutantscan.MutantScan [-h]\n\nScans for mutexes present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 mutantscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -331,8 +345,8 @@
                 "Lists virtual mapped sections."
               ],
               "terminal_help": "usage: vol.py windows.virtmap.VirtMap [-h]\n\nLists virtual mapped sections.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 virtmap",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "vadinfo",
@@ -340,8 +354,8 @@
                 "[--maxsize MAXSIZE]"
               ],
               "terminal_help": "usage: vol.py windows.vadinfo.VadInfo [-h] [--address ADDRESS]\n                                      [--pid [PID ...]] [--dump]\n                                      [--maxsize MAXSIZE]\n\nLists process memory ranges.\n\noptions:\n  -h, --help         show this help message and exit\n  --address ADDRESS  Process virtual memory address to include (all other\n                     address ranges are excluded).\n  --pid [PID ...]    Filter on specific process IDs\n  --dump             Extract listed memory ranges\n  --maxsize MAXSIZE  Maximum size for dumped VAD sections (all the bigger\n                     sections will be ignored)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 vadinfo",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "vadwalk",
@@ -349,8 +363,8 @@
                 "Walk the VAD tree."
               ],
               "terminal_help": "usage: vol.py windows.vadwalk.VadWalk [-h] [--pid [PID ...]]\n\nWalk the VAD tree.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 vadwalk",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "vadregexscan",
@@ -358,8 +372,8 @@
                 "[--maxsize MAXSIZE]"
               ],
               "terminal_help": "usage: vol.py windows.vadregexscan.VadRegExScan [-h] [--pid [PID ...]]\n                                                --pattern PATTERN\n                                                [--maxsize MAXSIZE]\n\nScans all virtual memory areas for tasks using RegEx.\n\noptions:\n  -h, --help         show this help message and exit\n  --pid [PID ...]    Filter on specific process IDs\n  --pattern PATTERN  RegEx pattern\n  --maxsize MAXSIZE  Maximum size in bytes for displayed context\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 vadregexscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "vadyarascan",
@@ -367,8 +381,8 @@
                 "[--yara-file YARA_FILE]"
               ],
               "terminal_help": "usage: vol.py windows.vadyarascan.VadYaraScan [-h] [--insensitive] [--wide]\n                                              [--yara-string YARA_STRING]\n                                              [--yara-file YARA_FILE]\n                                              [--yara-compiled-file YARA_COMPILED_FILE]\n                                              [--max-size MAX_SIZE]\n                                              [--pid [PID ...]]\n\nScans all the Virtual Address Descriptor memory maps using yara.\n\noptions:\n  -h, --help            show this help message and exit\n  --insensitive         Makes the search case insensitive\n  --wide                Match wide (unicode) strings\n  --yara-string YARA_STRING\n                        Yara rules (as a string)\n  --yara-file YARA_FILE\n                        Yara rules (as a file)\n  --yara-compiled-file YARA_COMPILED_FILE\n                        Yara compiled rules (as a file)\n  --max-size MAX_SIZE   Set the maximum size (default is 1GB)\n  --pid [PID ...]       Process IDs to include (all other processes are\n                        excluded)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 vadyarascan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -381,8 +395,8 @@
                 "Traverses network tracking structures present in a particular windows memory"
               ],
               "terminal_help": "usage: vol.py windows.netstat.NetStat [-h] [--include-corrupt]\n\nTraverses network tracking structures present in a particular windows memory\nimage.\n\noptions:\n  -h, --help         show this help message and exit\n  --include-corrupt  Radically eases result validation. This will show\n                     partially overwritten data. WARNING: the results are\n                     likely to include garbage and/or corrupt data. Be\n                     cautious!\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 netstat",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "netscan",
@@ -390,8 +404,8 @@
                 "Scans for network objects present in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.netscan.NetScan [-h] [--include-corrupt]\n\nScans for network objects present in a particular windows memory image.\n\noptions:\n  -h, --help         show this help message and exit\n  --include-corrupt  Radically eases result validation. This will show\n                     partially overwritten data. WARNING: the results are\n                     likely to include garbage and/or corrupt data. Be\n                     cautious!\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 netscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -404,8 +418,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.pslist.PsList [-h] [--physical] [--pid [PID ...]]\n                                    [--dump]\n\nLists the processes present in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --physical       Display physical offsets instead of virtual\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n  --dump           Extract listed processes\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 pslist",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "psscan",
@@ -413,8 +427,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.psscan.PsScan [-h] [--pid [PID ...]] [--dump]\n                                    [--physical]\n\nScans for processes present in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n  --dump           Extract listed processes\n  --physical       Display physical offset instead of virtual\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 psscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "pedump",
@@ -422,8 +436,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.pedump.PEDump [-h] [--pid [PID ...]] --base BASE\n                                    [--kernel-module]\n\nAllows extracting PE Files from a specific address in a specific address space\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --base BASE      Base address to reconstruct a PE file\n  --kernel-module  Extract from kernel address space.\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 pedump",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "dlllist",
@@ -431,8 +445,8 @@
                 "[--ignore-case] [--dump]"
               ],
               "terminal_help": "usage: vol.py windows.dlllist.DllList [-h] [--pid [PID ...]] [--offset OFFSET]\n                                      [--base BASE] [--name NAME]\n                                      [--ignore-case] [--dump]\n\nLists the loaded DLLs in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --offset OFFSET  Process offset in the physical address space\n  --base BASE      Specify a base virtual address in process memory\n  --name NAME      Specify a regular expression to match dll name(s)\n  --ignore-case    Specify case insensitivity for the regular expression name\n                   matching\n  --dump           Extract listed DLLs\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 dlllist",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "vadinfo",
@@ -440,8 +454,8 @@
                 "[--maxsize MAXSIZE]"
               ],
               "terminal_help": "usage: vol.py windows.vadinfo.VadInfo [-h] [--address ADDRESS]\n                                      [--pid [PID ...]] [--dump]\n                                      [--maxsize MAXSIZE]\n\nLists process memory ranges.\n\noptions:\n  -h, --help         show this help message and exit\n  --address ADDRESS  Process virtual memory address to include (all other\n                     address ranges are excluded).\n  --pid [PID ...]    Filter on specific process IDs\n  --dump             Extract listed memory ranges\n  --maxsize MAXSIZE  Maximum size for dumped VAD sections (all the bigger\n                     sections will be ignored)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 vadinfo",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "memmap",
@@ -449,8 +463,8 @@
                 "Prints the memory map"
               ],
               "terminal_help": "usage: vol.py windows.memmap.Memmap [-h] [--pid PID] [--dump]\n\nPrints the memory map\n\noptions:\n  -h, --help  show this help message and exit\n  --pid PID   Process ID to include (all other processes are excluded)\n  --dump      Extract listed memory segments\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 memmap",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "filescan",
@@ -458,8 +472,8 @@
                 "Scans for file objects present in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.filescan.FileScan [-h]\n\nScans for file objects present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 filescan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "dumpfiles",
@@ -467,8 +481,8 @@
                 "[--physaddr [PHYSADDR ...]]"
               ],
               "terminal_help": "usage: vol.py windows.dumpfiles.DumpFiles [-h] [--pid PID]\n                                          [--virtaddr [VIRTADDR ...]]\n                                          [--physaddr [PHYSADDR ...]]\n                                          [--filter FILTER] [--ignore-case]\n\nDumps cached file contents from Windows memory samples.\n\noptions:\n  -h, --help            show this help message and exit\n  --pid PID             Process ID to include (all other processes are\n                        excluded)\n  --virtaddr [VIRTADDR ...]\n                        Dump the _FILE_OBJECTs at the given virtual\n                        address(es)\n  --physaddr [PHYSADDR ...]\n                        Dump a single _FILE_OBJECTs at the given physical\n                        address(es)\n  --filter FILTER       Dump files matching regular expression FILTER\n  --ignore-case         Ignore case in filter match\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 dumpfiles",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "hivelist",
@@ -476,8 +490,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.registry.hivelist.HiveList [-h] [--filter FILTER]\n                                                 [--dump]\n\nLists the registry hives present in a particular memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --filter FILTER  String to filter hive names returned\n  --dump           Extract listed registry hives\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 hivelist",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "certificates",
@@ -485,8 +499,8 @@
                 "Lists the certificates in the registry's Certificate Store."
               ],
               "terminal_help": "usage: vol.py windows.registry.certificates.Certificates [-h] [--dump]\n\nLists the certificates in the registry's Certificate Store.\n\noptions:\n  -h, --help  show this help message and exit\n  --dump      Extract listed certificates\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 certificates",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "modules",
@@ -494,8 +508,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.modules.Modules [-h] [--dump] [--base BASE]\n                                      [--name NAME]\n\nLists the loaded kernel modules.\n\noptions:\n  -h, --help   show this help message and exit\n  --dump       Extract listed modules\n  --base BASE  Extract a single module with BASE address\n  --name NAME  module name/sub string\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 modules",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "modscan",
@@ -503,8 +517,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.modscan.ModScan [-h] [--dump] [--base BASE]\n                                      [--name NAME]\n\nScans for modules present in a particular windows memory image.\n\noptions:\n  -h, --help   show this help message and exit\n  --dump       Extract listed modules\n  --base BASE  Extract a single module with BASE address\n  --name NAME  module name/sub string\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 modscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -517,8 +531,8 @@
                 "Scans for MFT FILE objects present in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.mftscan.MFTScan [-h]\n\nScans for MFT FILE objects present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 mftscan.MFTScan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "mftscan.ADS",
@@ -526,8 +540,8 @@
                 "Scans for Alternate Data Stream"
               ],
               "terminal_help": "usage: vol.py windows.mftscan.ADS [-h]\n\nScans for Alternate Data Stream\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 mftscan.ADS",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "mftscan.ResidentData",
@@ -535,8 +549,8 @@
                 "Scans for MFT Records with Resident Data"
               ],
               "terminal_help": "usage: vol.py windows.mftscan.ResidentData [-h]\n\nScans for MFT Records with Resident Data\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 mftscan.ResidentData",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -549,8 +563,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.registry.hivelist.HiveList [-h] [--filter FILTER]\n                                                 [--dump]\n\nLists the registry hives present in a particular memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --filter FILTER  String to filter hive names returned\n  --dump           Extract listed registry hives\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 hivelist",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "hivescan",
@@ -558,8 +572,8 @@
                 "Scans for registry hives present in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.registry.hivescan.HiveScan [-h]\n\nScans for registry hives present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 hivescan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "printkey",
@@ -567,8 +581,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.registry.printkey.PrintKey [-h] [--offset OFFSET]\n                                                 [--key KEY] [--recurse]\n\nLists the registry keys under a hive or specific key value.\n\noptions:\n  -h, --help       show this help message and exit\n  --offset OFFSET  Hive Offset\n  --key KEY        Key to start from\n  --recurse        Recurses through keys\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 printkey",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "cachedump",
@@ -576,8 +590,8 @@
                 "Dumps lsa secrets from memory (deprecated)"
               ],
               "terminal_help": "usage: vol.py windows.cachedump.Cachedump [-h]\n\nDumps lsa secrets from memory (deprecated)\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 cachedump",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "hashdump",
@@ -585,8 +599,8 @@
                 "Dumps user hashes from memory (deprecated)"
               ],
               "terminal_help": "usage: vol.py windows.hashdump.Hashdump [-h]\n\nDumps user hashes from memory (deprecated)\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 hashdump",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "lsadump",
@@ -594,8 +608,8 @@
                 "Dumps lsa secrets from memory (deprecated)"
               ],
               "terminal_help": "usage: vol.py windows.lsadump.Lsadump [-h]\n\nDumps lsa secrets from memory (deprecated)\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 lsadump",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "amcache",
@@ -603,8 +617,8 @@
                 "Extract information on executed applications from the AmCache (deprecated)."
               ],
               "terminal_help": "usage: vol.py windows.amcache.Amcache [-h]\n\nExtract information on executed applications from the AmCache (deprecated).\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 amcache",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "userassist",
@@ -612,8 +626,8 @@
                 "Print userassist registry keys and information."
               ],
               "terminal_help": "usage: vol.py windows.registry.userassist.UserAssist [-h] [--offset OFFSET]\n\nPrint userassist registry keys and information.\n\noptions:\n  -h, --help       show this help message and exit\n  --offset OFFSET  Hive Offset\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 userassist",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "shimcache",
@@ -621,8 +635,8 @@
                 "Reads Shimcache entries from the ahcache.sys AVL tree"
               ],
               "terminal_help": "usage: vol.py windows.shimcachemem.ShimcacheMem [-h]\n\nReads Shimcache entries from the ahcache.sys AVL tree\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 shimcache",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "scheduled_tasks",
@@ -630,8 +644,8 @@
                 "Decodes scheduled task information from the Windows registry, including"
               ],
               "terminal_help": "usage: vol.py windows.registry.scheduled_tasks.ScheduledTasks [-h]\n\nDecodes scheduled task information from the Windows registry, including\ninformation about triggers, actions, run times, and creation times.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 scheduled_tasks",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "certificates",
@@ -639,8 +653,8 @@
                 "Lists the certificates in the registry's Certificate Store."
               ],
               "terminal_help": "usage: vol.py windows.registry.certificates.Certificates [-h] [--dump]\n\nLists the certificates in the registry's Certificate Store.\n\noptions:\n  -h, --help  show this help message and exit\n  --dump      Extract listed certificates\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 certificates",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "getcellroutine",
@@ -648,8 +662,8 @@
                 "Reports registry hives with a hooked GetCellRoutine handler"
               ],
               "terminal_help": "usage: vol.py windows.registry.getcellroutine.GetCellRoutine [-h]\n\nReports registry hives with a hooked GetCellRoutine handler\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 getcellroutine",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -662,8 +676,8 @@
                 "Lists services contained with the services.exe doubly linked list of services"
               ],
               "terminal_help": "usage: vol.py windows.svclist.SvcList [-h]\n\nLists services contained with the services.exe doubly linked list of services\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 svclist",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "svcscan",
@@ -671,8 +685,8 @@
                 "Scans for windows services."
               ],
               "terminal_help": "usage: vol.py windows.svcscan.SvcScan [-h]\n\nScans for windows services.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 svcscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "svcdiff",
@@ -680,8 +694,8 @@
                 "Compares services found through list walking versus scanning to find rootkits"
               ],
               "terminal_help": "usage: vol.py windows.malware.svcdiff.SvcDiff [-h]\n\nCompares services found through list walking versus scanning to find rootkits\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 svcdiff",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "getservicesids",
@@ -689,8 +703,8 @@
                 "Lists process token sids."
               ],
               "terminal_help": "usage: vol.py windows.getservicesids.GetServiceSIDs [-h]\n\nLists process token sids.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 getservicesids",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -703,8 +717,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.modules.Modules [-h] [--dump] [--base BASE]\n                                      [--name NAME]\n\nLists the loaded kernel modules.\n\noptions:\n  -h, --help   show this help message and exit\n  --dump       Extract listed modules\n  --base BASE  Extract a single module with BASE address\n  --name NAME  module name/sub string\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 modules",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "modscan",
@@ -712,8 +726,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.modscan.ModScan [-h] [--dump] [--base BASE]\n                                      [--name NAME]\n\nScans for modules present in a particular windows memory image.\n\noptions:\n  -h, --help   show this help message and exit\n  --dump       Extract listed modules\n  --base BASE  Extract a single module with BASE address\n  --name NAME  module name/sub string\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 modscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "driverscan",
@@ -721,8 +735,8 @@
                 "Scans for drivers present in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.driverscan.DriverScan [-h]\n\nScans for drivers present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 driverscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "unloadedmodules",
@@ -730,8 +744,8 @@
                 "Lists the unloaded kernel modules."
               ],
               "terminal_help": "usage: vol.py windows.unloadedmodules.UnloadedModules [-h]\n\nLists the unloaded kernel modules.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 unloadedmodules",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "devicetree",
@@ -739,8 +753,8 @@
                 "Listing tree based on drivers and attached devices in a particular windows"
               ],
               "terminal_help": "usage: vol.py windows.devicetree.DeviceTree [-h]\n\nListing tree based on drivers and attached devices in a particular windows\nmemory image.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 devicetree",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "driverirp",
@@ -748,8 +762,8 @@
                 "List IRPs for drivers in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.driverirp.DriverIrp [-h]\n\nList IRPs for drivers in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 driverirp",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "ssdt",
@@ -757,8 +771,8 @@
                 "Lists the system call table."
               ],
               "terminal_help": "usage: vol.py windows.ssdt.SSDT [-h]\n\nLists the system call table.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 ssdt",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "symlinkscan",
@@ -766,8 +780,8 @@
                 "Scans for links present in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.symlinkscan.SymlinkScan [-h]\n\nScans for links present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 symlinkscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "callbacks",
@@ -775,8 +789,8 @@
                 "Lists kernel callbacks and notification routines."
               ],
               "terminal_help": "usage: vol.py windows.callbacks.Callbacks [-h]\n\nLists kernel callbacks and notification routines.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 callbacks",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "timers",
@@ -784,8 +798,8 @@
                 "Print kernel timers and associated module DPCs"
               ],
               "terminal_help": "usage: vol.py windows.timers.Timers [-h]\n\nPrint kernel timers and associated module DPCs\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 timers",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "joblinks",
@@ -793,8 +807,8 @@
                 "Print process job link information"
               ],
               "terminal_help": "usage: vol.py windows.joblinks.JobLinks [-h] [--physical]\n\nPrint process job link information\n\noptions:\n  -h, --help  show this help message and exit\n  --physical  Display physical offset instead of virtual\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 joblinks",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "mbrscan",
@@ -802,8 +816,8 @@
                 "Scans for and parses potential Master Boot Records (MBRs)"
               ],
               "terminal_help": "usage: vol.py windows.mbrscan.MBRScan [-h] [--full]\n\nScans for and parses potential Master Boot Records (MBRs)\n\noptions:\n  -h, --help  show this help message and exit\n  --full      It analyzes and provides all the information in the partition\n              entry and bootcode hexdump. (It returns a lot of information, so\n              we recommend you render it in CSV.)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 mbrscan",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         },
@@ -816,8 +830,8 @@
                 "Lists all processes found via four of the methods described in \"The Art of"
               ],
               "terminal_help": "usage: vol.py windows.malware.psxview.PsXView [-h] [--physical-offsets]\n\nLists all processes found via four of the methods described in \"The Art of\nMemory Forensics\" which may help identify processes that are trying to hide\nthemselves.\n\noptions:\n  -h, --help          show this help message and exit\n  --physical-offsets  List processes with physical offsets instead of virtual\n                      offsets.\n\nWe recommend using -r pretty if you are looking at this plugin's output in a\nterminal.\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 psxview",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "pebmasquerade",
@@ -825,8 +839,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.malware.pebmasquerade.PebMasquerade [-h]\n                                                          [--pid [PID ...]]\n\nDetects potential process name spoofing by comparing EPROCESS and PEB data.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 pebmasquerade",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "suspicious_threads",
@@ -834,8 +848,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.malware.suspicious_threads.SuspiciousThreads\n       [-h] [--pid [PID ...]]\n\nLists suspicious userland process threads\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 suspicious_threads",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "drivermodule",
@@ -843,8 +857,8 @@
                 "Determines if any loaded drivers were hidden by a rootkit"
               ],
               "terminal_help": "usage: vol.py windows.malware.drivermodule.DriverModule [-h]\n\nDetermines if any loaded drivers were hidden by a rootkit\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 drivermodule",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "ldrmodules",
@@ -852,8 +866,8 @@
                 "Lists the loaded modules in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.malware.ldrmodules.LdrModules [-h] [--pid [PID ...]]\n\nLists the loaded modules in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 ldrmodules",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "hollowprocesses",
@@ -861,8 +875,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.malware.hollowprocesses.HollowProcesses\n       [-h] [--pid [PID ...]]\n\nLists hollowed processes\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 hollowprocesses",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "malfind",
@@ -870,8 +884,8 @@
                 "Lists process memory ranges that potentially contain injected code."
               ],
               "terminal_help": "usage: vol.py windows.malware.malfind.Malfind [-h] [--pid [PID ...]] [--dump]\n\nLists process memory ranges that potentially contain injected code.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --dump           Extract injected VADs\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 malfind",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "direct_system_calls",
@@ -879,8 +893,8 @@
                 "[--yara-file YARA_FILE] [--yara-compiled-file YARA_COMPILED_FILE]"
               ],
               "terminal_help": "usage: vol.py windows.malware.direct_system_calls.DirectSystemCalls\n       [-h] [--insensitive] [--wide] [--yara-string YARA_STRING]\n       [--yara-file YARA_FILE] [--yara-compiled-file YARA_COMPILED_FILE]\n       [--max-size MAX_SIZE]\n\nDetects the Direct System Call technique used to bypass EDRs\n\noptions:\n  -h, --help            show this help message and exit\n  --insensitive         Makes the search case insensitive\n  --wide                Match wide (unicode) strings\n  --yara-string YARA_STRING\n                        Yara rules (as a string)\n  --yara-file YARA_FILE\n                        Yara rules (as a file)\n  --yara-compiled-file YARA_COMPILED_FILE\n                        Yara compiled rules (as a file)\n  --max-size MAX_SIZE   Set the maximum size (default is 1GB)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 direct_system_calls",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "indirect_system_calls",
@@ -888,8 +902,8 @@
                 "[--yara-file YARA_FILE] [--yara-compiled-file YARA_COMPILED_FILE]"
               ],
               "terminal_help": "usage: vol.py windows.malware.indirect_system_calls.IndirectSystemCalls\n       [-h] [--insensitive] [--wide] [--yara-string YARA_STRING]\n       [--yara-file YARA_FILE] [--yara-compiled-file YARA_COMPILED_FILE]\n       [--max-size MAX_SIZE]\n\nDetects the Indirect System Call technique used to bypass EDRs.\n\noptions:\n  -h, --help            show this help message and exit\n  --insensitive         Makes the search case insensitive\n  --wide                Match wide (unicode) strings\n  --yara-string YARA_STRING\n                        Yara rules (as a string)\n  --yara-file YARA_FILE\n                        Yara rules (as a file)\n  --yara-compiled-file YARA_COMPILED_FILE\n                        Yara compiled rules (as a file)\n  --max-size MAX_SIZE   Set the maximum size (default is 1GB)\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 indirect_system_calls",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "processghosting",
@@ -897,8 +911,8 @@
                 "Lists processes whose DeletePending bit is set or whose FILE_OBJECT is set to"
               ],
               "terminal_help": "usage: vol.py windows.malware.processghosting.ProcessGhosting [-h]\n\nLists processes whose DeletePending bit is set or whose FILE_OBJECT is set to\n0 or Vads that are DeleteOnClose\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 processghosting",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "unhooked_system_calls",
@@ -906,8 +920,8 @@
                 "Detects hooked ntdll.dll stub functions in Windows processes."
               ],
               "terminal_help": "usage: vol.py windows.malware.unhooked_system_calls.UnhookedSystemCalls [-h]\n\nDetects hooked ntdll.dll stub functions in Windows processes.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 unhooked_system_calls",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "skeleton_key_check",
@@ -915,8 +929,8 @@
                 "Looks for signs of Skeleton Key malware"
               ],
               "terminal_help": "usage: vol.py windows.malware.skeleton_key_check.Skeleton_Key_Check [-h]\n\nLooks for signs of Skeleton Key malware\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 skeleton_key_check",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "etwpatch",
@@ -924,8 +938,8 @@
                 "Identifies ETW (Event Tracing for Windows) patching techniques used by malware"
               ],
               "terminal_help": "usage: vol.py windows.etwpatch.EtwPatch [-h] [--pid [PID ...]]\n\nIdentifies ETW (Event Tracing for Windows) patching techniques used by malware\nto evade detection.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Filter on specific process IDs\n\nThis plugin examines the first opcode of key ETW functions in ntdll.dll and\nadvapi32.dll to detect common ETW bypass techniques such as return pointer\nmanipulation (RET) or function redirection (JMP). Attackers often patch these\nfunctions to prevent security tools from receiving telemetry about process\nexecution, API calls, and other system events.\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 etwpatch",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "pe_symbols",
@@ -933,8 +947,8 @@
                 "[--symbols [SYMBOLS ...]]"
               ],
               "terminal_help": "usage: vol.py windows.pe_symbols.PESymbols [-h] --source {kernel,processes}\n                                           --module MODULE\n                                           [--symbols [SYMBOLS ...]]\n                                           [--addresses [ADDRESSES ...]]\n\nPrints symbols in PE files in process and kernel memory\n\noptions:\n  -h, --help            show this help message and exit\n  --source {kernel,processes}\n                        Where to resolve symbols.\n  --module MODULE       Module in which to resolve symbols. Use \"ntoskrnl.exe\"\n                        to resolve in the base kernel executable.\n  --symbols [SYMBOLS ...]\n                        Symbol name to resolve\n  --addresses [ADDRESSES ...]\n                        Address of symbol to resolve\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 pe_symbols",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             },
             {
               "name": "strings",
@@ -942,17 +956,8 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.strings.Strings [-h] [--pid [PID ...]]\n                                      --strings-file STRINGS_FILE\n\nReads output from the strings command and indicates which process(es) each\nstring belongs to.\n\noptions:\n  -h, --help            show this help message and exit\n  --pid [PID ...]       Process ID to include (all other processes are\n                        excluded)\n  --strings-file STRINGS_FILE\n                        Strings file\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 strings",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
-            },
-            {
-              "name": "psxview",
-              "help": [
-                "Lists all processes found via four of the methods described in \"The Art of"
-              ],
-              "terminal_help": "usage: vol.py windows.malware.psxview.PsXView [-h] [--physical-offsets]\n\nLists all processes found via four of the methods described in \"The Art of\nMemory Forensics\" which may help identify processes that are trying to hide\nthemselves.\n\noptions:\n  -h, --help          show this help message and exit\n  --physical-offsets  List processes with physical offsets instead of virtual\n                      offsets.\n\nWe recommend using -r pretty if you are looking at this plugin's output in a\nterminal.\n",
-              "vol2_command": "vol.py -f mem.raw --profile=Win7SP1x64 psxview",
-              "comment": "Tactical note: Ensure you have the correct profile for Vol2."
+              "vol2_command": "N/A",
+              "comment": "N/A"
             }
           ]
         }
