@@ -30,11 +30,11 @@
 </head>
 <body>
 
-    <a href="index.html" class="nav-back">« BACK TO CHEAT SHEET</a>
+    <a href="../index.html" class="nav-back">« BACK TO CHEAT SHEET</a>
 
     <h1>VAD Tree Visualizer</h1>
     <p>This tool transforms the flat text output of Volatility's <code>vadwalk</code> and/or <code>vadinfo</code> plugin into an interactive Binary Search Tree (BST) visualization.</p>
-    <p>In the tools folder you can find a <a href="./tools/vadwalk_output.txt">vadwalk output</a>, <a href="./tools/vadinfo_output.txt">vadinfo output</a>, <a href="./tools/vad_visualizer.py">the script</a> and the <a href="./tools/vad_tree.html">result</a>.</p>
+    <p>In the tools folder you can find a <a href="./vad_tree_visualizer/vadwalk_output.txt">vadwalk output</a>, <a href="./vad_tree_visualizer/vadinfo_output.txt">vadinfo output</a>, <a href="./vad_tree_visualizer/vad_visualizer.py">the script</a> and the <a href="./vad_tree_visualizer/vad_tree.html">result</a>.</p>
 
     <div class="content-section">
         <h2>What is the VAD?</h2>
@@ -52,7 +52,7 @@
         <p><span class="step-number">01 (bis).</span> <strong>Extract VAD Data:</strong> Run the <code>vadinfo</code> plugin on your memory image and save the output to a text file:</p>
         <pre>vol -f mem.raw windows.vadinfo --pid \<PID\> > vadinfo_output.txt</pre>
 
-        <p><span class="step-number">02.</span> <strong>Run the Python Parser:</strong> Use the provided Python script (<a href="./tools/vad_visualizer.py">here</a>) to parse the <code>vad_output.txt</code>. The script identifies the Parent, Left, and Right pointers for each memory range.</p>
+        <p><span class="step-number">02.</span> <strong>Run the Python Parser:</strong> Use the provided Python script (<a href="./vad_tree_visualizer/vad_visualizer.py">here</a>) to parse the <code>vad_output.txt</code>. The script identifies the Parent, Left, and Right pointers for each memory range.</p>
 
         <p><span class="step-number">03.</span> <strong>Visualize:</strong> The script generates an HTML file that you can open with your browser.</p>
     </div>
