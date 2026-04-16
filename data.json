@@ -322,7 +322,7 @@
                 "Lists process open handles."
               ],
               "terminal_help": "usage: vol.py windows.handles.Handles [-h] [--pid [PID ...]] [--offset OFFSET]\n\nLists process open handles.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --offset OFFSET  Process offset in the physical address space\n",
-              "vol2_command": "N/A",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> handles",
               "comment": "N/A"
             },
             {
@@ -395,7 +395,7 @@
                 "Traverses network tracking structures present in a particular windows memory"
               ],
               "terminal_help": "usage: vol.py windows.netstat.NetStat [-h] [--include-corrupt]\n\nTraverses network tracking structures present in a particular windows memory\nimage.\n\noptions:\n  -h, --help         show this help message and exit\n  --include-corrupt  Radically eases result validation. This will show\n                     partially overwritten data. WARNING: the results are\n                     likely to include garbage and/or corrupt data. Be\n                     cautious!\n",
-              "vol2_command": "N/A",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> netstat",
               "comment": "N/A"
             },
             {
@@ -404,7 +404,7 @@
                 "Scans for network objects present in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.netscan.NetScan [-h] [--include-corrupt]\n\nScans for network objects present in a particular windows memory image.\n\noptions:\n  -h, --help         show this help message and exit\n  --include-corrupt  Radically eases result validation. This will show\n                     partially overwritten data. WARNING: the results are\n                     likely to include garbage and/or corrupt data. Be\n                     cautious!\n",
-              "vol2_command": "N/A",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> netscan",
               "comment": "N/A"
             }
           ]
@@ -415,56 +415,59 @@
             {
               "name": "pslist",
               "help": [
-                "No description extracted."
+                "Can dump process"
               ],
-              "terminal_help": "usage: vol.py windows.pslist.PsList [-h] [--physical] [--pid [PID ...]]\n                                    [--dump]\n\nLists the processes present in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --physical       Display physical offsets instead of virtual\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n  --dump           Extract listed processes\n",
+              "terminal_help": "usage: vol.py windows.pslist.PsList --pid PID --dump",
               "vol2_command": "N/A",
               "comment": "N/A"
             },
             {
               "name": "psscan",
               "help": [
-                "No description extracted."
+                "Just like pslist but use pool scanning for finding processes"
               ],
-              "terminal_help": "usage: vol.py windows.psscan.PsScan [-h] [--pid [PID ...]] [--dump]\n                                    [--physical]\n\nScans for processes present in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process ID to include (all other processes are excluded)\n  --dump           Extract listed processes\n  --physical       Display physical offset instead of virtual\n",
+              "terminal_help": "usage: vol.py windows.psscan.PsScan --pid PID --dump",
               "vol2_command": "N/A",
               "comment": "N/A"
             },
             {
               "name": "pedump",
               "help": [
-                "No description extracted."
+                "Dump the executable of a process (try to reconstruct the executable)",
+                "can dump by PID, can precise the base address of the PE if known, can look inside the kernel"
               ],
-              "terminal_help": "usage: vol.py windows.pedump.PEDump [-h] [--pid [PID ...]] --base BASE\n                                    [--kernel-module]\n\nAllows extracting PE Files from a specific address in a specific address space\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --base BASE      Base address to reconstruct a PE file\n  --kernel-module  Extract from kernel address space.\n",
+              "terminal_help": "usage: vol.py windows.pedump.PEDump --pid PID [--base BASE] [--kernel-module]",
               "vol2_command": "N/A",
               "comment": "N/A"
             },
             {
               "name": "dlllist",
               "help": [
-                "[--ignore-case] [--dump]"
+                "Dump all the DLLs used by a process (or by all processes if not filtered)",
+                "can dump by PID, offset, base address or name"
               ],
-              "terminal_help": "usage: vol.py windows.dlllist.DllList [-h] [--pid [PID ...]] [--offset OFFSET]\n                                      [--base BASE] [--name NAME]\n                                      [--ignore-case] [--dump]\n\nLists the loaded DLLs in a particular windows memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --pid [PID ...]  Process IDs to include (all other processes are excluded)\n  --offset OFFSET  Process offset in the physical address space\n  --base BASE      Specify a base virtual address in process memory\n  --name NAME      Specify a regular expression to match dll name(s)\n  --ignore-case    Specify case insensitivity for the regular expression name\n                   matching\n  --dump           Extract listed DLLs\n",
-              "vol2_command": "N/A",
+              "terminal_help": "usage: vol.py windows.dlllist.DllList --pid PID --dump\nvol.py windows.dlllist.DllList --offset OFFSET --dump\nvol.py windows.dlllist.DllList --base BASE --dump\nvol.py windows.dlllist.DllList --name NAME [--ignore-case] --dump",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> dlllist",
               "comment": "N/A"
             },
             {
               "name": "vadinfo",
               "help": [
-                "[--maxsize MAXSIZE]"
+                "Dump all the entry of the VAD Tree of a process (or all processes if no PID filter on)"
               ],
               "terminal_help": "usage: vol.py windows.vadinfo.VadInfo [-h] [--address ADDRESS]\n                                      [--pid [PID ...]] [--dump]\n                                      [--maxsize MAXSIZE]\n\nLists process memory ranges.\n\noptions:\n  -h, --help         show this help message and exit\n  --address ADDRESS  Process virtual memory address to include (all other\n                     address ranges are excluded).\n  --pid [PID ...]    Filter on specific process IDs\n  --dump             Extract listed memory ranges\n  --maxsize MAXSIZE  Maximum size for dumped VAD sections (all the bigger\n                     sections will be ignored)\n",
               "vol2_command": "N/A",
-              "comment": "N/A"
+              "comment": "One file per VAD entry"
             },
             {
               "name": "memmap",
               "help": [
-                "Prints the memory map"
+                "Prints the memory map of a process (or all processes if no PID filter on)",
+                "Dump all pages of the memory of the process (or all processes if no PID filter on)"
               ],
-              "terminal_help": "usage: vol.py windows.memmap.Memmap [-h] [--pid PID] [--dump]\n\nPrints the memory map\n\noptions:\n  -h, --help  show this help message and exit\n  --pid PID   Process ID to include (all other processes are excluded)\n  --dump      Extract listed memory segments\n",
-              "vol2_command": "N/A",
-              "comment": "N/A"
+              "terminal_help": "usage: vol.py windows.memmap.Memmap --pid PID --dump\nvol.py windows.memmap.Memmap --dump",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> memdump",
+              "comment": "One file per process"
             },
             {
               "name": "filescan",
@@ -472,51 +475,55 @@
                 "Scans for file objects present in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.filescan.FileScan [-h]\n\nScans for file objects present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "N/A",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> filescan",
               "comment": "N/A"
             },
             {
               "name": "dumpfiles",
               "help": [
-                "[--physaddr [PHYSADDR ...]]"
+                "Dump file objects present in a particular windows memory image",
+                "When used on a process dump exe and associated Handles"
               ],
               "terminal_help": "usage: vol.py windows.dumpfiles.DumpFiles [-h] [--pid PID]\n                                          [--virtaddr [VIRTADDR ...]]\n                                          [--physaddr [PHYSADDR ...]]\n                                          [--filter FILTER] [--ignore-case]\n\nDumps cached file contents from Windows memory samples.\n\noptions:\n  -h, --help            show this help message and exit\n  --pid PID             Process ID to include (all other processes are\n                        excluded)\n  --virtaddr [VIRTADDR ...]\n                        Dump the _FILE_OBJECTs at the given virtual\n                        address(es)\n  --physaddr [PHYSADDR ...]\n                        Dump a single _FILE_OBJECTs at the given physical\n                        address(es)\n  --filter FILTER       Dump files matching regular expression FILTER\n  --ignore-case         Ignore case in filter match\n",
-              "vol2_command": "N/A",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> dumpfiles",
               "comment": "N/A"
             },
             {
               "name": "hivelist",
               "help": [
-                "No description extracted."
+                "This plugin which is also present in the 'registry' has the ability to dump hive",
+                "By default dump all hives, can filter on hives name"
               ],
-              "terminal_help": "usage: vol.py windows.registry.hivelist.HiveList [-h] [--filter FILTER]\n                                                 [--dump]\n\nLists the registry hives present in a particular memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --filter FILTER  String to filter hive names returned\n  --dump           Extract listed registry hives\n",
-              "vol2_command": "N/A",
+              "terminal_help": "usage: vol.py windows.registry.hivelist.HiveList --dump\nvol.py windows.registry.hivelist.HiveList --filter SECURITY --dump",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> hivedump",
               "comment": "N/A"
             },
             {
               "name": "certificates",
               "help": [
-                "Lists the certificates in the registry's Certificate Store."
+                "Lists the certificates in the registry's Certificate Store.",
+                "By default dump all certificates"
               ],
-              "terminal_help": "usage: vol.py windows.registry.certificates.Certificates [-h] [--dump]\n\nLists the certificates in the registry's Certificate Store.\n\noptions:\n  -h, --help  show this help message and exit\n  --dump      Extract listed certificates\n",
+              "terminal_help": "usage: vol.py windows.registry.certificates.Certificates --dump",
               "vol2_command": "N/A",
               "comment": "N/A"
             },
             {
               "name": "modules",
               "help": [
-                "No description extracted."
+                "Lists the loaded kernel modules, can extract modules with --dump",
+                "can filter the modules to dump via their base address or their name"
               ],
-              "terminal_help": "usage: vol.py windows.modules.Modules [-h] [--dump] [--base BASE]\n                                      [--name NAME]\n\nLists the loaded kernel modules.\n\noptions:\n  -h, --help   show this help message and exit\n  --dump       Extract listed modules\n  --base BASE  Extract a single module with BASE address\n  --name NAME  module name/sub string\n",
+              "terminal_help": "usage: vol.py windows.modules.Modules --dump \nvol.py windows.modules.Modules --base BASE --dump\nvol.py windows.modules.Modules --name NAME --dump",
               "vol2_command": "N/A",
               "comment": "N/A"
             },
             {
               "name": "modscan",
               "help": [
-                "No description extracted."
+                "Same as modules but use pool scanning for listing"
               ],
-              "terminal_help": "usage: vol.py windows.modscan.ModScan [-h] [--dump] [--base BASE]\n                                      [--name NAME]\n\nScans for modules present in a particular windows memory image.\n\noptions:\n  -h, --help   show this help message and exit\n  --dump       Extract listed modules\n  --base BASE  Extract a single module with BASE address\n  --name NAME  module name/sub string\n",
+              "terminal_help": "usage: vol.py windows.modscan.ModScan --dump",
               "vol2_command": "N/A",
               "comment": "N/A"
             }
@@ -563,7 +570,7 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.registry.hivelist.HiveList [-h] [--filter FILTER]\n                                                 [--dump]\n\nLists the registry hives present in a particular memory image.\n\noptions:\n  -h, --help       show this help message and exit\n  --filter FILTER  String to filter hive names returned\n  --dump           Extract listed registry hives\n",
-              "vol2_command": "N/A",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> hivelist",
               "comment": "N/A"
             },
             {
@@ -572,7 +579,7 @@
                 "Scans for registry hives present in a particular windows memory image."
               ],
               "terminal_help": "usage: vol.py windows.registry.hivescan.HiveScan [-h]\n\nScans for registry hives present in a particular windows memory image.\n\noptions:\n  -h, --help  show this help message and exit\n",
-              "vol2_command": "N/A",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> hivescan",
               "comment": "N/A"
             },
             {
@@ -581,7 +588,7 @@
                 "No description extracted."
               ],
               "terminal_help": "usage: vol.py windows.registry.printkey.PrintKey [-h] [--offset OFFSET]\n                                                 [--key KEY] [--recurse]\n\nLists the registry keys under a hive or specific key value.\n\noptions:\n  -h, --help       show this help message and exit\n  --offset OFFSET  Hive Offset\n  --key KEY        Key to start from\n  --recurse        Recurses through keys\n",
-              "vol2_command": "N/A",
+              "vol2_command": "vol.py -f mem.raw --profile=<profile> printkey -K “Software\\Microsoft\\Windows\\CurrentVersion”",
               "comment": "N/A"
             },
             {
