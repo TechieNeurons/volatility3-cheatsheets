@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VAD Tree Visualizer - Documentation</title>
-    <link rel="stylesheet" href="style.css">
+    <title>VAD TREE VISUALIZER - Documentation</title>
+    <link rel="stylesheet" href="../style.css">
     <style>
         /* Specific overrides for the documentation page */
         body { 
@@ -33,9 +33,9 @@
 <body>
 
     <a href="../index.html" class="nav-back">« BACK TO CHEAT SHEET</a>
-    <a href="tool_pstree_pretty_explorer.html" class="nav-tools">[[ PSTREE PRETTY EXPLORER ]]</a>
+    <a href="tool_pstree_pretty_visualizer.html" class="nav-tools">[[PSTREE PRETTY VISUALIZER]]</a>
 
-    <h1>VAD Tree Visualizer</h1>
+    <h1>VAD TREE VISUALIZER</h1>
     <p>This tool transforms the flat text output of Volatility's <code>vadwalk</code> and/or <code>vadinfo</code> plugin into an interactive Binary Search Tree (BST) visualization.</p>
     <p>In the tools folder you can find a <a href="./vad_tree_visualizer/vadwalk_output.txt">vadwalk output</a>, <a href="./vad_tree_visualizer/vadinfo_output.txt">vadinfo output</a>, <a href="./vad_tree_visualizer/vad_visualizer.py">the script</a> and the <a href="./vad_tree_visualizer/vad_tree.html">result</a>.</p>
 
@@ -56,8 +56,9 @@
         <pre>vol -f mem.raw windows.vadinfo --pid \<PID\> > vadinfo_output.txt</pre>
 
         <p><span class="step-number">02.</span> <strong>Run the Python Parser:</strong> Use the provided Python script (<a href="./vad_tree_visualizer/vad_visualizer.py">here</a>) to parse the <code>vad_output.txt</code>. The script identifies the Parent, Left, and Right pointers for each memory range.</p>
+        <pre>python ./vad_visualizer.py vad_output.txt vadinfo_output.txt</pre>
 
-        <p><span class="step-number">03.</span> <strong>Visualize:</strong> The script generates an HTML file that you can open with your browser.</p>
+        <p><span class="step-number">03.</span> <strong>Visualize:</strong> The script generates an HTML file that you can open with your browser, result example: <a href="./vad_tree_visualizer/vad_tree.html">here</a> </p>
     </div>
 
     <div class="content-section">
